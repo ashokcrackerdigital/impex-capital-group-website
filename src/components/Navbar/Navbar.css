@@ -1,0 +1,219 @@
+/* =========================
+   NAVBAR & MENU
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: transparent;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar.scrolled {
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+  }
+  
+  .menu-text {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+  }
+  
+  .hamburger {
+    width: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+  }
+  
+  .hamburger span {
+    display: block;
+    height: 1px;
+    background: white;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  .hamburger span:nth-child(1) {
+    width: 35px;
+  }
+  
+  .hamburger span:nth-child(2) {
+    width: 25px;
+  }
+  
+  .menu-toggle:hover .hamburger span:nth-child(1) {
+    width: 25px;
+  }
+  
+  .menu-toggle:hover .hamburger span:nth-child(2) {
+    width: 35px;
+  }
+  
+  /* =========================
+     FULL SCREEN MENU
+  ========================= */
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #080808;
+    z-index: 999;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-overlay.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .menu-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .menu-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-links li {
+    overflow: hidden;
+    margin-bottom: 1rem;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .menu-links button {
+    background: none;
+    border: none;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    color: #a0a0a0;
+    cursor: pointer;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .menu-overlay.active .menu-links button {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .menu-links:hover button {
+    opacity: 0.2;
+    filter: blur(3px);
+  }
+  
+  .menu-links li button:hover {
+    opacity: 1;
+    filter: blur(0);
+    color: #d4af37;
+    transform: translateX(20px);
+  }
+  
+  .menu-num {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    font-size: 0.9rem;
+    color: #d4af37;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .menu-links li button:hover + .menu-num {
+    opacity: 1;
+    right: 20px;
+  }
+  
+  .menu-footer {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #666;
+    opacity: 0;
+    transition: 0.5s 0.8s;
+  }
+  
+  .menu-overlay.active .menu-footer {
+    opacity: 1;
+  }
+  
+  .menu-socials a {
+    margin-left: 20px;
+    color: white;
+  }
+  
+  .menu-socials a:hover {
+    color: #d4af37;
+  }
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  
+  @media (max-width: 1024px) {
+    .navbar {
+      padding: 1.5rem 5%;
+    }
+  
+    .menu-links button {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1.2rem 4%;
+    }
+  
+    .logo {
+      font-size: 1.2rem;
+    }
+  }
+  
