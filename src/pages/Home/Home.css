@@ -40,7 +40,10 @@ body {
   color: var(--text-gold);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
 }
@@ -241,7 +244,8 @@ img {
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 1rem;
-  height: 4.5rem; /* Ensure consistent height so all paragraphs start at same level */
+  height: 4.5rem;
+  /* Ensure consistent height so all paragraphs start at same level */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -289,7 +293,7 @@ img {
   bottom: 0;
   width: 100%;
   padding: 3rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
 }
 
 /* =========================
@@ -310,14 +314,14 @@ img {
 
 .investors-content {
   width: 50%;
-  padding: 6rem 5%; 
+  padding: 6rem 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-left: 1px solid var(--border-color);
 }
 
-.investors-content h2{
+.investors-content h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
   letter-spacing: 2px;
@@ -325,14 +329,14 @@ img {
   text-transform: uppercase;
 }
 
-.investors-content p{
+.investors-content p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   color: var(--text-grey);
   max-width: 600px;
 }
 
-.btn-outline{
+.btn-outline {
   display: inline-block;
   width: fit-content;
   padding: 1rem 3rem;
@@ -343,7 +347,7 @@ img {
   font-size: 0.9rem;
 }
 
-.btn-outline:hover{
+.btn-outline:hover {
   background: var(--text-gold);
   border-color: var(--text-gold);
   color: #000;
@@ -428,56 +432,202 @@ img {
 }
 
 /* Map location coordinates */
-.b-arlington { top: 64%; left: 47.5%; }
-.b-austin { top: 69%; left: 46.5%; }
-.b-cedar-park { top: 68.5%; left: 46.3%; }
-.b-dallas { top: 63.5%; left: 47.8%; }
-.b-forney { top: 64.5%; left: 48.2%; }
-.b-frisco { top: 62.8%; left: 47.2%; }
-.b-galveston { top: 74.5%; left: 49.5%; }
-.b-georgetown { top: 67.8%; left: 46.2%; }
-.b-houston { top: 71.5%; left: 49.2%; }
-.b-katy { top: 71.8%; left: 48.5%; }
-.b-magnolia { top: 71.2%; left: 48.3%; }
-.b-mesquite { top: 64.8%; left: 48.5%; }
-.b-mont-belvieu { top: 71.6%; left: 49.4%; }
-.b-pasadena { top: 72.2%; left: 49.3%; }
-.b-porter { top: 71%; left: 49%; }
-.b-san-antonio { top: 72.8%; left: 45.2%; }
-.b-san-marcos { top: 70.8%; left: 46.3%; }
-.b-stanton { top: 65.5%; left: 44.5%; }
-.b-texas-city { top: 73.8%; left: 49.4%; }
-.b-tomball { top: 71.3%; left: 48.2%; }
-.b-travis-county { top: 68.8%; left: 46.4%; }
+.b-arlington {
+  top: 64%;
+  left: 47.5%;
+}
 
-.b-denver { top: 42%; left: 35%; }
-.b-fort-collins { top: 40%; left: 34%; }
-.b-parker { top: 42%; left: 35%; }
+.b-austin {
+  top: 69%;
+  left: 46.5%;
+}
 
-.b-los-angeles { top: 52%; left: 8%; }
-.b-el-dorado-hills { top: 40%; left: 7%; }
+.b-cedar-park {
+  top: 68.5%;
+  left: 46.3%;
+}
 
-.b-charlotte { top: 58%; left: 72%; }
-.b-macon { top: 63%; left: 70%; }
-.b-columbus { top: 50%; left: 68%; }
-.b-covington { top: 68%; left: 52%; }
-.b-kansas-city { top: 52%; left: 50%; }
-.b-n-ogden { top: 38%; left: 25%; }
-.b-oklahoma-city { top: 60%; left: 45%; }
-.b-philadelphia { top: 48%; left: 75%; }
-.b-spartanburg { top: 60%; left: 72%; }
-.b-fort-lauderdale { top: 82%; left: 78%; }
-.b-washington-dc { top: 52%; left: 74%; }
+.b-dallas {
+  top: 63.5%;
+  left: 47.8%;
+}
+
+.b-forney {
+  top: 64.5%;
+  left: 48.2%;
+}
+
+.b-frisco {
+  top: 62.8%;
+  left: 47.2%;
+}
+
+.b-galveston {
+  top: 74.5%;
+  left: 49.5%;
+}
+
+.b-georgetown {
+  top: 67.8%;
+  left: 46.2%;
+}
+
+.b-houston {
+  top: 71.5%;
+  left: 49.2%;
+}
+
+.b-katy {
+  top: 71.8%;
+  left: 48.5%;
+}
+
+.b-magnolia {
+  top: 71.2%;
+  left: 48.3%;
+}
+
+.b-mesquite {
+  top: 64.8%;
+  left: 48.5%;
+}
+
+.b-mont-belvieu {
+  top: 71.6%;
+  left: 49.4%;
+}
+
+.b-pasadena {
+  top: 72.2%;
+  left: 49.3%;
+}
+
+.b-porter {
+  top: 71%;
+  left: 49%;
+}
+
+.b-san-antonio {
+  top: 72.8%;
+  left: 45.2%;
+}
+
+.b-san-marcos {
+  top: 70.8%;
+  left: 46.3%;
+}
+
+.b-stanton {
+  top: 65.5%;
+  left: 44.5%;
+}
+
+.b-texas-city {
+  top: 73.8%;
+  left: 49.4%;
+}
+
+.b-tomball {
+  top: 71.3%;
+  left: 48.2%;
+}
+
+.b-travis-county {
+  top: 68.8%;
+  left: 46.4%;
+}
+
+.b-denver {
+  top: 42%;
+  left: 35%;
+}
+
+.b-fort-collins {
+  top: 40%;
+  left: 34%;
+}
+
+.b-parker {
+  top: 42%;
+  left: 35%;
+}
+
+.b-los-angeles {
+  top: 52%;
+  left: 8%;
+}
+
+.b-el-dorado-hills {
+  top: 40%;
+  left: 7%;
+}
+
+.b-charlotte {
+  top: 58%;
+  left: 72%;
+}
+
+.b-macon {
+  top: 63%;
+  left: 70%;
+}
+
+.b-columbus {
+  top: 50%;
+  left: 68%;
+}
+
+.b-covington {
+  top: 68%;
+  left: 52%;
+}
+
+.b-kansas-city {
+  top: 52%;
+  left: 50%;
+}
+
+.b-n-ogden {
+  top: 38%;
+  left: 25%;
+}
+
+.b-oklahoma-city {
+  top: 60%;
+  left: 45%;
+}
+
+.b-philadelphia {
+  top: 48%;
+  left: 75%;
+}
+
+.b-spartanburg {
+  top: 60%;
+  left: 72%;
+}
+
+.b-fort-lauderdale {
+  top: 82%;
+  left: 78%;
+}
+
+.b-washington-dc {
+  top: 52%;
+  left: 74%;
+}
 
 @keyframes pulse {
   0% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
   }
+
   70% {
     transform: scale(1);
     box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
   }
+
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
@@ -570,5 +720,75 @@ img {
 @media (max-width: 1024px) {
   .investors-section {
     flex-direction: column;
+  }
+
+  .section-header h2 {
+    font-size: 2.0rem;
+  }
+
+  /* .strategy-section .reveal {
+    padding: 1rem 5%;
+  } */
+}
+
+@media (max-width: 768px) {
+  /* Strategy spacing */
+  .strategy-section {
+    padding: 3rem 10%;
+  }
+
+  /* Investors layout - mobile */
+  .investors-section {
+    flex-direction: column;
+  }
+
+  .investors-content {
+    width: 100%;
+    padding: 3rem 8% 2rem;
+    border-left: none;
+    text-align: center;
+    align-items: center;
+    order: 1;
+  }
+
+  .investors-content p {
+    max-width: 90%;
+  }
+
+  .investors-visual {
+    width: 100%;
+    order: 2;
+    flex-direction: row;
+  }
+
+  .inv-img {
+    width: 50%;
+    height: 220px;
+  }
+
+  .map-section {
+    padding: 0 5% 3rem;
+    overflow: visible;
+  }
+
+  .map-container {
+    max-width: 100%;
+    margin: 2rem auto 0;
+    min-height: 320px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .section-header {
+    margin: 0 auto 1rem;
+  }
+
+  .news-section {
+    padding-top: 0 !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .news-header h2 {
+    margin-bottom: 0rem;
+    text-align: center !important;
   }
 }
