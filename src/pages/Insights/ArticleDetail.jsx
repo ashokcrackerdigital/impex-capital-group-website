@@ -1,0 +1,78 @@
+import { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import "./ArticleDetail.css";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+import { articles } from "./articlesData";
+
+const ArticleDetail = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const article = articles.find((a) => a.id === parseInt(id));
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
+
+  if (!article) {
+    return (
+      <>
+        <Navbar />
+        <div className="article-not-found">
+          <h1>Article not found</h1>
+          <button onClick={() => navigate("/insights")}>Back to Insights</button>
+        </div>
+        <Footer variant="insights" />
+      </>
+    );
+  }
+
+  return (
+    <>
+      <Navbar />
+      <article className="article-detail">
+        {/* Hero Section */}
+        <div className="article-hero">
+          <div className="article-hero-image">
+            <img src={article.img} alt={article.title} />
+
+            <div className="article-hero-content">
+              <div className="article-categories">{article.categories}</div>
+              <h1 className="article-title">{article.title}</h1>
+              <div className="article-hero-divider"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Article Content */}
+        <div className="article-content-wrapper">
+          <div className="article-content">
+            {article.content.map((section, index) => (
+              <div key={index} className="article-section">
+                {section.heading && (
+                  <h2 className="article-section-heading">{section.heading}</h2>
+                )}
+                {section.paragraphs.map((paragraph, pIndex) => (
+                  <p key={pIndex} className="article-paragraph">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Back Button */}
+        <div className="article-back">
+          <button onClick={() => navigate("/insights")} className="back-button">
+            <i className="fa-solid fa-arrow-left"></i> Back to Insights
+          </button>
+        </div>
+      </article>
+      <Footer variant="portfolio" />
+    </>
+  );
+};
+
+export default ArticleDetail;
+
