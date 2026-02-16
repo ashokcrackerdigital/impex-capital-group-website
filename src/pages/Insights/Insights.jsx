@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "./News.css";
+import "./Insights.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
@@ -37,7 +37,7 @@ const articles = [
   },
 ];
 
-const News = () => {
+const Insights = () => {
   // scroll reveal
   useEffect(() => {
     const reveal = () => {
@@ -57,7 +57,7 @@ const News = () => {
       <StructuredData
         breadcrumbs={[
           { name: "Home", url: "https://impexcapitalgroup.com" },
-          { name: "News", url: "https://impexcapitalgroup.com/news" }
+          { name: "Insights", url: "https://impexcapitalgroup.com/insights" }
         ]}
         faqs={[
           {
@@ -80,7 +80,7 @@ const News = () => {
           <div className="hero-kicker">
             Press • Announcements • Market Coverage
           </div>
-          <h1>NEWSROOM</h1>
+          <h1>INSIGHTS</h1>
           <p className="hero-subcopy">
             Follow the latest acquisitions, developments, and milestones from
             Impex Capital Group – alongside third‑party coverage from leading
@@ -143,4 +143,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default Insights;

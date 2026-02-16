@@ -321,8 +321,8 @@
     height: 210px;
   }
 
-  /* News section - mobile only, scoped to News page only */
-  /* This CSS file (News.css) is only imported in News.jsx, so it won't affect other pages */
+  /* Insights section - mobile only, scoped to Insights page only */
+  /* This CSS file (Insights.css) is only imported in Insights.jsx, so it won't affect other pages */
   .news-section {
     padding-top: 4rem !important;
     padding-bottom: 4rem !important;
@@ -330,7 +330,7 @@
     padding-right: 5% !important;
   }
 
-  /* News header - center text in mobile view */
+  /* Insights header - center text in mobile view */
   .news-header {
     text-align: center;
     align-items: center;

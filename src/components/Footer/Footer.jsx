@@ -31,7 +31,7 @@ const Footer = ({
 
         <div className="footer-portfolio-bottom">
           <div className="footer-copyright">
-            Copyright 2025 © Impex Capital Group
+            Copyright 2026 © Impex Capital Group
           </div>
           <div className="footer-contact">
             <a 

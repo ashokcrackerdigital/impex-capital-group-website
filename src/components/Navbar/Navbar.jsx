@@ -51,7 +51,7 @@ const Navbar = () => {
               ["/team", "Team", "02"],
               ["/portfolio", "Portfolio", "03"],
               ["/investors", "Investors", "04"],
-              ["/news", "News", "05"],
+              ["/insights", "Insights", "05"],
               ["/contact", "Contact", "06"],
             ].map(([path, label, num]) => {
               const isActive = location.pathname === path;

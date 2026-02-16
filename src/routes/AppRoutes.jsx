@@ -5,7 +5,7 @@ import Team from "../pages/Team/Team";
 import AshShah from "../pages/Team/AshShah";
 import NishaSmith from "../pages/Team/NishaSmith";
 import Contact from "../pages/Contact/Contact";
-import News from "../pages/News/News";
+import Insights from "../pages/Insights/Insights";
 import Investors from "../pages/Investors/Investors";
 import Multifamily from "../pages/Multifamily/Multifamily";
 import Land from "../pages/Land/Land";
@@ -22,7 +22,7 @@ const AppRoutes = () => {
                 <Route path="/team/nisha-smith" element={<NishaSmith />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/investors" element={<Investors />} />
-                <Route path="/news" element={<News />} />
+                <Route path="/insights" element={<Insights />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/multifamily" element={<Multifamily />} />
                 <Route path="/land" element={<Land />} />

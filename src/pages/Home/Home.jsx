@@ -320,14 +320,14 @@ const Home = () => {
         <div className="news-grid">
           <div className="news-card">
             <div className="news-img-wrapper">
-              <img src={denverImg} className="news-img" alt="News Denver" />
+              <img src={denverImg} className="news-img" alt="Insights Denver" />
             </div>
             <div className="news-content">
               <div className="news-meta">Nov 2024</div>
               <h3>
                 Expansion Into Colorado: ICG Acquires Premium Multifamily Asset
               </h3>
-              <Link to="/news" className="read-btn">
+              <Link to="/insights" className="read-btn">
                 Read Article
               </Link>
             </div>
@@ -340,7 +340,7 @@ const Home = () => {
             <div className="news-content">
               <div className="news-meta">Oct 2024</div>
               <h3>Impex Capital Group Closes Fund IV with $500M Raised</h3>
-              <Link to="/news" className="read-btn">
+              <Link to="/insights" className="read-btn">
                 Read Article
               </Link>
             </div>
@@ -353,7 +353,7 @@ const Home = () => {
             <div className="news-content">
               <div className="news-meta">Sep 2024</div>
               <h3>New Development Project Breaks Ground in Houston Metro</h3>
-              <Link to="/news" className="read-btn">
+              <Link to="/insights" className="read-btn">
                 Read Article
               </Link>
             </div>
