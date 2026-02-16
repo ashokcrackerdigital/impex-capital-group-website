@@ -206,6 +206,7 @@
   letter-spacing: 2px;
   color: var(--text-gold);
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .section-title {
@@ -504,4 +505,149 @@
 .cta-panel p {
     color: var(--text-grey);
     margin-bottom: 1.8rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .investors-page {
+    gap: 2.5rem;
+  }
+
+  .section {
+    text-align: center;
+  }
+
+  .investor-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .investor-hero > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .badge {
+    align-self: center;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin: 1rem 0 0.75rem;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .hero-actions {
+    margin-top: 1.5rem;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 0.85rem 1.8rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-panel {
+    width: 100%;
+    padding: 1.8rem 1.5rem;
+    text-align: center;
+  }
+
+  .hero-panel-title {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .hero-panel-text {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .hero-panel-metrics {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .metric-card {
+    padding: 1.2rem 1rem;
+    text-align: center;
+  }
+
+  .metric-label {
+    font-size: 0.7rem;
+  }
+
+  .metric-value {
+    font-size: 1.2rem;
+  }
+
+  .two-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .two-column > div {
+    width: 100%;
+  }
+
+  .investors-page .section-header,
+  .section-header {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .investors-page .section-kicker,
+  .section-kicker {
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .investors-page .section-title,
+  .section-title {
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .investors-page .section-subtitle,
+  .section-subtitle {
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+    margin-bottom: 0 !important;
+  }
+
+  .pill-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .pill {
+    text-align: center;
+  }
 }

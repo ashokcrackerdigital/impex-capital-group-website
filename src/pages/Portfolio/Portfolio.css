@@ -191,7 +191,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 3.5rem;
   float: left;
-  margin-right: 15px;
+  margin-right: 5px;
   line-height: 0.8;
   color: var(--text-gold);
 }
@@ -462,6 +462,26 @@
   .portfolio-page .stats-container { 
     grid-template-columns: 1fr; 
     gap: 2rem; 
+  }
+  
+  .portfolio-page .stats-section {
+    padding: 3rem 5%;
+  }
+  
+  .portfolio-page .portfolio-intro {
+    padding: 4rem 5%;
+  }
+  
+  .portfolio-page .filter-section {
+    padding: 3rem 5% 2rem;
+  }
+  
+  .portfolio-page .portfolio-section {
+    padding-top: 0;
+  }
+  
+  .portfolio-page .filter-container {
+    margin-bottom: 0;
   }
 }
 

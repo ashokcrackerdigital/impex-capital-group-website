@@ -156,6 +156,18 @@ footer {
     gap: 3rem;
   }
 
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-nav {
+    align-items: center;
+  }
+
+  .footer-about-text {
+    text-align: center;
+  }
+
   .footer-portfolio-bottom {
     flex-direction: column;
     gap: 1rem;

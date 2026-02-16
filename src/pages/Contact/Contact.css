@@ -108,6 +108,10 @@
 .contact-info-section {
   padding: 6rem 10%;
   background: var(--bg-panel);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .contact-info-grid {
@@ -332,11 +336,19 @@
 .contact-form-wrapper {
   display: flex;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .contact-form-section {
   padding-top: 6rem;  
-  padding-bottom: 6rem; 
+  padding-bottom: 6rem;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .form-header {
@@ -370,6 +382,8 @@
   padding: 3rem;
   transition: var(--transition);
   box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
 }
 
 #vboutEmbedFormWrapper-182767:hover {
@@ -763,10 +777,26 @@
   .contact-hero {
     height: 100vh;
     min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
   }
 
   .contact-info-section {
     padding: 4rem 5%;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-info-grid {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
 
   /* Contact form section - mobile only, scoped to Contact page only */
@@ -776,20 +806,70 @@
     padding-bottom: 4rem;
     padding-left: 5%;
     padding-right: 5%;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-form-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   /* Form header - mobile only, scoped to Contact page only */
   .form-header {
     text-align: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto 2rem;
+    box-sizing: border-box;
   }
 
   .contact-form {
     padding: 2rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #vboutEmbedFormWrapper-182767 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 2rem !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  #vboutEmbedFormWrapper-182767 form,
+  #vboutEmbedFormWrapper-182767 fieldset {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  #vboutEmbedFormWrapper-182767 .vboutEmbedFormRow {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  #vboutEmbedFormWrapper-182767 input,
+  #vboutEmbedFormWrapper-182767 textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .contact-info-card {
     padding: 2.5rem 1.5rem;
     overflow: visible;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .contact-info-card p {
@@ -800,6 +880,7 @@
     text-align: center;
     margin: 0 auto;
     max-width: 100%;
+    width: 100%;
     box-sizing: border-box;
   }
 
@@ -807,6 +888,7 @@
     word-break: break-all;
     overflow-wrap: break-word;
     max-width: 100%;
+    width: 100%;
     display: inline-block;
     text-align: center;
     padding: 0;
