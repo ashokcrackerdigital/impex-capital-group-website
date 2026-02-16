@@ -170,6 +170,8 @@
   max-width: 1200px;
   margin: 4rem auto;
   padding: 0 5%;
+  position: relative;
+  z-index: 1;
 }
 
 .stat-box {
@@ -549,12 +551,29 @@
 
 @media (max-width: 768px) {
   .hotel-hero {
-    height: 80vh;
+    height: 100vh;
+    min-height: 100vh;
+  }
+
+  .hotel-hero .hero-subtitle {
+    white-space: normal !important;
+    word-break: break-word;
+    padding: 0 5%;
+    font-size: clamp(0.75rem, 3vw, 1rem) !important;
+    line-height: 1.5 !important;
+  }
+
+  .hotel-hero .back-btn {
+    margin-bottom: 2rem;
   }
 
   .dynamic-stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    margin-top: 0 !important;
+    padding-top: 3rem !important;
+    position: relative;
+    z-index: 1;
   }
 
   .properties-grid {
