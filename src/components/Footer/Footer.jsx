@@ -6,8 +6,8 @@ const Footer = ({
   text = "Discover how we build wealth through strategic asset management.",
   variant = "default"
 }) => {
-  // Portfolio variant footer
-  if (variant === "portfolio") {
+  // Portfolio and Insights variant footer (same style)
+  if (variant === "portfolio" || variant === "insights") {
     return (
       <footer className="footer-portfolio">
         <div className="footer-portfolio-content">
