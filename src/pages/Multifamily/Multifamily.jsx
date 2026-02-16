@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Multifamily.css";
 
@@ -10,6 +10,7 @@ import multifamilyImg from "../../assets/images/multifamily.png";
 import StructuredData from "../../components/StructuredData";
 
 const Multifamily = () => {
+  const navigate = useNavigate();
   const [properties, setProperties] = useState([]);
 
   /* Scroll Reveal Animation */
@@ -253,7 +254,12 @@ const Multifamily = () => {
               : "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80";
 
             return (
-              <div key={prop.id} className="property-card">
+              <div 
+                key={prop.id} 
+                className="property-card"
+                onClick={() => navigate(`/portfolio/property/${prop.id}`, { state: { from: 'multifamily' } })}
+                style={{ cursor: 'pointer' }}
+              >
                 <div className="property-img-container">
                   <img
                     src={imageUrl}

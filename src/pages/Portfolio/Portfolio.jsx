@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./Portfolio.css";
 
@@ -7,6 +8,7 @@ import Footer from "../../components/Footer/Footer";
 import StructuredData from "../../components/StructuredData";
 
 const Portfolio = () => {
+  const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState("all");
   const [portfolioItems, setPortfolioItems] = useState([]);
 
@@ -205,6 +207,8 @@ const Portfolio = () => {
                     : ""
                     }`}
                   data-category={item.category}
+                  onClick={() => navigate(`/portfolio/property/${item.id}`, { state: { from: 'portfolio' } })}
+                  style={{ cursor: 'pointer' }}
                 >
                   <div className="p-img-container">
                     <img

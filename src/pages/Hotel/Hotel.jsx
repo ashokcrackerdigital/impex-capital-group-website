@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Hotel.css";
 
@@ -8,6 +8,7 @@ import Footer from "../../components/Footer/Footer";
 import StructuredData from "../../components/StructuredData";
 
 const Hotel = () => {
+  const navigate = useNavigate();
   const [properties, setProperties] = useState([]);
 
   /* Scroll Reveal Animation */
@@ -214,7 +215,12 @@ const Hotel = () => {
               : "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80";
 
             return (
-              <div key={prop.id} className="property-card">
+              <div 
+                key={prop.id} 
+                className="property-card"
+                onClick={() => navigate(`/portfolio/property/${prop.id}`, { state: { from: 'hotel' } })}
+                style={{ cursor: 'pointer' }}
+              >
                 <div className="property-img-container">
                   <img src={imageUrl} className="property-img" alt={prop.title} />
                   <div className="property-overlay">
