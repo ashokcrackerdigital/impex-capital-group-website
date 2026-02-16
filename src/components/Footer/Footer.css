@@ -51,6 +51,18 @@ footer {
   color: #666;
 }
 
+.footer-link {
+  color: #666;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  color: #d4af37;
+  text-decoration: underline;
+}
+
 @media (max-width: 1024px) {
   .footer-btm {
     flex-direction: column;

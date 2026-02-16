@@ -320,4 +320,31 @@
   .news-img {
     height: 210px;
   }
+
+  /* News section - mobile only, scoped to News page only */
+  /* This CSS file (News.css) is only imported in News.jsx, so it won't affect other pages */
+  .news-section {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+
+  /* News header - center text in mobile view */
+  .news-header {
+    text-align: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+
+  .news-header h2 {
+    text-align: center;
+  }
+
+  .news-header p {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
