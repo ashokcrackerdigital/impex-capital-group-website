@@ -294,12 +294,41 @@
     gap: 2rem;
   }
 
+  .property-info {
+    text-align: center;
+    align-items: center;
+  }
+
+  .property-category {
+    text-align: center;
+  }
+
   .property-title {
     font-size: clamp(2rem, 6vw, 3rem);
+    text-align: center;
+  }
+
+  .property-address {
+    text-align: center;
   }
 
   .property-carousel-section {
     padding: 3rem 4%;
+  }
+
+  .carousel-header {
+    text-align: center;
+  }
+
+  .carousel-header h2 {
+    text-align: center;
+  }
+
+  .property-back {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
   }
 
   .carousel-item {
