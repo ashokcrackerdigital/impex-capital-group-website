@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Land.css";
 
@@ -10,6 +10,7 @@ import seniorLivingImg from "../../assets/images/Seniorliving.png";
 import StructuredData from "../../components/StructuredData";
 
 const Land = () => {
+  const navigate = useNavigate();
   const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -261,7 +262,12 @@ const Land = () => {
                 : "https://images.unsplash.com/photo-1555636222-cae831e670b3?auto=format&fit=crop&q=80";
 
               return (
-                <div key={prop.id} className="property-card">
+                <div 
+                  key={prop.id} 
+                  className="property-card"
+                  onClick={() => navigate(`/portfolio/property/${prop.id}`, { state: { from: 'land' } })}
+                  style={{ cursor: 'pointer' }}
+                >
                   <div className="property-img-container">
                     <img
                       src={imageUrl}

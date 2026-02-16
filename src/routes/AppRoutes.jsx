@@ -13,6 +13,7 @@ import Land from "../pages/Land/Land";
 import Hotel from "../pages/Hotel/Hotel";
 import ExitedPortfolio from "../pages/ExitedPortfolio/ExitedPortfolio";
 import Portfolio from "../pages/Portfolio/Portfolio";
+import PropertyDetail from "../pages/Portfolio/PropertyDetail";
 
 const AppRoutes = () => {
     return (
@@ -22,6 +23,7 @@ const AppRoutes = () => {
                 <Route path="/team/ash-shah" element={<AshShah />} />
                 <Route path="/team/nisha-smith" element={<NishaSmith />} />
                 <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/portfolio/property/:id" element={<PropertyDetail />} />
                 <Route path="/investors" element={<Investors />} />
                 <Route path="/insights" element={<Insights />} />
                 <Route path="/insights/article/:id" element={<ArticleDetail />} />
