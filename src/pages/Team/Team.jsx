@@ -5,6 +5,7 @@ import "./Team.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import FooterCTA from "../../components/Footer/FooterCTA";
 
 import ashShahImg from "../../assets/images/AshShah.png";
 import nishaSmithImg from "../../assets/images/NishaSmith.png";
@@ -210,11 +211,12 @@ const Team = () => {
         </div>
       </section>
 
-      {/* ===== FOOTER ===== */}
-      <Footer
+      {/* ===== CTA + FOOTER ===== */}
+      <FooterCTA
         heading="Partner With Our Team"
         text="For co‑investment opportunities, strategic partnerships, or speaking engagements with our leadership, please contact our investor relations team."
       />
+      <Footer />
     </>
   );
 };

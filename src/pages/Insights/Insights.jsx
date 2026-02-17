@@ -4,6 +4,7 @@ import "./Insights.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import FooterCTA from "../../components/Footer/FooterCTA";
 import StructuredData from "../../components/StructuredData";
 import { articles } from "./articlesData";
 
@@ -117,10 +118,11 @@ const Insights = () => {
         </div>
       </section>
 
-      <Footer
+      <FooterCTA
         heading="Media & Investor Inquiries"
         text="For interviews, speaking opportunities, or additional information about Impex Capital Group, please connect with our investor relations team."
       />
+      <Footer />
     </>
   );
 };

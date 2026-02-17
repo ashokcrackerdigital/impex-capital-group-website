@@ -19,9 +19,29 @@ footer {
   margin-bottom: 1.5rem;
 }
 
+@media (min-width: 1024px) {
+  .footer-cta h2 {
+    white-space: nowrap;
+  }
+}
+
 .footer-text {
   color: #888;
   margin-bottom: 2rem;
+}
+
+/* Wrapper for CTA section used above the footer */
+.footer-cta-wrapper {
+  background: #000;
+  padding: 6rem 5% 3rem;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+/* Center CTA content with a max width */
+.footer-cta {
+  max-width: 1100px;
+  margin: 0 auto 5rem;
 }
 
 .btn-gold-outline {
@@ -148,6 +168,15 @@ footer {
 
   .footer-cta {
     margin-bottom: 3rem;
+  }
+
+  /* Mobile padding for CTA wrapper */
+  .footer-cta-wrapper {
+    padding: 3rem 5% 3rem;
+  }
+
+  .footer-cta {
+    margin-bottom: 0rem;
   }
 
   /* Portfolio footer layout */
