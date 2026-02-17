@@ -5,6 +5,7 @@ import "./Home.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import FooterCTA from "../../components/Footer/FooterCTA";
 
 import heroVideo from "../../assets/videos/Luxury_Apartment_Drone_Footage.mp4";
 import multifamilyImg from "../../assets/images/multifamily.png";
@@ -341,7 +342,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ===== FOOTER ===== */}
+      {/* ===== CTA + FOOTER ===== */}
+      <FooterCTA />
       <Footer />
     </>
   );

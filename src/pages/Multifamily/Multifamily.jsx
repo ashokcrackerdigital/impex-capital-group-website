@@ -5,6 +5,7 @@ import "./Multifamily.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import FooterCTA from "../../components/Footer/FooterCTA";
 
 import multifamilyImg from "../../assets/images/multifamily.png";
 import StructuredData from "../../components/StructuredData";
@@ -291,7 +292,8 @@ const Multifamily = () => {
         </div>
       </div>
 
-      {/* ===== FOOTER ===== */}
+      {/* ===== FOOTER CTA + GLOBAL FOOTER ===== */}
+      <FooterCTA />
       <Footer />
     </>
   );

@@ -4,6 +4,7 @@ import "./Contact.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import FooterCTA from "../../components/Footer/FooterCTA";
 import StructuredData from "../../components/StructuredData";
 
 const Contact = () => {
@@ -262,7 +263,7 @@ const Contact = () => {
       </section>
 
       {/* ===== CONTACT FORM SECTION ===== */}
-      <section className="contact-form-section reveal">
+      <section id="contact-form-section" className="contact-form-section reveal">
         <div className="contact-form-container">
           <div className="form-header">
             <h2>Contact Us</h2>
@@ -342,7 +343,22 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* ===== FOOTER ===== */}
+      {/* ===== CTA (scroll to form) + FOOTER ===== */}
+      <FooterCTA
+        heading="Partner With Our Team"
+        text="For co‑investment opportunities, strategic partnerships, or speaking engagements with our leadership, please contact our investor relations team."
+        onClick={() => {
+          const formSection = document.getElementById("contact-form-section");
+          if (formSection) {
+            const yOffset = -120; // navbar offset so heading is fully visible
+            const y =
+              formSection.getBoundingClientRect().top +
+              window.pageYOffset +
+              yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+          }
+        }}
+      />
       <Footer />
     </>
   );

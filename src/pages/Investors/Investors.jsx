@@ -5,6 +5,7 @@ import "./Investors.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import FooterCTA from "../../components/Footer/FooterCTA";
 import StructuredData from "../../components/StructuredData";
 
 const Investors = () => {
@@ -299,6 +300,7 @@ const Investors = () => {
         </section>
       </main>
 
+      <FooterCTA />
       <Footer />
     </>
   );

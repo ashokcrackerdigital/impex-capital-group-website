@@ -5,6 +5,7 @@ import "./Land.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import FooterCTA from "../../components/Footer/FooterCTA";
 
 import seniorLivingImg from "../../assets/images/Seniorliving.png";
 import StructuredData from "../../components/StructuredData";
@@ -302,7 +303,8 @@ const Land = () => {
         </div>
       </div>
 
-      {/* ===== FOOTER ===== */}
+      {/* ===== FOOTER CTA + GLOBAL FOOTER ===== */}
+      <FooterCTA />
       <Footer />
     </>
   );

@@ -5,6 +5,7 @@ import "./Hotel.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import FooterCTA from "../../components/Footer/FooterCTA";
 import StructuredData from "../../components/StructuredData";
 
 const createSlug = (title = "") =>
@@ -248,7 +249,8 @@ const Hotel = () => {
         </div>
       </div>
 
-      {/* ===== FOOTER ===== */}
+      {/* ===== FOOTER CTA + GLOBAL FOOTER ===== */}
+      <FooterCTA />
       <Footer />
     </>
   );
