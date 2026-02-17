@@ -7,6 +7,13 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import StructuredData from "../../components/StructuredData";
 
+const createSlug = (title = "") =>
+  title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+
 const ExitedPortfolio = () => {
   const navigate = useNavigate();
   const [properties, setProperties] = useState([]);
@@ -85,7 +92,14 @@ const ExitedPortfolio = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setProperties(data.data || []);
+        const formatted = (data.data || []).map((item) => ({
+          id: item.id,
+          slug: createSlug(item.title || ""),
+          title: item.title,
+          location: item.location,
+          image: item.image,
+        }));
+        setProperties(formatted);
         setLoading(false);
       })
       .catch((err) => {
@@ -230,7 +244,7 @@ const ExitedPortfolio = () => {
                 <div 
                   key={prop.id} 
                   className="property-card"
-                  onClick={() => navigate(`/portfolio/property/${prop.id}`, { state: { from: 'exited-portfolio' } })}
+                  onClick={() => navigate(`/portfolio/property/${prop.slug}`, { state: { from: 'exited-portfolio' } })}
                   style={{ cursor: 'pointer' }}
                 >
                   <div className="property-img-container">

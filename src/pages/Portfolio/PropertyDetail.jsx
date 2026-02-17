@@ -4,8 +4,15 @@ import "./PropertyDetail.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
+const createSlug = (title = "") =>
+  title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+
 const PropertyDetail = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
   const [property, setProperty] = useState(null);
@@ -15,14 +22,14 @@ const PropertyDetail = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [id]);
+  }, [slug]);
 
   useEffect(() => {
     setLoading(true);
     setProperty(null);
     setSameCategoryProperties([]);
     
-    // Fetch all properties and find the one matching the ID
+    // Fetch all properties and find the one matching the slug
     fetch(`https://impex-capital-strapi-production.up.railway.app/api/properties?populate=*&pagination[pageSize]=200`)
       .then((res) => {
         if (!res.ok) {
@@ -40,8 +47,10 @@ const PropertyDetail = () => {
           throw new Error("Properties data not found");
         }
         
-        // Find the property with matching ID
-        const foundProperty = data.data.find((item) => item.id === parseInt(id));
+        // Find the property with matching slug (derived from title)
+        const foundProperty = data.data.find(
+          (item) => createSlug(item.title || "") === slug
+        );
         
         if (!foundProperty) {
           throw new Error("Property not found");
@@ -62,10 +71,17 @@ const PropertyDetail = () => {
         const categoryLabel = foundProperty.category;
         if (categoryLabel) {
           const sameCategory = data.data
-            .filter((item) => item.category === categoryLabel && item.id !== parseInt(id))
+            .filter(
+              (item) =>
+                item.category === categoryLabel &&
+                createSlug(item.title || "") !== slug
+            )
             .map((item) => ({
               id: item.id,
-              category: item.category ? item.category.toLowerCase().replace(/\s+/g, "-") : "",
+              slug: createSlug(item.title || ""),
+              category: item.category
+                ? item.category.toLowerCase().replace(/\s+/g, "-")
+                : "",
               title: item.title,
               location: item.location,
               image: item.image?.url
@@ -82,7 +98,7 @@ const PropertyDetail = () => {
         setSameCategoryProperties([]);
         setLoading(false);
       });
-  }, [id]);
+  }, [slug]);
 
   const scrollCarousel = (direction) => {
     if (carouselRef.current) {
@@ -174,7 +190,7 @@ const PropertyDetail = () => {
                     className="carousel-item"
                     onClick={() => {
                       const from = location.state?.from || new URLSearchParams(location.search).get('from') || 'portfolio';
-                      navigate(`/portfolio/property/${item.id}`, { state: { from } });
+                      navigate(`/portfolio/property/${item.slug}`, { state: { from } });
                     }}
                   >
                     <img src={item.image} alt={item.title} />
