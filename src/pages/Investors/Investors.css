@@ -99,6 +99,9 @@
   border-radius: 0;
   border: 1px solid var(--text-gold);
   cursor: pointer;
+  width: 350px;
+  flex-shrink: 0;
+  text-align: center;
 }
 
 .btn-primary {
