@@ -1,17 +1,55 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
+  const location = useLocation();
+
+  const isActive = (path) => {
+    if (path === "/") {
+      return location.pathname === "/";
+    }
+    return (
+      location.pathname === path ||
+      location.pathname.startsWith(`${path}/`)
+    );
+  };
+
   return (
     <footer className="footer-portfolio">
       <div className="footer-portfolio-content">
         <div className="footer-section">
           <h3 className="footer-section-title">Company</h3>
           <nav className="footer-nav">
-            <Link to="/">About Us</Link>
-            <Link to="/team">Team</Link>
-            <Link to="/investors">Investors</Link>
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/" className={isActive("/") ? "active" : ""}>
+              Home
+            </Link>
+            <Link to="/team" className={isActive("/team") ? "active" : ""}>
+              Team
+            </Link>
+            <Link
+              to="/portfolio"
+              className={isActive("/portfolio") ? "active" : ""}
+            >
+              Portfolio
+            </Link>
+            <Link
+              to="/insights"
+              className={isActive("/insights") ? "active" : ""}
+            >
+              Insights
+            </Link>
+            <Link
+              to="/investors"
+              className={isActive("/investors") ? "active" : ""}
+            >
+              Investors
+            </Link>
+            <Link
+              to="/contact"
+              className={isActive("/contact") ? "active" : ""}
+            >
+              Contact Us
+            </Link>
           </nav>
         </div>
         
