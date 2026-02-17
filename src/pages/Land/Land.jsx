@@ -9,6 +9,13 @@ import Footer from "../../components/Footer/Footer";
 import seniorLivingImg from "../../assets/images/Seniorliving.png";
 import StructuredData from "../../components/StructuredData";
 
+const createSlug = (title = "") =>
+  title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+
 const Land = () => {
   const navigate = useNavigate();
   const [properties, setProperties] = useState([]);
@@ -87,7 +94,14 @@ const Land = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setProperties(data.data || []);
+        const formatted = (data.data || []).map((item) => ({
+          id: item.id,
+          slug: createSlug(item.title || ""),
+          title: item.title,
+          location: item.location,
+          image: item.image,
+        }));
+        setProperties(formatted);
         setLoading(false);
       })
       .catch((err) => {
@@ -265,7 +279,7 @@ const Land = () => {
                 <div 
                   key={prop.id} 
                   className="property-card"
-                  onClick={() => navigate(`/portfolio/property/${prop.id}`, { state: { from: 'land' } })}
+                  onClick={() => navigate(`/portfolio/property/${prop.slug}`, { state: { from: 'land' } })}
                   style={{ cursor: 'pointer' }}
                 >
                   <div className="property-img-container">

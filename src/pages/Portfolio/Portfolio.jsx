@@ -7,6 +7,13 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import StructuredData from "../../components/StructuredData";
 
+const createSlug = (title = "") =>
+  title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+
 const Portfolio = () => {
   const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState("all");
@@ -45,15 +52,19 @@ const Portfolio = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        const formatted = data.data.map((item) => ({
-          id: item.id,
-          category: item.category.toLowerCase().replace(/\s+/g, "-"),
-          title: item.title,
-          location: item.location,
-          image: item.image?.url
-            ? `https://impex-capital-strapi-production.up.railway.app${item.image.url}`
-            : "https://via.placeholder.com/600x400?text=No+Image",
-        }));
+        const formatted = data.data.map((item) => {
+          const title = item.title || "";
+          return {
+            id: item.id,
+            slug: createSlug(title),
+            category: item.category.toLowerCase().replace(/\s+/g, "-"),
+            title,
+            location: item.location,
+            image: item.image?.url
+              ? `https://impex-capital-strapi-production.up.railway.app${item.image.url}`
+              : "https://via.placeholder.com/600x400?text=No+Image",
+          };
+        });
         setPortfolioItems(formatted);
       })
       .catch((err) => console.error("CMS Fetch Error:", err));
@@ -207,7 +218,7 @@ const Portfolio = () => {
                     : ""
                     }`}
                   data-category={item.category}
-                  onClick={() => navigate(`/portfolio/property/${item.id}`, { state: { from: 'portfolio' } })}
+                  onClick={() => navigate(`/portfolio/property/${item.slug}`, { state: { from: 'portfolio' } })}
                   style={{ cursor: 'pointer' }}
                 >
                   <div className="p-img-container">

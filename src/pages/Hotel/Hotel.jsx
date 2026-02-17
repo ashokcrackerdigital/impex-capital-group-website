@@ -7,6 +7,13 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import StructuredData from "../../components/StructuredData";
 
+const createSlug = (title = "") =>
+  title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+
 const Hotel = () => {
   const navigate = useNavigate();
   const [properties, setProperties] = useState([]);
@@ -84,7 +91,14 @@ const Hotel = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setProperties(data.data || []);
+        const formatted = (data.data || []).map((item) => ({
+          id: item.id,
+          slug: createSlug(item.title || ""),
+          title: item.title,
+          location: item.location,
+          image: item.image,
+        }));
+        setProperties(formatted);
       })
       .catch((err) => {
         console.error("Error fetching hotel properties:", err);
@@ -218,7 +232,7 @@ const Hotel = () => {
               <div 
                 key={prop.id} 
                 className="property-card"
-                onClick={() => navigate(`/portfolio/property/${prop.id}`, { state: { from: 'hotel' } })}
+                onClick={() => navigate(`/portfolio/property/${prop.slug}`, { state: { from: 'hotel' } })}
                 style={{ cursor: 'pointer' }}
               >
                 <div className="property-img-container">

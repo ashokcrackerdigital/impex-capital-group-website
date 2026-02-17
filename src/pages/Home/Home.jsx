@@ -11,10 +11,8 @@ import multifamilyImg from "../../assets/images/multifamily.png";
 import seniorLivingImg from "../../assets/images/Seniorliving.png";
 import topInvestorImg from "../../assets/images/topinvestor.png";
 import bottomInvestorImg from "../../assets/images/Bottominvestor.png";
-import denverImg from "../../assets/images/denver.png";
-import ivfundImg from "../../assets/images/ivfund.png";
-import houstonImg from "../../assets/images/houston.png";
 import StructuredData from "../../components/StructuredData";
+import { articles } from "../Insights/articlesData";
 
 const Home = () => {
   /* Scroll Reveal Animation */
@@ -318,46 +316,28 @@ const Home = () => {
           <h2>Latest News</h2>
         </div>
         <div className="news-grid">
-          <div className="news-card">
-            <div className="news-img-wrapper">
-              <img src={denverImg} className="news-img" alt="Insights Denver" />
-            </div>
-            <div className="news-content">
-              <div className="news-meta">Nov 2024</div>
-              <h3>
-                Expansion Into Colorado: ICG Acquires Premium Multifamily Asset
-              </h3>
-              <Link to="/insights" className="read-btn">
-                Read Article
-              </Link>
-            </div>
-          </div>
-
-          <div className="news-card">
-            <div className="news-img-wrapper">
-              <img src={ivfundImg} className="news-img" alt="News Fund IV" />
-            </div>
-            <div className="news-content">
-              <div className="news-meta">Oct 2024</div>
-              <h3>Impex Capital Group Closes Fund IV with $500M Raised</h3>
-              <Link to="/insights" className="read-btn">
-                Read Article
-              </Link>
-            </div>
-          </div>
-
-          <div className="news-card">
-            <div className="news-img-wrapper">
-              <img src={houstonImg} className="news-img" alt="News Houston" />
-            </div>
-            <div className="news-content">
-              <div className="news-meta">Sep 2024</div>
-              <h3>New Development Project Breaks Ground in Houston Metro</h3>
-              <Link to="/insights" className="read-btn">
-                Read Article
-              </Link>
-            </div>
-          </div>
+          {articles.slice(0, 3).map((article) => {
+            // Extract month and year from date (format: "Dec 01, 2022 • Houston Multifamily")
+            const dateMatch = article.date.match(/(\w+)\s+\d+,\s+(\d+)/);
+            const formattedDate = dateMatch 
+              ? `${dateMatch[1]} ${dateMatch[2]}` 
+              : article.date.split(' • ')[0];
+            
+            return (
+              <div key={article.id} className="news-card">
+                <div className="news-img-wrapper">
+                  <img src={article.img} className="news-img" alt={article.title} />
+                </div>
+                <div className="news-content">
+                  <div className="news-meta">{formattedDate}</div>
+                  <h3>{article.title}</h3>
+                  <Link to={`/insights/article/${article.id}`} className="read-btn">
+                    Read Article
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 

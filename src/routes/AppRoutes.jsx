@@ -23,7 +23,7 @@ const AppRoutes = () => {
                 <Route path="/team/ash-shah" element={<AshShah />} />
                 <Route path="/team/nisha-smith" element={<NishaSmith />} />
                 <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/portfolio/property/:id" element={<PropertyDetail />} />
+                <Route path="/portfolio/property/:slug" element={<PropertyDetail />} />
                 <Route path="/investors" element={<Investors />} />
                 <Route path="/insights" element={<Insights />} />
                 <Route path="/insights/article/:id" element={<ArticleDetail />} />
