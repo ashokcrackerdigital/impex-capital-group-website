@@ -815,4 +815,22 @@ img {
     margin-bottom: 0rem;
     text-align: center !important;
   }
+
+  /* Featured In - Mobile */
+  .featured-in {
+    padding: 2.5rem 5%;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .featured-label {
+    font-size: 0.65rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .press-logo {
+    font-size: 0.95rem;
+  }
 }
