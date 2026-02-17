@@ -236,7 +236,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                5251 Westheimer Suite 925<br />
+                5251&nbsp;Westheimer&nbsp;Suite&nbsp;925<br />
                 Houston, TX 77056
               </a>
             </p>
