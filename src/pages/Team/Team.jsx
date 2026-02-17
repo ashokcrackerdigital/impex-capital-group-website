@@ -57,10 +57,28 @@ const Team = () => {
     setCurrentMember(
       (prev) => (prev + offset + teamMembers.length) % teamMembers.length
     );
+    // Scroll to name section so it starts from the top
+    setTimeout(() => {
+      const teamCopy = document.getElementById("team-copy");
+      if (teamCopy) {
+        const yOffset = -100; // Offset from top
+        const y = teamCopy.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 0);
   };
 
   const goToMemberByIndex = (index) => {
     setCurrentMember(index);
+    // Scroll to name section so it starts from the top
+    setTimeout(() => {
+      const teamCopy = document.getElementById("team-copy");
+      if (teamCopy) {
+        const yOffset = -100; // Offset from top
+        const y = teamCopy.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 0);
   };
 
   const currentPerson = teamMembers[currentMember];
@@ -119,9 +137,9 @@ const Team = () => {
           </div>
         </div>
 
-        <div className="team-layout reveal">
+        <div id="team-layout" className="team-layout reveal">
           {/* Left: text */}
-          <div className="team-copy">
+          <div id="team-copy" className="team-copy">
             <span className="team-tag">Executive Profiles</span>
             <h2 className="team-name">{currentPerson.name}</h2>
             <p className="team-title">{currentPerson.role}</p>
@@ -165,7 +183,7 @@ const Team = () => {
           </div>
 
           {/* Right: main image + thumbnails */}
-          <div className="team-visual">
+          <div id="team-visual" className="team-visual">
             <div className="team-main">
               <div className="team-main-inner">
                 <img
