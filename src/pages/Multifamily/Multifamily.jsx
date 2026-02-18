@@ -133,10 +133,7 @@ const Multifamily = () => {
       <Navbar />
 
       {/* ===== HERO ===== */}
-      <section
-        className="multifamily-hero"
-        style={{ position: "relative" }}
-      >
+      <section className="multifamily-hero" style={{ position: "relative" }}>
         <div
           className="service-hero-bg"
           style={{
@@ -148,8 +145,8 @@ const Multifamily = () => {
             backgroundImage: `url(${multifamilyImg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            opacity: 0.15,
-            filter: "grayscale(100%) brightness(0.3)",
+            opacity: 0.3,
+            filter: "grayscale(60%) brightness(0.65)",
             zIndex: 1,
           }}
         ></div>
