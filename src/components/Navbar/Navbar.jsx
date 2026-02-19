@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -22,17 +22,16 @@ const Navbar = () => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
   }, [isMenuOpen]);
 
-  const goTo = (path) => {
+  const closeMenu = () => {
     setIsMenuOpen(false);
-    navigate(path);
   };
 
   return (
     <>
       <nav className="navbar" ref={navbarRef}>
-        <div className="logo" onClick={() => goTo("/")}>
+        <Link to="/" className="logo" onClick={closeMenu}>
           IMPEX CAPITAL
-        </div>
+        </Link>
 
         <div className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <span className="menu-text">{isMenuOpen ? "Close" : "Menu"}</span>
@@ -57,12 +56,13 @@ const Navbar = () => {
               const isActive = location.pathname === path;
               return (
                 <li key={path}>
-                  <button
+                  <Link
+                    to={path}
                     className={`link-reset ${isActive ? "active" : ""}`}
-                    onClick={() => goTo(path)}
+                    onClick={closeMenu}
                   >
                     {label}
-                  </button>
+                  </Link>
                   <span className="menu-num">{num}</span>
                 </li>
               );
