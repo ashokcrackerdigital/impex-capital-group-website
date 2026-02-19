@@ -254,7 +254,9 @@
     align-items: center !important;
     position: absolute !important;
     bottom: 40px !important;
-    width: calc(100% - 4rem) !important;
+    left: 5% !important;
+    right: 5% !important;
+    width: auto !important;
     margin-top: 0 !important;
   }
 
@@ -386,7 +388,8 @@
   }
 
   .link-reset {
-    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    /* Increased from 1.4rem/1.8rem */
     padding: 0.2rem 0;
   }
 
