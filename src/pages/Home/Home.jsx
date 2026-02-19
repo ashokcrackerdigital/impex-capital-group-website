@@ -38,8 +38,9 @@ const Home = () => {
     <>
       <SEO
         title="Impex Capital Group | Real Estate Investment Firm Houston"
-        description="Impex Capital Group is a premier real estate investment firm in Houston, TX, managing $450M+ in assets. We specialize in value-add acquisitions and strategic investments across the US."
-        ogImage="https://impexcapitalgroup.com/assets/images/multifamily.png"
+        description="Premier real estate investment firm in Houston, TX, managing $450M+ in assets. Specializing in value-add multifamily, land, and commercial investments."
+        canonical="https://impexcapitalgroup.com/"
+        ogImage="https://impexcapitalgroup.com/assets/images/multifamily.webp"
       />
       <StructuredData
         breadcrumbs={[
