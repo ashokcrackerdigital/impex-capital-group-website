@@ -7,8 +7,9 @@ import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
 
 import ashShahImg from "../../assets/images/AshShah.webp";
-import heroSectionImage from "../../assets/images/heroSetionImage.webp";
 import StructuredData from "../../components/StructuredData";
+
+const heroSectionImage = "/assets/images/heroSetionImage.webp";
 
 const AshShah = () => {
   /* Scroll Reveal Animation */
