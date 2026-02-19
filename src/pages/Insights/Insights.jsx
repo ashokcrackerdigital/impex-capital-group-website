@@ -6,6 +6,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
 import StructuredData from "../../components/StructuredData";
+import SEO from "../../components/SEO";
 import { articlesSummary as articles } from "./articlesSummary";
 
 const Insights = () => {
@@ -31,6 +32,12 @@ const Insights = () => {
 
   return (
     <>
+      <SEO
+        title="Insights & News | Impex Capital Group"
+        description="Latest updates and market insights from Impex Capital Group including acquisitions, developments, and industry news."
+        canonical="https://impexcapitalgroup.com/insights"
+        ogImage="https://impexcapitalgroup.com/assets/images/heroSetionImage.webp"
+      />
       <StructuredData
         breadcrumbs={[
           { name: "Home", url: "https://impexcapitalgroup.com" },
