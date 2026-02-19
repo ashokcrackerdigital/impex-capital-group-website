@@ -48,7 +48,7 @@ const Footer = () => {
               to="/contact"
               className={isActive("/contact") ? "active" : ""}
             >
-              Contact Us
+              Contact
             </Link>
           </nav>
         </div>
