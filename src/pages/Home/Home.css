@@ -356,6 +356,28 @@ img {
   max-width: 600px;
 }
 
+/* Desktop - ensure no empty space, images left, text right */
+@media (min-width: 1025px) {
+  .investors-section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .investors-visual {
+    width: 50%;
+    flex-direction: column;
+  }
+
+  .investors-content {
+    width: 50%;
+    padding: 6rem 5%;
+  }
+
+  .investors-content p {
+    max-width: 100%;
+  }
+}
+
 .btn-outline {
   display: inline-block;
   width: fit-content;
@@ -746,6 +768,30 @@ img {
     flex-direction: column;
   }
 
+  .investors-content {
+    width: 100%;
+    padding: 3rem 8% 2rem;
+    border-left: none;
+    text-align: center;
+    align-items: center;
+    order: 1;
+  }
+
+  .investors-content p {
+    max-width: 90%;
+  }
+
+  .investors-visual {
+    width: 100%;
+    order: 2;
+    flex-direction: row;
+  }
+
+  .inv-img {
+    width: 50%;
+    height: 220px;
+  }
+
   .section-header h2 {
     font-size: 2.0rem;
   }
@@ -817,34 +863,7 @@ img {
     box-sizing: border-box;
   }
 
-  /* Investors layout - mobile */
-  .investors-section {
-    flex-direction: column;
-  }
-
-  .investors-content {
-    width: 100%;
-    padding: 3rem 8% 2rem;
-    border-left: none;
-    text-align: center;
-    align-items: center;
-    order: 1;
-  }
-
-  .investors-content p {
-    max-width: 90%;
-  }
-
-  .investors-visual {
-    width: 100%;
-    order: 2;
-    flex-direction: row;
-  }
-
-  .inv-img {
-    width: 50%;
-    height: 220px;
-  }
+  /* Investors layout - mobile (already handled in 1024px media query above) */
 
   .map-section {
     padding: 0 5% 3rem;
