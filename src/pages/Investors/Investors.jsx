@@ -7,6 +7,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
 import StructuredData from "../../components/StructuredData";
+import SEO from "../../components/SEO";
 
 const Investors = () => {
   /* Scroll Reveal Animation */
@@ -27,6 +28,12 @@ const Investors = () => {
 
   return (
     <>
+      <SEO
+        title="Investors | Impex Capital Group"
+        description="Partnering with accredited investors to acquire, develop, and manage institutional-quality commercial real estate assets across high-growth U.S. markets."
+        canonical="https://impexcapitalgroup.com/investors"
+        ogImage="https://impexcapitalgroup.com/assets/images/heroSetionImage.webp"
+      />
       <StructuredData
         breadcrumbs={[
           { name: "Home", url: "https://impexcapitalgroup.com" },
