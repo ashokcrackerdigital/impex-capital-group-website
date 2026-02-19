@@ -426,12 +426,16 @@ img {
   letter-spacing: 0.5px;
 }
 
-.beacon:hover::after {
+.beacon:hover::after,
+.beacon:active::after,
+.beacon:focus::after {
   opacity: 1;
   bottom: 30px;
 }
 
-.beacon:hover {
+.beacon:hover,
+.beacon:active,
+.beacon:focus {
   transform: translate(-50%, -50%) scale(1.8);
   background: #f0d070;
 }
@@ -801,6 +805,94 @@ img {
     margin: 2rem auto 0;
     min-height: 320px;
     aspect-ratio: 16 / 9;
+    overflow: visible;
+  }
+
+  /* Make beacons more touch-friendly on mobile */
+  .beacon {
+    width: 10px;
+    height: 10px;
+    /* Increase touch target area */
+    padding: 8px;
+    margin: -8px;
+  }
+
+  /* Mobile tooltip fixes - ensure full text visibility */
+  .beacon::after {
+    white-space: normal !important;
+    max-width: 140px !important;
+    min-width: 90px !important;
+    word-wrap: break-word !important;
+    text-align: center !important;
+    /* Center by default, but allow adjustment */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    /* Add padding to prevent edge overflow */
+    padding: 8px 10px !important;
+    font-size: 11px !important;
+  }
+
+  .beacon:hover::after,
+  .beacon:active::after,
+  .beacon:focus::after {
+    white-space: normal !important;
+    max-width: 140px !important;
+  }
+
+  /* For beacons on left side (left < 15%) - align tooltip to left of beacon */
+  .b-los-angeles::after,
+  .b-el-dorado-hills::after,
+  .b-denver::after,
+  .b-fort-collins::after,
+  .b-parker::after,
+  .b-n-ogden::after {
+    left: 0 !important;
+    transform: translateX(0) !important;
+    margin-left: 5px !important;
+  }
+
+  .b-los-angeles:hover::after,
+  .b-el-dorado-hills:hover::after,
+  .b-el-dorado-hills:active::after,
+  .b-el-dorado-hills:focus::after,
+  .b-denver:hover::after,
+  .b-fort-collins:hover::after,
+  .b-parker:hover::after,
+  .b-n-ogden:hover::after {
+    left: 0 !important;
+    transform: translateX(0) !important;
+    margin-left: 5px !important;
+  }
+
+  /* For beacons on right side (left > 70%) - align tooltip to right of beacon */
+  .b-charlotte::after,
+  .b-macon::after,
+  .b-philadelphia::after,
+  .b-spartanburg::after,
+  .b-fort-lauderdale::after,
+  .b-washington-dc::after {
+    left: auto !important;
+    right: 0 !important;
+    transform: translateX(0) !important;
+    margin-right: 5px !important;
+  }
+
+  .b-charlotte:hover::after,
+  .b-macon:hover::after,
+  .b-philadelphia:hover::after,
+  .b-spartanburg:hover::after,
+  .b-fort-lauderdale:hover::after,
+  .b-washington-dc:hover::after,
+  .b-charlotte:active::after,
+  .b-macon:active::after,
+  .b-philadelphia:active::after,
+  .b-spartanburg:active::after,
+  .b-fort-lauderdale:active::after,
+  .b-washington-dc:active::after {
+    left: auto !important;
+    right: 0 !important;
+    transform: translateX(0) !important;
+    margin-right: 5px !important;
   }
 
   .section-header {
