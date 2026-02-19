@@ -7,7 +7,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
 
-import multifamilyImg from "../../assets/images/multifamily.png";
+import multifamilyImg from "../../assets/images/multifamily.webp";
 import StructuredData from "../../components/StructuredData";
 
 const createSlug = (title = "") =>
@@ -266,8 +266,8 @@ const Multifamily = () => {
               : "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80";
 
             return (
-              <div 
-                key={prop.id} 
+              <div
+                key={prop.id}
                 className="property-card"
                 onClick={() => navigate(`/portfolio/property/${prop.slug}`, { state: { from: 'multifamily' } })}
                 style={{ cursor: 'pointer' }}

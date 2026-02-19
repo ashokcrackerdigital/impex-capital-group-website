@@ -7,8 +7,8 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
 
-import ashShahImg from "../../assets/images/AshShah.png";
-import nishaSmithImg from "../../assets/images/NishaSmith.png";
+import ashShahImg from "../../assets/images/AshShah.webp";
+import nishaSmithImg from "../../assets/images/NishaSmith.webp";
 import StructuredData from "../../components/StructuredData";
 
 const Team = () => {
