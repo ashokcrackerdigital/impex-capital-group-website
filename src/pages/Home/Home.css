@@ -745,6 +745,30 @@ img {
   } */
 }
 
+/* Tablet and small laptop view - 600px to 1024px - 2x2 grid for stats */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+
+  /* Show divider only between first and second column items (first row) */
+  .stat-item:nth-child(2)::after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 70%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
 @media (max-width: 768px) {
   /* Ensure video covers full hero at all zoom levels */
   .hero-video {
