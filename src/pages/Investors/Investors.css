@@ -653,4 +653,14 @@
   .pill {
     text-align: center;
   }
+
+  /* Center tag-tile text on mobile */
+  .tag-tile {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .tag-tile span {
+    text-align: center;
+  }
 }
