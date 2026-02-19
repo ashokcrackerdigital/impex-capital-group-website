@@ -6,8 +6,8 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
 
-import nishaSmithImg from "../../assets/images/NishaSmith.png";
-import heroSectionImage from "../../assets/images/heroSetionImage.jpg";
+import nishaSmithImg from "../../assets/images/NishaSmith.webp";
+import heroSectionImage from "../../assets/images/heroSetionImage.webp";
 import StructuredData from "../../components/StructuredData";
 
 const NishaSmith = () => {
