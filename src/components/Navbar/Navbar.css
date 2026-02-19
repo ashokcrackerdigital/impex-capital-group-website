@@ -321,6 +321,10 @@
     margin-bottom: 0.6rem;
   }
 
+  .menu-links {
+    margin-top: 3rem;
+  }
+
   .menu-footer {
     bottom: 35px;
     padding-top: 0.5rem;
@@ -395,6 +399,10 @@
 
   .menu-links li {
     margin-bottom: 0.3rem;
+  }
+
+  .menu-links {
+    margin-top: 2rem;
   }
 
   .menu-footer {

@@ -67,13 +67,18 @@ const Home = () => {
 
       {/* ===== HERO ===== */}
       <header className="hero">
+        <img
+          src={multifamilyImg}
+          alt="Hero background"
+          className="hero-video"
+          style={{ zIndex: -2 }}
+        />
         <video
           autoPlay
           muted
           loop
           playsInline
           className="hero-video"
-          poster={multifamilyImg}
         >
           <source src={require("../../assets/videos/mobile_Luxury_Apartment_Drone_Footage.mp4")} type="video/mp4" media="(max-width: 768px)" />
           <source src={heroVideo} type="video/mp4" />
