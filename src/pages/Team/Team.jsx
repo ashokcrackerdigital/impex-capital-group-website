@@ -10,6 +10,7 @@ import FooterCTA from "../../components/Footer/FooterCTA";
 import ashShahImg from "../../assets/images/AshShah.webp";
 import nishaSmithImg from "../../assets/images/NishaSmith.webp";
 import StructuredData from "../../components/StructuredData";
+import SEO from "../../components/SEO";
 
 const Team = () => {
   const [currentMember, setCurrentMember] = useState(0);
@@ -98,6 +99,11 @@ const Team = () => {
               "Impex Capital Group is led by an experienced executive team with expertise in real estate investment and asset management."
           }
         ]}
+      />
+      <SEO
+        title="Our Team"
+        description="Meet the leadership team at Impex Capital Group. Seasoned real estate operators and capital markets professionals with over 25 years of experience and a $1.8B+ portfolio."
+        canonical="https://impexcapitalgroup.com/team"
       />
 
       {/* ===== NAVBAR ===== */}
