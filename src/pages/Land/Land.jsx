@@ -7,7 +7,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
 
-import seniorLivingImg from "../../assets/images/Seniorliving.png";
+import seniorLivingImg from "../../assets/images/Seniorliving.webp";
 import StructuredData from "../../components/StructuredData";
 
 const createSlug = (title = "") =>
@@ -277,8 +277,8 @@ const Land = () => {
                 : "https://images.unsplash.com/photo-1555636222-cae831e670b3?auto=format&fit=crop&q=80";
 
               return (
-                <div 
-                  key={prop.id} 
+                <div
+                  key={prop.id}
                   className="property-card"
                   onClick={() => navigate(`/portfolio/property/${prop.slug}`, { state: { from: 'land' } })}
                   style={{ cursor: 'pointer' }}
