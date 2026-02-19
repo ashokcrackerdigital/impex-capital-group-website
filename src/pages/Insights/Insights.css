@@ -51,6 +51,12 @@
   z-index: -1;
 }
 
+@media (max-width: 768px) {
+  .news-hero::before {
+    background-image: url('../../assets/images/newsherosection_mobile.webp');
+  }
+}
+
 .news-hero::after {
   content: '';
   position: absolute;

@@ -72,9 +72,11 @@ const Home = () => {
           loop
           playsInline
           className="hero-video"
-          src={heroVideo}
           poster={multifamilyImg}
-        />
+        >
+          <source src={require("../../assets/videos/mobile_Luxury_Apartment_Drone_Footage.mp4")} type="video/mp4" media="(max-width: 768px)" />
+          <source src={heroVideo} type="video/mp4" />
+        </video>
         <div className="hero-content reveal active">
           <span className="hero-subtitle">
             Building Value. Creating Opportunities.
