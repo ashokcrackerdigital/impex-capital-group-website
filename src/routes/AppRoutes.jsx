@@ -1,22 +1,32 @@
+import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Home from "../pages/Home/Home";
-import Team from "../pages/Team/Team";
-import AshShah from "../pages/Team/AshShah";
-import NishaSmith from "../pages/Team/NishaSmith";
-import Contact from "../pages/Contact/Contact";
-import Insights from "../pages/Insights/Insights";
-import ArticleDetail from "../pages/Insights/ArticleDetail";
-import Investors from "../pages/Investors/Investors";
-import Multifamily from "../pages/Multifamily/Multifamily";
-import Land from "../pages/Land/Land";
-import Hotel from "../pages/Hotel/Hotel";
-import ExitedPortfolio from "../pages/ExitedPortfolio/ExitedPortfolio";
-import Portfolio from "../pages/Portfolio/Portfolio";
-import PropertyDetail from "../pages/Portfolio/PropertyDetail";
+
+// Lazy load other pages
+const Team = lazy(() => import("../pages/Team/Team"));
+const AshShah = lazy(() => import("../pages/Team/AshShah"));
+const NishaSmith = lazy(() => import("../pages/Team/NishaSmith"));
+const Contact = lazy(() => import("../pages/Contact/Contact"));
+const Insights = lazy(() => import("../pages/Insights/Insights"));
+const ArticleDetail = lazy(() => import("../pages/Insights/ArticleDetail"));
+const Investors = lazy(() => import("../pages/Investors/Investors"));
+const Multifamily = lazy(() => import("../pages/Multifamily/Multifamily"));
+const Land = lazy(() => import("../pages/Land/Land"));
+const Hotel = lazy(() => import("../pages/Hotel/Hotel"));
+const ExitedPortfolio = lazy(() => import("../pages/ExitedPortfolio/ExitedPortfolio"));
+const Portfolio = lazy(() => import("../pages/Portfolio/Portfolio"));
+const PropertyDetail = lazy(() => import("../pages/Portfolio/PropertyDetail"));
+
+const Loading = () => (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <div className="loading-spinner"></div>
+    </div>
+);
 
 const AppRoutes = () => {
     return (
+        <Suspense fallback={<Loading />}>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/team" element={<Team />} />
@@ -33,6 +43,7 @@ const AppRoutes = () => {
                 <Route path="/exited-portfolio" element={<ExitedPortfolio />} />
                 <Route path="/commercial" element={<Hotel />} />
             </Routes>
+        </Suspense>
     );
 };
 

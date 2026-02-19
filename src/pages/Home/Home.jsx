@@ -8,11 +8,11 @@ import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
 import SEO from "../../components/SEO";
 
-import heroVideo from "../../assets/videos/Luxury_Apartment_Drone_Footage.mp4";
-import multifamilyImg from "../../assets/images/multifamily.png";
-import seniorLivingImg from "../../assets/images/Seniorliving.png";
-import topInvestorImg from "../../assets/images/topinvestor.png";
-import bottomInvestorImg from "../../assets/images/Bottominvestor.png";
+import heroVideo from "../../assets/videos/opt_Luxury_Apartment_Drone_Footage.mp4";
+import multifamilyImg from "../../assets/images/multifamily.webp";
+import seniorLivingImg from "../../assets/images/Seniorliving.webp";
+import topInvestorImg from "../../assets/images/topinvestor.webp";
+import bottomInvestorImg from "../../assets/images/Bottominvestor.webp";
 import StructuredData from "../../components/StructuredData";
 import { articles } from "../Insights/articlesData";
 
