@@ -402,6 +402,12 @@
   min-width: 0 !important;
 }
 
+#vboutEmbedFormWrapper-182767 .vboutEmbedFormRow label.vfb-error{
+  color: #f00 !important;
+  text-transform: none !important;
+  font-size: 0.8rem !important;
+}
+
 /* ===============================
    ROW SPACING (FORM-GROUP LIKE)
 ================================ */
@@ -522,7 +528,6 @@
 }
 
 #vboutEmbedFormWrapper-182767 label::after {
-  content: '*';
   color: var(--text-gold);
   margin-left: 3px;
 }
