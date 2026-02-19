@@ -6,6 +6,7 @@ import "./Portfolio.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import StructuredData from "../../components/StructuredData";
+import SEO from "../../components/SEO";
 
 const createSlug = (title = "") =>
   title
@@ -115,6 +116,12 @@ const Portfolio = () => {
 
   return (
     <>
+      <SEO
+        title="Our Portfolio | Impex Capital Group"
+        description="Explore the Impex Capital Group portfolio, featuring over $1.8B+ in investments across multifamily, commercial, industrial, and land assets in the US."
+        canonical="https://impexcapitalgroup.com/portfolio"
+        ogImage="https://impexcapitalgroup.com/assets/images/heroSetionImage.webp"
+      />
       <StructuredData
         breadcrumbs={[
           { name: "Home", url: "https://impexcapitalgroup.com" },
