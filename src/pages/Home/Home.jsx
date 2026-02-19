@@ -13,7 +13,7 @@ import seniorLivingImg from "../../assets/images/Seniorliving.webp";
 import topInvestorImg from "../../assets/images/topinvestor.webp";
 import bottomInvestorImg from "../../assets/images/Bottominvestor.webp";
 import StructuredData from "../../components/StructuredData";
-import { articles } from "../Insights/articlesData";
+import { articlesSummary as articles } from "../Insights/articlesSummary";
 
 const multifamilyImg = "/assets/images/multifamily.webp";
 
