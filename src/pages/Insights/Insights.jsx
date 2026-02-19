@@ -6,7 +6,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
 import StructuredData from "../../components/StructuredData";
-import { articles } from "./articlesData";
+import { articlesSummary as articles } from "./articlesSummary";
 
 const Insights = () => {
   const navigate = useNavigate();
@@ -89,14 +89,14 @@ const Insights = () => {
 
         <div className="news-grid">
           {articles.map((item, i) => (
-            <article 
-              key={i} 
+            <article
+              key={i}
               className="news-card reveal"
               onClick={() => handleArticleClick(item.id)}
               style={{ cursor: 'pointer' }}
             >
               <div className="news-img-wrapper">
-                <img className="news-img" src={item.img} alt={item.title} />
+                <img className="news-img" src={item.img} alt={item.title} loading="lazy" />
                 <div className="news-badge">{item.badge}</div>
               </div>
               <div className="news-content">

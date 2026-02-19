@@ -3,12 +3,17 @@ import { useParams, useNavigate } from "react-router-dom";
 import "./ArticleDetail.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import { articles } from "./articlesData";
+import { articlesSummary } from "./articlesSummary";
+import { articlesContent } from "./articlesContent";
 
 const ArticleDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const article = articles.find((a) => a.id === parseInt(id));
+
+  const summary = articlesSummary.find((a) => a.id === parseInt(id));
+  const content = articlesContent.find((a) => a.id === parseInt(id));
+
+  const article = summary && content ? { ...summary, ...content } : null;
 
   useEffect(() => {
     window.scrollTo(0, 0);
