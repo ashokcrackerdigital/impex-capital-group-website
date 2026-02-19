@@ -104,9 +104,9 @@
 
 .menu-container {
   width: 100%;
-  max-width: 1200px;
-  /* extra top padding so first item is always fully visible below navbar, even when scrolled */
-  padding: 7.5rem 2rem 5rem;
+  /* max-width: 1200px; - Removed to ensure alignment with logo on wide screens */
+  /* extra top padding so first item is always fully visible below navbar */
+  padding: 7.5rem 5% 5rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -121,7 +121,8 @@
 
 .menu-links li {
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  /* Reduced from 1rem */
   position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -131,8 +132,9 @@
   background: none;
   border: none;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 5vw, 4rem);
-  color: #ffff;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  /* Reduced from 2rem, 5vw, 4rem */
+  color: #ffffff;
   cursor: pointer;
   transform: translateY(100%);
   opacity: 0;
@@ -140,7 +142,6 @@
   padding: 0;
   text-align: left;
   width: 100%;
-  color: #ffffff;
 }
 
 .menu-overlay.active .menu-links li,
@@ -305,17 +306,17 @@
 
   /* 1024px - bigger font like image */
   .menu-container {
-    padding: 8.5rem 2rem 5rem;
+    padding: 8.5rem 5% 5rem;
     justify-content: center;
   }
 
-  .menu-links button {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    padding: 0.4rem 0;
+  .link-reset {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    padding: 0.3rem 0;
   }
 
   .menu-links li {
-    margin-bottom: 0.9rem;
+    margin-bottom: 0.6rem;
   }
 
   .menu-footer {
@@ -327,17 +328,17 @@
 /* 1440px fix - reduce font size to fit properly, ensure footer doesn't overlap */
 @media (min-width: 1025px) and (max-width: 1600px) {
   .menu-container {
-    padding: 7rem 2rem 6rem;
+    padding: 7rem 5% 6rem;
     justify-content: space-between;
   }
 
   .menu-links li {
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
   }
 
-  .menu-links button {
-    font-size: clamp(2rem, 3vw, 2.8rem);
-    padding: 0.2rem 0;
+  .link-reset {
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+    padding: 0.1rem 0;
   }
 
   .menu-footer {
@@ -349,17 +350,17 @@
 /* 2560px and above - reduce font size further */
 @media (min-width: 1601px) {
   .menu-container {
-    padding: 7rem 2rem 5rem;
-    justify-content: space-between;
+    padding: 7rem 5% 5rem;
+    justify-content: center;
   }
 
   .menu-links li {
     margin-bottom: 0.6rem;
   }
 
-  .menu-links button {
-    font-size: clamp(2rem, 2.5vw, 2.8rem);
-    padding: 0.15rem 0;
+  .link-reset {
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
+    padding: 0.1rem 0;
   }
 
   .menu-footer {
@@ -380,17 +381,17 @@
   }
 
   .menu-container {
-    padding: 4rem 2rem 8rem;
+    padding: 4rem 4% 8rem;
     justify-content: flex-start;
   }
 
-  .menu-links button {
-    font-size: clamp(1.5rem, 5vw, 2rem);
-    padding: 0.25rem 0;
+  .link-reset {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    padding: 0.2rem 0;
   }
 
   .menu-links li {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
   }
 
   .menu-footer {
