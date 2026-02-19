@@ -293,6 +293,16 @@ img {
   filter: grayscale(100%) brightness(0.7);
 }
 
+@media (max-width: 768px) {
+  .sector-item:nth-child(1) .sector-bg {
+    background-image: url('../../assets/images/multifamily_mobile.webp') !important;
+  }
+
+  .sector-item:nth-child(2) .sector-bg {
+    background-image: url('../../assets/images/Seniorliving_mobile.webp') !important;
+  }
+}
+
 .sector-item:hover .sector-bg {
   transform: scale(1.1);
   filter: grayscale(0%) brightness(1);
@@ -816,6 +826,7 @@ img {
 }
 
 @media (max-width: 768px) {
+
   /* Ensure video covers full hero at all zoom levels */
   .hero-video {
     width: 100% !important;

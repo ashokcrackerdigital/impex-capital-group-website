@@ -6,8 +6,8 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
 
-import ashShahImg from "../../assets/images/AshShah.png";
-import heroSectionImage from "../../assets/images/heroSetionImage.jpg";
+import ashShahImg from "../../assets/images/AshShah.webp";
+import heroSectionImage from "../../assets/images/heroSetionImage.webp";
 import StructuredData from "../../components/StructuredData";
 
 const AshShah = () => {

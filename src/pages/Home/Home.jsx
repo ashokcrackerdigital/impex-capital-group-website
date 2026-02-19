@@ -6,12 +6,13 @@ import "./Home.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
+import SEO from "../../components/SEO";
 
-import heroVideo from "../../assets/videos/Luxury_Apartment_Drone_Footage.mp4";
-import multifamilyImg from "../../assets/images/multifamily.png";
-import seniorLivingImg from "../../assets/images/Seniorliving.png";
-import topInvestorImg from "../../assets/images/topinvestor.png";
-import bottomInvestorImg from "../../assets/images/Bottominvestor.png";
+import heroVideo from "../../assets/videos/opt_Luxury_Apartment_Drone_Footage.mp4";
+import multifamilyImg from "../../assets/images/multifamily.webp";
+import seniorLivingImg from "../../assets/images/Seniorliving.webp";
+import topInvestorImg from "../../assets/images/topinvestor.webp";
+import bottomInvestorImg from "../../assets/images/Bottominvestor.webp";
 import StructuredData from "../../components/StructuredData";
 import { articles } from "../Insights/articlesData";
 
@@ -34,6 +35,11 @@ const Home = () => {
 
   return (
     <>
+      <SEO
+        title="Impex Capital Group | Real Estate Investment Firm Houston"
+        description="Impex Capital Group is a premier real estate investment firm in Houston, TX, managing $450M+ in assets. We specialize in value-add acquisitions and strategic investments across the US."
+        ogImage="https://impexcapitalgroup.com/assets/images/multifamily.png"
+      />
       <StructuredData
         breadcrumbs={[
           {
@@ -66,13 +72,16 @@ const Home = () => {
           loop
           playsInline
           className="hero-video"
-          src={heroVideo}
-        />
+          poster={multifamilyImg}
+        >
+          <source src={require("../../assets/videos/mobile_Luxury_Apartment_Drone_Footage.mp4")} type="video/mp4" media="(max-width: 768px)" />
+          <source src={heroVideo} type="video/mp4" />
+        </video>
         <div className="hero-content reveal active">
           <span className="hero-subtitle">
             Building Value. Creating Opportunities.
           </span>
-          <h1>
+          <h1 className="hero-title">
             A LEGACY OF
             <br />
             SUCCESS
@@ -320,10 +329,10 @@ const Home = () => {
           {articles.slice(0, 3).map((article) => {
             // Extract month and year from date (format: "Dec 01, 2022 • Houston Multifamily")
             const dateMatch = article.date.match(/(\w+)\s+\d+,\s+(\d+)/);
-            const formattedDate = dateMatch 
-              ? `${dateMatch[1]} ${dateMatch[2]}` 
+            const formattedDate = dateMatch
+              ? `${dateMatch[1]} ${dateMatch[2]}`
               : article.date.split(' • ')[0];
-            
+
             return (
               <div key={article.id} className="news-card">
                 <div className="news-img-wrapper">
