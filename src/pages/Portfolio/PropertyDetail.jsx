@@ -28,7 +28,7 @@ const PropertyDetail = () => {
     setLoading(true);
     setProperty(null);
     setSameCategoryProperties([]);
-    
+
     // Fetch all properties and find the one matching the slug
     fetch(`https://impex-capital-strapi-production.up.railway.app/api/properties?populate=*&pagination[pageSize]=200`)
       .then((res) => {
@@ -42,20 +42,20 @@ const PropertyDetail = () => {
         if (data.error) {
           throw new Error(data.error.message || "Properties not found");
         }
-        
+
         if (!data.data || !Array.isArray(data.data)) {
           throw new Error("Properties data not found");
         }
-        
+
         // Find the property with matching slug (derived from title)
         const foundProperty = data.data.find(
           (item) => createSlug(item.title || "") === slug
         );
-        
+
         if (!foundProperty) {
           throw new Error("Property not found");
         }
-        
+
         const prop = {
           id: foundProperty.id,
           category: foundProperty.category,
@@ -180,6 +180,7 @@ const PropertyDetail = () => {
                 className="carousel-nav carousel-nav-left"
                 onClick={() => scrollCarousel("left")}
                 aria-label="Scroll left"
+                title="Previous"
               >
                 <i className="fa-solid fa-chevron-left"></i>
               </button>
@@ -205,6 +206,7 @@ const PropertyDetail = () => {
                 className="carousel-nav carousel-nav-right"
                 onClick={() => scrollCarousel("right")}
                 aria-label="Scroll right"
+                title="Next"
               >
                 <i className="fa-solid fa-chevron-right"></i>
               </button>
@@ -224,10 +226,10 @@ const PropertyDetail = () => {
               'portfolio': { path: '/portfolio', label: 'Back to Portfolio' }
             };
             const route = backRoutes[from] || backRoutes['portfolio'];
-            
+
             return (
-              <button 
-                onClick={() => navigate(route.path)} 
+              <button
+                onClick={() => navigate(route.path)}
                 className="back-button"
               >
                 <i className="fa-solid fa-arrow-left"></i> {route.label}
