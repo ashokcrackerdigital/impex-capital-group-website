@@ -6,6 +6,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
 import StructuredData from "../../components/StructuredData";
+import SEO from "../../components/SEO";
 
 const Contact = () => {
   /* Scroll Reveal Animation */
@@ -174,6 +175,11 @@ const Contact = () => {
 
   return (
     <>
+      <SEO
+        title="Contact Us | Impex Capital Group"
+        description="Get in touch with Impex Capital Group for investment opportunities, strategic partnerships, or general inquiries. Our team is here to assist you."
+        canonical="https://impexcapitalgroup.com/contact"
+      />
       <StructuredData
         breadcrumbs={[
           { name: "Home", url: "https://impexcapitalgroup.com" },
