@@ -37,8 +37,8 @@ const Contact = () => {
       const phoneInput = form.querySelector('input[type="tel"][name="vbout_EmbedForm[field][631386]"]');
       if (!phoneInput) return;
 
-      // Set default value to +91 if empty
-      if (!phoneInput.value || phoneInput.value.trim() === '') {
+      if (phoneInput && false) {
+        // Disabled pre-filling +91 so HTML5/VBOUT required validation can trigger
         phoneInput.value = '+91';
       }
 
@@ -84,39 +84,35 @@ const Contact = () => {
             }
           }
 
-          // Close any open dropdowns
-          const closeDropdowns = () => {
-            const openDropdowns = phoneRow.querySelectorAll('[class*="open"], [aria-expanded="true"], [class*="active"]');
-            openDropdowns.forEach(dd => {
-              if (dd !== countrySelect && !dd.contains(countrySelect)) {
-                dd.setAttribute('aria-expanded', 'false');
-                dd.classList.remove('open', 'active', 'show');
-                dd.style.display = '';
-              }
-            });
-          };
-
-          closeDropdowns();
-
-          // Close dropdown on click outside
-          const handleClickOutside = (e) => {
-            if (!phoneRow.contains(e.target)) {
-              closeDropdowns();
-            }
-          };
-
-          document.addEventListener('click', handleClickOutside);
-
-          // Also close on country selector click if it opens
-          if (countrySelect.addEventListener) {
-            countrySelect.addEventListener('click', (e) => {
-              setTimeout(closeDropdowns, 100);
-            });
-          }
+          // Let the native VBOUT/intl-tel-input script handle its own country dropdown state
         } else if (attempts >= maxAttempts) {
           clearInterval(checkCountrySelector);
         }
       }, 100);
+
+      // Keep India +91 prefilled visually
+      if (phoneInput && phoneInput.value.trim() === '') {
+        phoneInput.value = '+91';
+      }
+
+      // Add mousedown intercept on submit to clear +91 precisely before VBOUT validation
+      // This ensures "required" validation still catches it if they didn't type a number
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn && !submitBtn.dataset.phoneIntercepted) {
+        submitBtn.dataset.phoneIntercepted = 'true';
+        submitBtn.addEventListener('mousedown', () => {
+          if (phoneInput && phoneInput.value.trim() === '+91') {
+            phoneInput.value = ''; // temporarily clear it so validation fails
+
+            // Restore it a short time later in case the observer misses it
+            setTimeout(() => {
+              if (phoneInput.value === '') {
+                phoneInput.value = '+91';
+              }
+            }, 500);
+          }
+        });
+      }
     };
 
     // Initialize phone field after form loads (multiple attempts)
@@ -144,10 +140,9 @@ const Contact = () => {
         text.includes("subscription is now complete") ||
         text.includes("thank you")
       ) {
-        wrapper.style.display = "none";
-        document
-          .getElementById("vbout-success-ui")
-          .classList.add("active");
+        form.style.display = "none";
+        responseBox.style.display = "block";
+        responseBox.innerHTML = "<div class='success-msg'><h3>Thank you!</h3><p>Your message has been received.</p></div>";
         return;
       }
 
@@ -177,6 +172,12 @@ const Contact = () => {
         if (first) {
           first.scrollIntoView({ behavior: "smooth", block: "center" });
           first.focus();
+        }
+
+        // Restore +91 if we temporarily cleared it for validation
+        const phoneInput = form.querySelector('input[type="tel"]');
+        if (phoneInput && phoneInput.value.trim() === '') {
+          phoneInput.value = '+91';
         }
       }
     });
@@ -231,7 +232,7 @@ const Contact = () => {
             <i className="fas fa-map-marker-alt contact-icon"></i>
             <h3>Get To Us</h3>
             <p>
-              <a 
+              <a
                 href="https://www.google.com/maps/place/Impex+Capital+Group/@29.7398124,-95.4676206,20.67z/data=!3m1!5s0x8640c1660088901f:0x27ab5d914c39924f!4m6!3m5!1s0x8640b7d5c58b68a1:0x94eb814eccad0500!8m2!3d29.7398767!4d-95.4671945!16s%2Fg%2F11p17yth42?authuser=0&entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
