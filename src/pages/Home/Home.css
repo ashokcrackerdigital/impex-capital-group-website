@@ -415,8 +415,8 @@ img {
   max-width: 1000px;
   margin: 4rem auto 0;
   position: relative;
-  min-height: 500px;
-  aspect-ratio: 16 / 9;
+  width: 100%;
+  aspect-ratio: 959 / 593;
 }
 
 .map-image {
@@ -664,17 +664,17 @@ img {
 
 @keyframes pulse {
   0% {
-    transform: scale(0.95);
+    transform: translate(-50%, -50%) scale(0.95);
     box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
   }
 
   70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 12px 2px rgba(212, 175, 55, 0.4);
   }
 
   100% {
-    transform: scale(0.95);
+    transform: translate(-50%, -50%) scale(0.95);
     box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
   }
 }
@@ -918,18 +918,17 @@ img {
   .map-container {
     max-width: 100%;
     margin: 2rem auto 0;
-    min-height: 320px;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 959 / 593 !important;
     overflow: visible;
   }
 
   /* Make beacons more touch-friendly on mobile */
   .beacon {
-    width: 10px;
-    height: 10px;
-    /* Increase touch target area */
-    padding: 8px;
-    margin: -8px;
+    width: 5px !important;
+    height: 5px !important;
+    padding: 0;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.6);
   }
 
   /* Mobile tooltip fixes - ensure full text visibility */
