@@ -119,14 +119,6 @@ const Contact = () => {
     setTimeout(initPhoneField, 1000);
     setTimeout(initPhoneField, 2000);
 
-    const clearErrors = () => {
-      form.querySelectorAll(".field-error-msg").forEach(el => {
-        el.textContent = "";
-      });
-      form.querySelectorAll("input, textarea").forEach(el => {
-        el.classList.remove("field-error");
-      });
-    };
 
     const observer = new MutationObserver(() => {
       // 2. Check for JSON errors in the original response box
