@@ -557,6 +557,7 @@
 }
 
 #vboutEmbedFormWrapper-182767 label::after {
+  content: '*';
   color: var(--text-gold);
   margin-left: 3px;
 }
