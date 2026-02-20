@@ -347,7 +347,9 @@ const Home = () => {
                 </div>
                 <div className="news-content">
                   <div className="news-meta">{formattedDate}</div>
-                  <h3>{article.title}</h3>
+                  <Link to={`/insights/article/${article.id}`} className="news-title-link">
+                    <h3>{article.title}</h3>
+                  </Link>
                   <Link to={`/insights/article/${article.id}`} className="read-btn">
                     Read Article
                   </Link>
