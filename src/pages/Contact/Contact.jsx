@@ -129,23 +129,8 @@ const Contact = () => {
     };
 
     const observer = new MutationObserver(() => {
+      // 2. Check for JSON errors in the original response box
       const html = responseBox.innerHTML;
-      const text = responseBox.innerText.toLowerCase();
-
-      clearErrors();
-
-      // ✅ SUCCESS
-      if (
-        text.includes("subscription is now complete") ||
-        text.includes("thank you")
-      ) {
-        form.style.display = "none";
-        responseBox.style.display = "block";
-        responseBox.innerHTML = "<div class='success-msg'><h3>Thank you!</h3><p>Your message has been received.</p></div>";
-        return;
-      }
-
-      // ❌ ERROR JSON
       const jsonMatch = html.match(/\{[\s\S]*"errorList"[\s\S]*?\}/);
       if (!jsonMatch) return;
 
@@ -182,6 +167,10 @@ const Contact = () => {
     });
 
     observer.observe(responseBox, {
+      childList: true,
+      subtree: true,
+    });
+    observer.observe(form, {
       childList: true,
       subtree: true,
     });
