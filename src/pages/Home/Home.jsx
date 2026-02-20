@@ -344,12 +344,14 @@ const Home = () => {
               <div key={article.id} className="news-card">
                 <div className="news-img-wrapper">
                   <img src={article.img} className="news-img" alt={article.title} />
+                  <div className="news-badge">{article.badge}</div>
                 </div>
                 <div className="news-content">
-                  <div className="news-meta">{formattedDate}</div>
+                  <div className="news-categories">{article.categories}</div>
                   <Link to={`/insights/article/${article.id}`} className="news-title-link">
                     <h3>{article.title}</h3>
                   </Link>
+                  <div className="news-meta">{formattedDate}</div>
                   <Link to={`/insights/article/${article.id}`} className="read-btn">
                     Read Article
                   </Link>
