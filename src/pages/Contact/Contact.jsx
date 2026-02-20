@@ -27,7 +27,6 @@ const Contact = () => {
   /* Form Submission Handler */
   useEffect(() => {
     const form = document.getElementById("vboutEmbedForm-182767");
-    const wrapper = document.getElementById("vboutEmbedFormWrapper-182767");
     const responseBox = document.getElementById("vboutEmbedFormResponse-182767");
 
     if (!form || !responseBox) return;
