@@ -88,7 +88,7 @@ const Hotel = () => {
   /* ONLY CHANGE: CMS DATA FETCH */
   useEffect(() => {
     fetch(
-      "https://impex-capital-strapi-production.up.railway.app/api/properties?filters[category][$eq]=Hotel&populate=*"
+      "https://api.impexcapitalgroup.com/api/properties?filters[category][$eq]=Hotel&populate=*"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -226,7 +226,7 @@ const Hotel = () => {
         <div className="properties-grid">
           {properties.map((prop) => {
             const imageUrl = prop.image?.url
-              ? `https://impex-capital-strapi-production.up.railway.app${prop.image.url}`
+              ? `https://api.impexcapitalgroup.com${prop.image.url}`
               : "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80";
 
             return (

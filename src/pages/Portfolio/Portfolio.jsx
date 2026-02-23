@@ -39,7 +39,7 @@ const Portfolio = () => {
   // ===== CMS DATA FETCH =====
   useEffect(() => {
     let url =
-      "https://impex-capital-strapi-production.up.railway.app/api/properties?populate=*&pagination[pageSize]=200";
+      "https://api.impexcapitalgroup.com/api/properties?populate=*&pagination[pageSize]=200";
 
     if (activeFilter !== "all") {
       const selected = filterCategories.find(
@@ -48,7 +48,7 @@ const Portfolio = () => {
       if (selected) {
         // Encode the selected label properly to avoid URL issues
         const encodedLabel = encodeURIComponent(selected.label);
-        url = `https://impex-capital-strapi-production.up.railway.app/api/properties?filters[category][$eq]=${encodedLabel}&populate=*&pagination[pageSize]=200`;
+        url = `https://api.impexcapitalgroup.com/api/properties?filters[category][$eq]=${encodedLabel}&populate=*&pagination[pageSize]=200`;
       }
     }
 
@@ -64,7 +64,7 @@ const Portfolio = () => {
             title,
             location: item.location,
             image: item.image?.url
-              ? `https://impex-capital-strapi-production.up.railway.app${item.image.url}`
+              ? `https://api.impexcapitalgroup.com${item.image.url}`
               : "https://via.placeholder.com/600x400?text=No+Image",
           };
         });
