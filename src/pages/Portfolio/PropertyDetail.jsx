@@ -30,7 +30,7 @@ const PropertyDetail = () => {
     setSameCategoryProperties([]);
 
     // Fetch all properties and find the one matching the slug
-    fetch(`https://impex-capital-strapi-production.up.railway.app/api/properties?populate=*&pagination[pageSize]=200`)
+    fetch(`https://api.impexcapitalgroup.com/api/properties?populate=*&pagination[pageSize]=200`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
@@ -62,7 +62,7 @@ const PropertyDetail = () => {
           title: foundProperty.title,
           location: foundProperty.location,
           image: foundProperty.image?.url
-            ? `https://impex-capital-strapi-production.up.railway.app${foundProperty.image.url}`
+            ? `https://api.impexcapitalgroup.com${foundProperty.image.url}`
             : "https://via.placeholder.com/600x400?text=No+Image",
         };
         setProperty(prop);
@@ -85,7 +85,7 @@ const PropertyDetail = () => {
               title: item.title,
               location: item.location,
               image: item.image?.url
-                ? `https://impex-capital-strapi-production.up.railway.app${item.image.url}`
+                ? `https://api.impexcapitalgroup.com${item.image.url}`
                 : "https://via.placeholder.com/600x400?text=No+Image",
             }));
           setSameCategoryProperties(sameCategory);

@@ -90,7 +90,7 @@ const Multifamily = () => {
   /* ONLY CHANGE: CMS DATA FETCH */
   useEffect(() => {
     fetch(
-      "https://impex-capital-strapi-production.up.railway.app/api/properties?filters[category][$eq]=Multifamily&populate=*&pagination[pageSize]=100"
+      "https://api.impexcapitalgroup.com/api/properties?filters[category][$eq]=Multifamily&populate=*&pagination[pageSize]=100"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -262,7 +262,7 @@ const Multifamily = () => {
         <div className="properties-grid">
           {properties.map((prop) => {
             const imageUrl = prop.image?.url
-              ? `https://impex-capital-strapi-production.up.railway.app${prop.image.url}`
+              ? `https://api.impexcapitalgroup.com${prop.image.url}`
               : "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80";
 
             return (
