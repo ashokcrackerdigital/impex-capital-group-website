@@ -46,7 +46,9 @@ const Portfolio = () => {
         (f) => f.value === activeFilter
       );
       if (selected) {
-        url = `https://impex-capital-strapi-production.up.railway.app/api/properties?filters[category][$eq]=${selected.label}&populate=*&pagination[pageSize]=200`;
+        // Encode the selected label properly to avoid URL issues
+        const encodedLabel = encodeURIComponent(selected.label);
+        url = `https://impex-capital-strapi-production.up.railway.app/api/properties?filters[category][$eq]=${encodedLabel}&populate=*&pagination[pageSize]=200`;
       }
     }
 
