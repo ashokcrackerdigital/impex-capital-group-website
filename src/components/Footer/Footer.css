@@ -33,6 +33,7 @@ footer {
 /* Wrapper for CTA section used above the footer */
 .footer-cta-wrapper {
   background: #000;
+  color: white;
   padding: 6rem 5% 3rem;
   text-align: center;
   border-top: 1px solid #222;
@@ -165,6 +166,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+
   /* Main site footer spacing */
   footer {
     padding: 3.5rem 10% 1.5rem;

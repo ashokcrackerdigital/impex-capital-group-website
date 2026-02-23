@@ -17,6 +17,7 @@ const Hotel = lazy(() => import("../pages/Hotel/Hotel"));
 const ExitedPortfolio = lazy(() => import("../pages/ExitedPortfolio/ExitedPortfolio"));
 const Portfolio = lazy(() => import("../pages/Portfolio/Portfolio"));
 const PropertyDetail = lazy(() => import("../pages/Portfolio/PropertyDetail"));
+const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
 
 const Loading = () => (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
@@ -42,6 +43,7 @@ const AppRoutes = () => {
                 <Route path="/land" element={<Land />} />
                 <Route path="/exited-portfolio" element={<ExitedPortfolio />} />
                 <Route path="/commercial" element={<Hotel />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </Suspense>
     );
