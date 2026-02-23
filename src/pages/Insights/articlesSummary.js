@@ -1,3 +1,7 @@
+import shutterstockImg from "../../assets/images/shutterstock_1.jpg";
+import article1Img from "../../assets/images/article1.png";
+import article2Img from "../../assets/images/image3.png";
+
 export const articlesSummary = [
     {
         id: 1,
@@ -9,7 +13,7 @@ export const articlesSummary = [
         title: "Strong Core Fundamentals Creating Attractive Opportunities despite Market Jitters",
         excerpt:
             "While macro headlines focus on volatility, resilient rent rolls, muted new supply and compelling basis levels are continuing to create institutional‑grade opportunities across select Sun Belt markets.",
-        img: "https://impexcapitalgroup.com/wp-content/uploads/2022/12/real-estate-g56c3702f2_1920-1024x683.jpg",
+        img: article1Img,
         readTime: "6 min read"
     },
     {
@@ -22,7 +26,7 @@ export const articlesSummary = [
         title: "Top 10 Metrics That Every Multifamily Investor Should Know",
         excerpt:
             "From DSCR and yield‑on‑cost to loss‑to‑lease and retention, this primer walks through the key metrics sophisticated investors rely on when underwriting, executing and monitoring multifamily strategies.",
-        img: "https://impexcapitalgroup.com/wp-content/uploads/2022/08/shutterstock_1775103674-1-768x442.jpg",
+        img: shutterstockImg,
         readTime: "8 min read"
     },
     {
@@ -35,7 +39,7 @@ export const articlesSummary = [
         title: "Why Multifamily Investing May Be Your Best Investment Bet During The Recession",
         excerpt:
             "Structural undersupply, essential‑need housing and favorable replacement‑cost dynamics have made Class A and B multifamily a core ballast in diversified portfolios through multiple downturns.",
-        img: "https://impexcapitalgroup.com/wp-content/uploads/2022/03/s3-768x570.jpg",
+        img: article2Img,
         readTime: "7 min read"
     }
 ];
