@@ -6,6 +6,7 @@ import "./ExitedPortfolio.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
+import SEO from "../../components/SEO";
 import StructuredData from "../../components/StructuredData";
 
 const createSlug = (title = "") =>
@@ -111,6 +112,11 @@ const ExitedPortfolio = () => {
 
   return (
     <>
+      <SEO
+        title="Exited Portfolio | Impex Capital Group"
+        description="A curated portfolio of successfully realized investments by Impex Capital Group, spanning multifamily, land, retail, hotel, and commercial assets."
+        canonical="https://impexcapitalgroup.com/exited-portfolio"
+      />
 
       <StructuredData
         breadcrumbs={[
@@ -242,8 +248,8 @@ const ExitedPortfolio = () => {
                 : "https://images.unsplash.com/photo-1555636222-cae831e670b3?auto=format&fit=crop&q=80";
 
               return (
-                <div 
-                  key={prop.id} 
+                <div
+                  key={prop.id}
                   className="property-card"
                   onClick={() => navigate(`/portfolio/property/${prop.slug}`, { state: { from: 'exited-portfolio' } })}
                   style={{ cursor: 'pointer' }}
