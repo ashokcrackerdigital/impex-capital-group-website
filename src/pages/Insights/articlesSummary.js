@@ -1,6 +1,7 @@
 import shutterstockImg from "../../assets/images/shutterstock_1.jpg";
 import article1Img from "../../assets/images/article1.png";
 import article2Img from "../../assets/images/image3.png";
+import impexLogo from "../../assets/images/logo.png";
 
 export const articlesSummary = [
     {
@@ -14,7 +15,9 @@ export const articlesSummary = [
         excerpt:
             "While macro headlines focus on volatility, resilient rent rolls, muted new supply and compelling basis levels are continuing to create institutional‑grade opportunities across select Sun Belt markets.",
         img: article1Img,
-        readTime: "6 min read"
+        readTime: "6 min read",
+        source: "Impex Capital Group",
+        sourceLogo: impexLogo
     },
     {
         id: 2,
@@ -27,7 +30,9 @@ export const articlesSummary = [
         excerpt:
             "From DSCR and yield‑on‑cost to loss‑to‑lease and retention, this primer walks through the key metrics sophisticated investors rely on when underwriting, executing and monitoring multifamily strategies.",
         img: shutterstockImg,
-        readTime: "8 min read"
+        readTime: "8 min read",
+        source: "Impex Capital Group",
+        sourceLogo: impexLogo
     },
     {
         id: 3,
@@ -40,6 +45,8 @@ export const articlesSummary = [
         excerpt:
             "Structural undersupply, essential‑need housing and favorable replacement‑cost dynamics have made Class A and B multifamily a core ballast in diversified portfolios through multiple downturns.",
         img: article2Img,
-        readTime: "7 min read"
+        readTime: "7 min read",
+        source: "Impex Capital Group",
+        sourceLogo: impexLogo
     }
 ];

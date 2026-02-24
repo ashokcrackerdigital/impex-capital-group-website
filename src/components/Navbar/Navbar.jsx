@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import "./Navbar.css";
+import logoImg from "../../assets/images/logo.png";
 
 const Navbar = () => {
   const navbarRef = useRef(null);
@@ -29,7 +30,8 @@ const Navbar = () => {
     <>
       <nav className="navbar" ref={navbarRef}>
         <Link to="/" className="logo" onClick={closeMenu}>
-          IMPEX CAPITAL
+          <img src={logoImg} alt="Impex Capital Group" className="logo-img" />
+          <span className="logo-text">IMPEX CAPITAL GROUP</span>
         </Link>
 
         <div className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>

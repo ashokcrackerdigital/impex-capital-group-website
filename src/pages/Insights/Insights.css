@@ -262,6 +262,30 @@
   font-weight: 300;
 }
 
+.news-source {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.news-source-logo {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.news-source-name {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-gold);
+  font-weight: 600;
+}
+
 .news-meta {
   font-size: 0.8rem;
   text-transform: uppercase;
