@@ -152,10 +152,37 @@ const Portfolio = () => {
     return cat ? cat.label : category;
   };
 
-  const filteredItems =
-    activeFilter === "all"
-      ? portfolioItems
-      : portfolioItems.filter((item) => item.category === activeFilter);
+  // Category priority for "All" view — premium categories first
+  const categoryPriority = {
+    "multifamily": 1,
+    "hotel": 2,
+    "build-to-rent": 3,
+    "commercial": 4,
+    "industrial": 5,
+    "office": 6,
+    "medical-office-building": 7,
+    "senior-living": 8,
+    "self-storage": 9,
+    "affordable-housing": 10,
+    "land": 11,
+    "exited-portfolio": 12,
+  };
+
+  const filteredItems = (() => {
+    const items =
+      activeFilter === "all"
+        ? portfolioItems
+        : portfolioItems.filter((item) => item.category === activeFilter);
+
+    if (activeFilter === "all") {
+      return [...items].sort(
+        (a, b) =>
+          (categoryPriority[a.category] || 99) -
+          (categoryPriority[b.category] || 99)
+      );
+    }
+    return items;
+  })();
 
   return (
     <>

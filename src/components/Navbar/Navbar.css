@@ -25,12 +25,24 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  cursor: pointer;
 }
 
 .menu-toggle {
@@ -405,8 +417,12 @@
     padding: 1.2rem 4%;
   }
 
-  .logo {
-    font-size: 1.2rem;
+  .logo-img {
+    height: 30px;
+  }
+
+  .logo-text {
+    font-size: 0.85rem;
   }
 
   .menu-container {
