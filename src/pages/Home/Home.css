@@ -290,6 +290,12 @@ img {
   transition: transform 0.8s ease;
   background-position: center;
   filter: grayscale(100%) brightness(0.7);
+  -webkit-filter: grayscale(100%) brightness(0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  -webkit-transform: translateZ(0);
 }
 
 @media (max-width: 768px) {

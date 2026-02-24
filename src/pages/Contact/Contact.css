@@ -556,7 +556,7 @@
   letter-spacing: 1px;
 }
 
-#vboutEmbedFormWrapper-182767 label::after {
+#vboutEmbedFormWrapper-182767 label:not(.vfb-error)::after {
   content: '*';
   color: var(--text-gold);
   margin-left: 3px;
