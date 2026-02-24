@@ -121,6 +121,29 @@ const Contact = () => {
     setTimeout(initPhoneField, 2000);
 
 
+    // Hide errors when user starts typing
+    const hideErrorOnTyping = (e) => {
+      const field = e.target;
+      field.classList.remove("field-error");
+
+      const row = field.closest(".vboutEmbedFormRow");
+      if (row) {
+        // Hide VBOUT's generated error labels
+        const errorLabels = row.querySelectorAll(".vfb-error, label.error, span.error, .vbout-error");
+        errorLabels.forEach(label => {
+          label.style.display = "none";
+        });
+
+        // Clear custom error message if it exists
+        const msgBox = row.querySelector(".field-error-msg");
+        if (msgBox) {
+          msgBox.textContent = "";
+        }
+      }
+    };
+
+    form.addEventListener("input", hideErrorOnTyping);
+
     const observer = new MutationObserver(() => {
       // 2. Check for JSON errors in the original response box
       const html = responseBox.innerHTML;
@@ -135,6 +158,16 @@ const Contact = () => {
           if (!field) return;
 
           field.classList.add("field-error");
+
+          // Show the error label if it was hidden previously
+          const row = field.closest(".vboutEmbedFormRow");
+          if (row) {
+            const errorLabel = row.querySelector("label.vfb-error");
+            if (errorLabel) {
+              errorLabel.style.display = ""; // Reset display
+            }
+          }
+
           const msgBox = field
             .closest(".vboutEmbedFormRow")
             .querySelector(".field-error-msg");
@@ -168,7 +201,10 @@ const Contact = () => {
       subtree: true,
     });
 
-    return () => observer.disconnect();
+    return () => {
+      form.removeEventListener("input", hideErrorOnTyping);
+      observer.disconnect();
+    };
   }, []);
 
 
