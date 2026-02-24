@@ -15,66 +15,26 @@ const createSlug = (title = "") =>
     .replace(/[^a-z0-9]+/g, "_")
     .replace(/^_+|_+$/g, "");
 
+const filterCategories = [
+  { value: "all", label: "All" },
+  { value: "affordable-housing", label: "Affordable Housing" },
+  { value: "build-to-rent", label: "Build-To-Rent" },
+  { value: "commercial", label: "Commercial" },
+  { value: "exited-portfolio", label: "Exited Portfolio" },
+  { value: "hotel", label: "Hotel" },
+  { value: "industrial", label: "Industrial" },
+  { value: "land", label: "Land" },
+  { value: "medical-office-building", label: "Medical Office Building" },
+  { value: "multifamily", label: "Multifamily" },
+  { value: "office", label: "Office" },
+  { value: "self-storage", label: "Self Storage" },
+  { value: "senior-living", label: "Senior Living" },
+];
+
 const Portfolio = () => {
   const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState("all");
   const [portfolioItems, setPortfolioItems] = useState([]);
-
-  const filterCategories = useMemo(() => [
-    { value: "all", label: "All" },
-    { value: "affordable-housing", label: "Affordable Housing" },
-    { value: "build-to-rent", label: "Build-To-Rent" },
-    { value: "commercial", label: "Commercial" },
-    { value: "exited-portfolio", label: "Exited Portfolio" },
-    { value: "hotel", label: "Hotel" },
-    { value: "industrial", label: "Industrial" },
-    { value: "land", label: "Land" },
-    { value: "medical-office-building", label: "Medical Office Building" },
-    { value: "multifamily", label: "Multifamily" },
-    { value: "office", label: "Office" },
-    { value: "self-storage", label: "Self Storage" },
-    { value: "senior-living", label: "Senior Living" },
-  ], []);
-
-  // ===== CMS DATA FETCH =====
-  // useEffect(() => {
-  //   let url =
-  //     "https://api.impexcapitalgroup.com/api/properties?populate=*&pagination[pageSize]=100";
-
-  //   if (activeFilter !== "all") {
-  //     const selected = filterCategories.find(
-  //       (f) => f.value === activeFilter
-  //     );
-  //     if (selected) {
-  //       // Encode the selected label properly to avoid URL issues
-  //       const encodedLabel = encodeURIComponent(selected.label);
-  //       url = `https://api.impexcapitalgroup.com/api/properties?filters[category][$eq]=${encodedLabel}&populate=*&pagination[pageSize]=100`;
-  //     }
-  //   }
-
-  //   fetch(url)
-  //     .then((res) => {
-  //       if (!res.ok) throw new Error("Network error");
-  //       return res.json();
-  //     })
-  //     .then((data) => {
-  //       const formatted = data.data.map((item) => {
-  //         const title = item.title || "";
-  //         return {
-  //           id: item.id,
-  //           slug: createSlug(title),
-  //           category: item.category.toLowerCase().replace(/\s+/g, "-"),
-  //           title,
-  //           location: item.location,
-  //           image: item.image?.url
-  //             ? `https://api.impexcapitalgroup.com${item.image.url}`
-  //             : "https://via.placeholder.com/600x400?text=No+Image",
-  //         };
-  //       });
-  //       setPortfolioItems(formatted);
-  //     })
-  //     .catch((err) => console.error("CMS Fetch Error:", err));
-  // }, [activeFilter, filterCategories]);
 
   // ===== CMS DATA FETCH (Filter + Dynamic Pagination Safe) =====
   useEffect(() => {
