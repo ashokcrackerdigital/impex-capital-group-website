@@ -71,7 +71,9 @@ const Portfolio = () => {
             }
           }
 
-          const res = await fetch(`${baseUrl}?${params.toString()}`);
+          const res = await fetch(`${baseUrl}?${params.toString()}`, {
+            cache: "no-store"
+          });
           if (!res.ok) throw new Error("Network error");
 
           const json = await res.json();
@@ -91,10 +93,12 @@ const Portfolio = () => {
             category: item.category?.toLowerCase().replace(/\s+/g, "-"),
             title,
             location: item.location,
-            image: item.image?.url
-              ? `https://api.impexcapitalgroup.com${item.image.url}`
-              : "https://via.placeholder.com/600x400?text=No+Image",
-          };
+            image: item.image?.formats?.medium?.url
+              ? `https://api.impexcapitalgroup.com${item.image.formats.medium.url}`
+              : item.image?.url
+                ? `https://api.impexcapitalgroup.com${item.image.url}`
+                : "https://via.placeholder.com/600x400?text=No+Image",
+          }
         });
 
         setPortfolioItems(formatted);

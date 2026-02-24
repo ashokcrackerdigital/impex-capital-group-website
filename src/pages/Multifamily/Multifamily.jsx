@@ -105,7 +105,8 @@ const Multifamily = () => {
           params.append("pagination[pageSize]", 20); // small chunk safe
   
           const res = await fetch(
-            `https://api.impexcapitalgroup.com/api/properties?${params.toString()}`
+            `https://api.impexcapitalgroup.com/api/properties?${params.toString()}`,
+            {cache: "no-store"}
           );
   
           if (!res.ok) throw new Error("Network error");
@@ -119,13 +120,22 @@ const Multifamily = () => {
   
         if (!isMounted) return;
   
-        const formatted = allData.map((item) => ({
-          id: item.id,
-          slug: createSlug(item.title || ""),
-          title: item.title,
-          location: item.location,
-          image: item.image,
-        }));
+        const formatted = allData.map((item) => {
+          const imageUrl =
+            item.image?.url ||
+            item.image?.data?.attributes?.url ||
+            "";
+        
+          return {
+            id: item.id,
+            slug: createSlug(item.title || ""),
+            title: item.title,
+            location: item.location,
+            image: imageUrl
+              ? `https://api.impexcapitalgroup.com${imageUrl}`
+              : "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
+          };
+        });
   
         setProperties(formatted);
       } catch (err) {
@@ -293,9 +303,7 @@ const Multifamily = () => {
 
         <div className="properties-grid">
           {properties.map((prop) => {
-            const imageUrl = prop.image?.url
-              ? `https://api.impexcapitalgroup.com${prop.image.url}`
-              : "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80";
+            const imageUrl = prop.image;
 
             return (
               <div

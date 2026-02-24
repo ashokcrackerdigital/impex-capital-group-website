@@ -91,43 +91,53 @@ const Land = () => {
   /* Fetch Land Properties from Strapi */
   useEffect(() => {
     let isMounted = true;
-  
+
     const fetchLandProperties = async () => {
       try {
         let allData = [];
         let page = 1;
         let pageCount = 1;
-  
+
         do {
           const params = new URLSearchParams();
           params.append("filters[category][$eq]", "Land");
           params.append("populate", "image");
           params.append("pagination[page]", page);
           params.append("pagination[pageSize]", 20);
-  
+
           const res = await fetch(
-            `https://api.impexcapitalgroup.com/api/properties?${params.toString()}`
+            `https://api.impexcapitalgroup.com/api/properties?${params.toString()}`,
+            { cache: "no-store" }
           );
-  
+
           if (!res.ok) throw new Error("Network error");
-  
+
           const json = await res.json();
-  
+
           allData = [...allData, ...json.data];
           pageCount = json.meta.pagination.pageCount;
           page++;
         } while (page <= pageCount);
-  
+
         if (!isMounted) return;
-  
-        const formatted = allData.map((item) => ({
-          id: item.id,
-          slug: createSlug(item.title || ""),
-          title: item.title,
-          location: item.location,
-          image: item.image,
-        }));
-  
+
+        const formatted = allData.map((item) => {
+          const imageUrl =
+            item.image?.url ||
+            item.image?.data?.attributes?.url ||
+            "";
+        
+          return {
+            id: item.id,
+            slug: createSlug(item.title || ""),
+            title: item.title,
+            location: item.location,
+            image: imageUrl
+              ? `https://api.impexcapitalgroup.com${imageUrl}`
+              : "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
+          };
+        });
+
         setProperties(formatted);
         setLoading(false);
       } catch (err) {
@@ -135,9 +145,9 @@ const Land = () => {
         setLoading(false);
       }
     };
-  
+
     fetchLandProperties();
-  
+
     return () => {
       isMounted = false;
     };
@@ -304,9 +314,7 @@ const Land = () => {
             <p style={{ textAlign: "center" }}>Loading properties...</p>
           ) : (
             properties.map((prop) => {
-              const imageUrl = prop.image?.url
-                ? `https://api.impexcapitalgroup.com${prop.image.url}`
-                : "https://images.unsplash.com/photo-1555636222-cae831e670b3?auto=format&fit=crop&q=80";
+              const imageUrl = prop.image;
 
               return (
                 <div
