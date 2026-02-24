@@ -89,23 +89,55 @@ const Multifamily = () => {
 
   /* ONLY CHANGE: CMS DATA FETCH */
   useEffect(() => {
-    fetch(
-      "https://api.impexcapitalgroup.com/api/properties?filters[category][$eq]=Multifamily&populate=*&pagination[pageSize]=100"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        const formatted = (data.data || []).map((item) => ({
+    let isMounted = true;
+  
+    const fetchMultifamily = async () => {
+      try {
+        let allData = [];
+        let page = 1;
+        let pageCount = 1;
+  
+        do {
+          const params = new URLSearchParams();
+          params.append("filters[category][$eq]", "Multifamily");
+          params.append("populate", "image");
+          params.append("pagination[page]", page);
+          params.append("pagination[pageSize]", 20); // small chunk safe
+  
+          const res = await fetch(
+            `https://api.impexcapitalgroup.com/api/properties?${params.toString()}`
+          );
+  
+          if (!res.ok) throw new Error("Network error");
+  
+          const json = await res.json();
+  
+          allData = [...allData, ...json.data];
+          pageCount = json.meta.pagination.pageCount;
+          page++;
+        } while (page <= pageCount);
+  
+        if (!isMounted) return;
+  
+        const formatted = allData.map((item) => ({
           id: item.id,
           slug: createSlug(item.title || ""),
           title: item.title,
           location: item.location,
           image: item.image,
         }));
+  
         setProperties(formatted);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error("Error fetching multifamily properties:", err);
-      });
+      }
+    };
+  
+    fetchMultifamily();
+  
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
@@ -277,6 +309,7 @@ const Multifamily = () => {
                     src={imageUrl}
                     className="property-img"
                     alt={prop.title}
+                    loading="lazy"
                   />
                   <div className="property-overlay">
                     <h3>{prop.title}</h3>

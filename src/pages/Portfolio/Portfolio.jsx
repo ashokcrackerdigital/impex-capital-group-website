@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./Portfolio.css";
@@ -15,52 +15,80 @@ const createSlug = (title = "") =>
     .replace(/[^a-z0-9]+/g, "_")
     .replace(/^_+|_+$/g, "");
 
+const filterCategories = [
+  { value: "all", label: "All" },
+  { value: "affordable-housing", label: "Affordable Housing" },
+  { value: "build-to-rent", label: "Build-To-Rent" },
+  { value: "commercial", label: "Commercial" },
+  { value: "exited-portfolio", label: "Exited Portfolio" },
+  { value: "hotel", label: "Hotel" },
+  { value: "industrial", label: "Industrial" },
+  { value: "land", label: "Land" },
+  { value: "medical-office-building", label: "Medical Office Building" },
+  { value: "multifamily", label: "Multifamily" },
+  { value: "office", label: "Office" },
+  { value: "self-storage", label: "Self Storage" },
+  { value: "senior-living", label: "Senior Living" },
+];
+
 const Portfolio = () => {
   const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState("all");
   const [portfolioItems, setPortfolioItems] = useState([]);
 
-  const filterCategories = useMemo(() => [
-    { value: "all", label: "All" },
-    { value: "affordable-housing", label: "Affordable Housing" },
-    { value: "build-to-rent", label: "Build-To-Rent" },
-    { value: "commercial", label: "Commercial" },
-    { value: "exited-portfolio", label: "Exited Portfolio" },
-    { value: "hotel", label: "Hotel" },
-    { value: "industrial", label: "Industrial" },
-    { value: "land", label: "Land" },
-    { value: "medical-office-building", label: "Medical Office Building" },
-    { value: "multifamily", label: "Multifamily" },
-    { value: "office", label: "Office" },
-    { value: "self-storage", label: "Self Storage" },
-    { value: "senior-living", label: "Senior Living" },
-  ], []);
-
-  // ===== CMS DATA FETCH =====
+  // ===== CMS DATA FETCH (Filter + Dynamic Pagination Safe) =====
   useEffect(() => {
-    let url =
-      "https://api.impexcapitalgroup.com/api/properties?populate=*&pagination[pageSize]=200";
+    let isMounted = true;
 
-    if (activeFilter !== "all") {
-      const selected = filterCategories.find(
-        (f) => f.value === activeFilter
-      );
-      if (selected) {
-        // Encode the selected label properly to avoid URL issues
-        const encodedLabel = encodeURIComponent(selected.label);
-        url = `https://api.impexcapitalgroup.com/api/properties?filters[category][$eq]=${encodedLabel}&populate=*&pagination[pageSize]=200`;
-      }
-    }
+    const fetchAllProperties = async () => {
+      try {
+        let allData = [];
+        let page = 1;
+        let pageCount = 1;
 
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        const formatted = data.data.map((item) => {
+        do {
+          let baseUrl =
+            "https://api.impexcapitalgroup.com/api/properties";
+
+          const params = new URLSearchParams();
+
+          // Only populate image (lightweight)
+          params.append("populate", "image");
+          params.append("pagination[page]", page);
+          params.append("pagination[pageSize]", 20); // safe chunk size
+
+          // FILTER LOGIC
+          if (activeFilter !== "all") {
+            const selected = filterCategories.find(
+              (f) => f.value === activeFilter
+            );
+
+            if (selected) {
+              params.append(
+                "filters[category][$eq]",
+                selected.label
+              );
+            }
+          }
+
+          const res = await fetch(`${baseUrl}?${params.toString()}`);
+          if (!res.ok) throw new Error("Network error");
+
+          const json = await res.json();
+
+          allData = [...allData, ...json.data];
+          pageCount = json.meta.pagination.pageCount;
+          page++;
+        } while (page <= pageCount);
+
+        if (!isMounted) return;
+
+        const formatted = allData.map((item) => {
           const title = item.title || "";
           return {
             id: item.id,
             slug: createSlug(title),
-            category: item.category.toLowerCase().replace(/\s+/g, "-"),
+            category: item.category?.toLowerCase().replace(/\s+/g, "-"),
             title,
             location: item.location,
             image: item.image?.url
@@ -68,10 +96,19 @@ const Portfolio = () => {
               : "https://via.placeholder.com/600x400?text=No+Image",
           };
         });
+
         setPortfolioItems(formatted);
-      })
-      .catch((err) => console.error("CMS Fetch Error:", err));
-  }, [activeFilter, filterCategories]);
+      } catch (err) {
+        console.error("CMS Fetch Error:", err);
+      }
+    };
+
+    fetchAllProperties();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [activeFilter]);
 
   /* Scroll Reveal Animation */
   useEffect(() => {
@@ -235,6 +272,7 @@ const Portfolio = () => {
                       src={item.image}
                       className="p-img"
                       alt={item.title}
+                      loading="lazy"
                     />
                     <div className="p-overlay">
                       <span className="p-cat">

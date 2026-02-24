@@ -89,25 +89,57 @@ const ExitedPortfolio = () => {
 
   /* CMS DATA FETCH - Exited Only */
   useEffect(() => {
-    fetch(
-      "https://api.impexcapitalgroup.com/api/properties?filters[propertyStatus][$eq]=Exited&populate=*"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        const formatted = (data.data || []).map((item) => ({
+    let isMounted = true;
+  
+    const fetchExitedProperties = async () => {
+      try {
+        let allData = [];
+        let page = 1;
+        let pageCount = 1;
+  
+        do {
+          const params = new URLSearchParams();
+          params.append("filters[propertyStatus][$eq]", "Exited");
+          params.append("populate", "image");
+          params.append("pagination[page]", page);
+          params.append("pagination[pageSize]", 20);
+  
+          const res = await fetch(
+            `https://api.impexcapitalgroup.com/api/properties?${params.toString()}`
+          );
+  
+          if (!res.ok) throw new Error("Network error");
+  
+          const json = await res.json();
+  
+          allData = [...allData, ...json.data];
+          pageCount = json.meta.pagination.pageCount;
+          page++;
+        } while (page <= pageCount);
+  
+        if (!isMounted) return;
+  
+        const formatted = allData.map((item) => ({
           id: item.id,
           slug: createSlug(item.title || ""),
           title: item.title,
           location: item.location,
           image: item.image,
         }));
+  
         setProperties(formatted);
         setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error("Error fetching exited properties:", err);
         setLoading(false);
-      });
+      }
+    };
+  
+    fetchExitedProperties();
+  
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
@@ -259,6 +291,7 @@ const ExitedPortfolio = () => {
                       src={imageUrl}
                       className="property-img"
                       alt={prop.title}
+                      loading="lazy"
                     />
                     <div className="property-overlay">
                       <h3>{prop.title}</h3>
