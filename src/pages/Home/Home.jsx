@@ -14,7 +14,6 @@ import topInvestorImg from "../../assets/images/topinvestor.webp";
 import bottomInvestorImg from "../../assets/images/Bottominvestor.webp";
 import StructuredData from "../../components/StructuredData";
 import { articlesSummary as articles } from "../Insights/articlesSummary";
-import logoImg from "../../assets/images/logo.png";
 
 const multifamilyImg = "/assets/images/multifamily.webp";
 
@@ -120,22 +119,10 @@ const Home = () => {
       {/* ===== FEATURED IN ===== */}
       <section className="featured-in reveal">
         <span className="featured-label">Featured In</span>
-        <span className="press-logo">
-          <img src="https://logo.clearbit.com/yahoo.com" alt="Yahoo! Finance" className="press-logo-img" />
-          <span className="press-logo-text">Yahoo! Finance</span>
-        </span>
-        <span className="press-logo">
-          <img src="https://logo.clearbit.com/houstonchronicle.com" alt="Houston Chronicle" className="press-logo-img" />
-          <span className="press-logo-text">Houston Chronicle</span>
-        </span>
-        <span className="press-logo">
-          <img src="https://logo.clearbit.com/commercialobserver.com" alt="The Commercial Observer" className="press-logo-img" />
-          <span className="press-logo-text">The Commercial Observer</span>
-        </span>
-        <span className="press-logo">
-          <img src={logoImg} alt="Luxcior" className="press-logo-img" />
-          <span className="press-logo-text">Luxcior</span>
-        </span>
+        <span className="press-logo">Yahoo! Finance</span>
+        <span className="press-logo">Houston Chronicle</span>
+        <span className="press-logo">The Commercial Observer</span>
+        <span className="press-logo">Luxcior</span>
       </section>
 
       {/* ===== STRATEGY ===== */}
@@ -360,12 +347,6 @@ const Home = () => {
                   <div className="news-badge">{article.badge}</div>
                 </div>
                 <div className="news-content">
-                  <div className="news-source">
-                    {article.sourceLogo && (
-                      <img src={article.sourceLogo} alt={article.source} className="news-source-logo" />
-                    )}
-                    <span className="news-source-name">{article.source}</span>
-                  </div>
                   <div className="news-categories">{article.categories}</div>
                   <Link to={`/insights/article/${article.id}`} className="news-title-link">
                     <h3>{article.title}</h3>
