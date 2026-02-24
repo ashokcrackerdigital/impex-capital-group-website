@@ -37,30 +37,98 @@ const Portfolio = () => {
   ], []);
 
   // ===== CMS DATA FETCH =====
+  // useEffect(() => {
+  //   let url =
+  //     "https://api.impexcapitalgroup.com/api/properties?populate=*&pagination[pageSize]=100";
+
+  //   if (activeFilter !== "all") {
+  //     const selected = filterCategories.find(
+  //       (f) => f.value === activeFilter
+  //     );
+  //     if (selected) {
+  //       // Encode the selected label properly to avoid URL issues
+  //       const encodedLabel = encodeURIComponent(selected.label);
+  //       url = `https://api.impexcapitalgroup.com/api/properties?filters[category][$eq]=${encodedLabel}&populate=*&pagination[pageSize]=100`;
+  //     }
+  //   }
+
+  //   fetch(url)
+  //     .then((res) => {
+  //       if (!res.ok) throw new Error("Network error");
+  //       return res.json();
+  //     })
+  //     .then((data) => {
+  //       const formatted = data.data.map((item) => {
+  //         const title = item.title || "";
+  //         return {
+  //           id: item.id,
+  //           slug: createSlug(title),
+  //           category: item.category.toLowerCase().replace(/\s+/g, "-"),
+  //           title,
+  //           location: item.location,
+  //           image: item.image?.url
+  //             ? `https://api.impexcapitalgroup.com${item.image.url}`
+  //             : "https://via.placeholder.com/600x400?text=No+Image",
+  //         };
+  //       });
+  //       setPortfolioItems(formatted);
+  //     })
+  //     .catch((err) => console.error("CMS Fetch Error:", err));
+  // }, [activeFilter, filterCategories]);
+
+  // ===== CMS DATA FETCH (Filter + Dynamic Pagination Safe) =====
   useEffect(() => {
-    let url =
-      "https://api.impexcapitalgroup.com/api/properties?populate=*&pagination[pageSize]=200";
+    let isMounted = true;
 
-    if (activeFilter !== "all") {
-      const selected = filterCategories.find(
-        (f) => f.value === activeFilter
-      );
-      if (selected) {
-        // Encode the selected label properly to avoid URL issues
-        const encodedLabel = encodeURIComponent(selected.label);
-        url = `https://api.impexcapitalgroup.com/api/properties?filters[category][$eq]=${encodedLabel}&populate=*&pagination[pageSize]=200`;
-      }
-    }
+    const fetchAllProperties = async () => {
+      try {
+        let allData = [];
+        let page = 1;
+        let pageCount = 1;
 
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        const formatted = data.data.map((item) => {
+        do {
+          let baseUrl =
+            "https://api.impexcapitalgroup.com/api/properties";
+
+          const params = new URLSearchParams();
+
+          // Only populate image (lightweight)
+          params.append("populate", "image");
+          params.append("pagination[page]", page);
+          params.append("pagination[pageSize]", 20); // safe chunk size
+
+          // FILTER LOGIC
+          if (activeFilter !== "all") {
+            const selected = filterCategories.find(
+              (f) => f.value === activeFilter
+            );
+
+            if (selected) {
+              params.append(
+                "filters[category][$eq]",
+                selected.label
+              );
+            }
+          }
+
+          const res = await fetch(`${baseUrl}?${params.toString()}`);
+          if (!res.ok) throw new Error("Network error");
+
+          const json = await res.json();
+
+          allData = [...allData, ...json.data];
+          pageCount = json.meta.pagination.pageCount;
+          page++;
+        } while (page <= pageCount);
+
+        if (!isMounted) return;
+
+        const formatted = allData.map((item) => {
           const title = item.title || "";
           return {
             id: item.id,
             slug: createSlug(title),
-            category: item.category.toLowerCase().replace(/\s+/g, "-"),
+            category: item.category?.toLowerCase().replace(/\s+/g, "-"),
             title,
             location: item.location,
             image: item.image?.url
@@ -68,10 +136,19 @@ const Portfolio = () => {
               : "https://via.placeholder.com/600x400?text=No+Image",
           };
         });
+
         setPortfolioItems(formatted);
-      })
-      .catch((err) => console.error("CMS Fetch Error:", err));
-  }, [activeFilter, filterCategories]);
+      } catch (err) {
+        console.error("CMS Fetch Error:", err);
+      }
+    };
+
+    fetchAllProperties();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [activeFilter]);
 
   /* Scroll Reveal Animation */
   useEffect(() => {
@@ -235,6 +312,7 @@ const Portfolio = () => {
                       src={item.image}
                       className="p-img"
                       alt={item.title}
+                      loading="lazy"
                     />
                     <div className="p-overlay">
                       <span className="p-cat">
