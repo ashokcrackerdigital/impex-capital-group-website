@@ -103,7 +103,8 @@ const Hotel = () => {
           params.append("pagination[pageSize]", 20);
   
           const res = await fetch(
-            `https://api.impexcapitalgroup.com/api/properties?${params.toString()}`
+            `https://api.impexcapitalgroup.com/api/properties?${params.toString()}`,
+            {cache: "no-store"}
           );
   
           if (!res.ok) throw new Error("Network error");
@@ -117,13 +118,22 @@ const Hotel = () => {
   
         if (!isMounted) return;
   
-        const formatted = allData.map((item) => ({
-          id: item.id,
-          slug: createSlug(item.title || ""),
-          title: item.title,
-          location: item.location,
-          image: item.image,
-        }));
+        const formatted = allData.map((item) => {
+          const imageUrl =
+            item.image?.url ||
+            item.image?.data?.attributes?.url ||
+            "";
+        
+          return {
+            id: item.id,
+            slug: createSlug(item.title || ""),
+            title: item.title,
+            location: item.location,
+            image: imageUrl
+              ? `https://api.impexcapitalgroup.com${imageUrl}`
+              : "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
+          };
+        });
   
         setProperties(formatted);
       } catch (err) {
@@ -257,10 +267,8 @@ const Hotel = () => {
 
         <div className="properties-grid">
           {properties.map((prop) => {
-            const imageUrl = prop.image?.url
-              ? `https://api.impexcapitalgroup.com${prop.image.url}`
-              : "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80";
-
+            const imageUrl = prop.image;
+            
             return (
               <div 
                 key={prop.id} 
