@@ -14,7 +14,6 @@ import topInvestorImg from "../../assets/images/topinvestor.webp";
 import bottomInvestorImg from "../../assets/images/Bottominvestor.webp";
 import StructuredData from "../../components/StructuredData";
 import { articlesSummary as articles } from "../Insights/articlesSummary";
-import logoImg from "../../assets/images/logo.png";
 
 const multifamilyImg = "/assets/images/multifamily.webp";
 
