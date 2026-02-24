@@ -89,25 +89,67 @@ const ExitedPortfolio = () => {
 
   /* CMS DATA FETCH - Exited Only */
   useEffect(() => {
-    fetch(
-      "https://impex-capital-strapi-production.up.railway.app/api/properties?filters[propertyStatus][$eq]=Exited&populate=*"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        const formatted = (data.data || []).map((item) => ({
-          id: item.id,
-          slug: createSlug(item.title || ""),
-          title: item.title,
-          location: item.location,
-          image: item.image,
-        }));
+    let isMounted = true;
+  
+    const fetchExitedProperties = async () => {
+      try {
+        let allData = [];
+        let page = 1;
+        let pageCount = 1;
+  
+        do {
+          const params = new URLSearchParams();
+          params.append("filters[propertyStatus][$eq]", "Exited");
+          params.append("populate", "image");
+          params.append("pagination[page]", page);
+          params.append("pagination[pageSize]", 20);
+  
+          const res = await fetch(
+            `https://api.impexcapitalgroup.com/api/properties?${params.toString()}`,
+            {cache: "no-store"}
+          );
+  
+          if (!res.ok) throw new Error("Network error");
+  
+          const json = await res.json();
+  
+          allData = [...allData, ...json.data];
+          pageCount = json.meta.pagination.pageCount;
+          page++;
+        } while (page <= pageCount);
+  
+        if (!isMounted) return;
+  
+        const formatted = allData.map((item) => {
+          const imageUrl =
+            item.image?.url ||
+            item.image?.data?.attributes?.url ||
+            "";
+        
+          return {
+            id: item.id,
+            slug: createSlug(item.title || ""),
+            title: item.title,
+            location: item.location,
+            image: imageUrl
+              ? `https://api.impexcapitalgroup.com${imageUrl}`
+              : "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
+          };
+        });
+  
         setProperties(formatted);
         setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error("Error fetching exited properties:", err);
         setLoading(false);
-      });
+      }
+    };
+  
+    fetchExitedProperties();
+  
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
@@ -243,9 +285,7 @@ const ExitedPortfolio = () => {
             <p style={{ textAlign: "center" }}>Loading exited properties...</p>
           ) : (
             properties.map((prop) => {
-              const imageUrl = prop.image?.url
-                ? `https://impex-capital-strapi-production.up.railway.app${prop.image.url}`
-                : "https://images.unsplash.com/photo-1555636222-cae831e670b3?auto=format&fit=crop&q=80";
+              const imageUrl = prop.image;
 
               return (
                 <div
@@ -259,6 +299,7 @@ const ExitedPortfolio = () => {
                       src={imageUrl}
                       className="property-img"
                       alt={prop.title}
+                      loading="lazy"
                     />
                     <div className="property-overlay">
                       <h3>{prop.title}</h3>

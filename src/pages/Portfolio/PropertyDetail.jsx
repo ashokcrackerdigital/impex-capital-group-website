@@ -28,76 +28,77 @@ const PropertyDetail = () => {
     setLoading(true);
     setProperty(null);
     setSameCategoryProperties([]);
-
-    // Fetch all properties and find the one matching the slug
-    fetch(`https://impex-capital-strapi-production.up.railway.app/api/properties?populate=*&pagination[pageSize]=200`)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        return res.json();
-      })
-      .then((data) => {
-        // Check for API error response
-        if (data.error) {
-          throw new Error(data.error.message || "Properties not found");
-        }
-
-        if (!data.data || !Array.isArray(data.data)) {
-          throw new Error("Properties data not found");
-        }
-
-        // Find the property with matching slug (derived from title)
-        const foundProperty = data.data.find(
+  
+    const fetchProperty = async () => {
+      try {
+        let allData = [];
+        let page = 1;
+        let pageCount = 1;
+  
+        // Load in small chunks (safe for mobile)
+        do {
+          const res = await fetch(
+            `https://api.impexcapitalgroup.com/api/properties?populate=image&pagination[page]=${page}&pagination[pageSize]=25`
+          );
+  
+          if (!res.ok) throw new Error("Network error");
+  
+          const json = await res.json();
+  
+          allData = [...allData, ...json.data];
+          pageCount = json.meta.pagination.pageCount;
+          page++;
+        } while (page <= pageCount);
+  
+        // Now find matching slug in frontend
+        const foundProperty = allData.find(
           (item) => createSlug(item.title || "") === slug
         );
-
+  
         if (!foundProperty) {
           throw new Error("Property not found");
         }
-
+  
         const prop = {
           id: foundProperty.id,
           category: foundProperty.category,
           title: foundProperty.title,
           location: foundProperty.location,
           image: foundProperty.image?.url
-            ? `https://impex-capital-strapi-production.up.railway.app${foundProperty.image.url}`
+            ? `https://api.impexcapitalgroup.com${foundProperty.image.url}`
             : "https://via.placeholder.com/600x400?text=No+Image",
         };
+  
         setProperty(prop);
-
-        // Filter properties from same category
-        const categoryLabel = foundProperty.category;
-        if (categoryLabel) {
-          const sameCategory = data.data
-            .filter(
-              (item) =>
-                item.category === categoryLabel &&
-                createSlug(item.title || "") !== slug
-            )
-            .map((item) => ({
-              id: item.id,
-              slug: createSlug(item.title || ""),
-              category: item.category
-                ? item.category.toLowerCase().replace(/\s+/g, "-")
-                : "",
-              title: item.title,
-              location: item.location,
-              image: item.image?.url
-                ? `https://impex-capital-strapi-production.up.railway.app${item.image.url}`
-                : "https://via.placeholder.com/600x400?text=No+Image",
-            }));
-          setSameCategoryProperties(sameCategory);
-        }
+  
+        // Same category
+        const sameCategory = allData
+          .filter(
+            (item) =>
+              item.category === foundProperty.category &&
+              createSlug(item.title || "") !== slug
+          )
+          .slice(0, 6)
+          .map((item) => ({
+            id: item.id,
+            slug: createSlug(item.title || ""),
+            category: item.category?.toLowerCase().replace(/\s+/g, "-"),
+            title: item.title,
+            location: item.location,
+            image: item.image?.url
+              ? `https://api.impexcapitalgroup.com${item.image.url}`
+              : "https://via.placeholder.com/600x400?text=No+Image",
+          }));
+  
+        setSameCategoryProperties(sameCategory);
         setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error("Error fetching property:", err);
-        setProperty(null);
-        setSameCategoryProperties([]);
         setLoading(false);
-      });
+      }
+    };
+  
+    fetchProperty();
   }, [slug]);
 
   const scrollCarousel = (direction) => {

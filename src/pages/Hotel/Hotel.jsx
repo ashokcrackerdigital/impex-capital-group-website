@@ -87,23 +87,65 @@ const Hotel = () => {
 
   /* ONLY CHANGE: CMS DATA FETCH */
   useEffect(() => {
-    fetch(
-      "https://impex-capital-strapi-production.up.railway.app/api/properties?filters[category][$eq]=Hotel&populate=*"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        const formatted = (data.data || []).map((item) => ({
-          id: item.id,
-          slug: createSlug(item.title || ""),
-          title: item.title,
-          location: item.location,
-          image: item.image,
-        }));
+    let isMounted = true;
+  
+    const fetchHotelProperties = async () => {
+      try {
+        let allData = [];
+        let page = 1;
+        let pageCount = 1;
+  
+        do {
+          const params = new URLSearchParams();
+          params.append("filters[category][$eq]", "Hotel");
+          params.append("populate", "image");
+          params.append("pagination[page]", page);
+          params.append("pagination[pageSize]", 20);
+  
+          const res = await fetch(
+            `https://api.impexcapitalgroup.com/api/properties?${params.toString()}`,
+            {cache: "no-store"}
+          );
+  
+          if (!res.ok) throw new Error("Network error");
+  
+          const json = await res.json();
+  
+          allData = [...allData, ...json.data];
+          pageCount = json.meta.pagination.pageCount;
+          page++;
+        } while (page <= pageCount);
+  
+        if (!isMounted) return;
+  
+        const formatted = allData.map((item) => {
+          const imageUrl =
+            item.image?.url ||
+            item.image?.data?.attributes?.url ||
+            "";
+        
+          return {
+            id: item.id,
+            slug: createSlug(item.title || ""),
+            title: item.title,
+            location: item.location,
+            image: imageUrl
+              ? `https://api.impexcapitalgroup.com${imageUrl}`
+              : "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
+          };
+        });
+  
         setProperties(formatted);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error("Error fetching hotel properties:", err);
-      });
+      }
+    };
+  
+    fetchHotelProperties();
+  
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
@@ -225,10 +267,8 @@ const Hotel = () => {
 
         <div className="properties-grid">
           {properties.map((prop) => {
-            const imageUrl = prop.image?.url
-              ? `https://impex-capital-strapi-production.up.railway.app${prop.image.url}`
-              : "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80";
-
+            const imageUrl = prop.image;
+            
             return (
               <div 
                 key={prop.id} 
@@ -237,7 +277,7 @@ const Hotel = () => {
                 style={{ cursor: 'pointer' }}
               >
                 <div className="property-img-container">
-                  <img src={imageUrl} className="property-img" alt={prop.title} />
+                  <img src={imageUrl} className="property-img" alt={prop.title} loading="lazy" />
                   <div className="property-overlay">
                     <h3>{prop.title}</h3>
                     <div className="property-location">{prop.location}</div>
