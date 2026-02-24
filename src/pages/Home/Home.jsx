@@ -119,10 +119,10 @@ const Home = () => {
       {/* ===== FEATURED IN ===== */}
       <section className="featured-in reveal">
         <span className="featured-label">Featured In</span>
-        <span className="press-logo">Yahoo! Finance</span>
-        <span className="press-logo">Houston Chronicle</span>
-        <span className="press-logo">The Commercial Observer</span>
-        <span className="press-logo">Luxcior</span>
+        <span className="press-logo-text">Yahoo! Finance</span>
+        <span className="press-logo-text">Houston Chronicle</span>
+        <span className="press-logo-text">The Commercial Observer</span>
+        <span className="press-logo-text">Luxcior</span>
       </section>
 
       {/* ===== STRATEGY ===== */}
