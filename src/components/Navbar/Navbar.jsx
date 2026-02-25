@@ -35,8 +35,7 @@ const Navbar = () => {
         </Link>
 
         <div className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <span className="menu-text">{isMenuOpen ? "Close" : "Menu"}</span>
-          <div className="hamburger">
+          <div className={`hamburger ${isMenuOpen ? "open" : ""}`}>
             <span />
             <span />
           </div>
