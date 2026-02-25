@@ -82,12 +82,23 @@
   width: 25px;
 }
 
-.menu-toggle:hover .hamburger span:nth-child(1) {
+.menu-toggle:hover .hamburger:not(.open) span:nth-child(1) {
   width: 25px;
 }
 
-.menu-toggle:hover .hamburger span:nth-child(2) {
+.menu-toggle:hover .hamburger:not(.open) span:nth-child(2) {
   width: 35px;
+}
+
+/* Hamburger → X animation */
+.hamburger.open span:nth-child(1) {
+  width: 35px;
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  width: 35px;
+  transform: translateY(-3.5px) rotate(-45deg);
 }
 
 /* =========================
