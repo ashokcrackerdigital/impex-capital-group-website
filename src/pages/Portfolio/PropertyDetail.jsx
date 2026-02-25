@@ -19,46 +19,67 @@ const PropertyDetail = () => {
   const [sameCategoryProperties, setSameCategoryProperties] = useState([]);
   const [loading, setLoading] = useState(true);
   const carouselRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const updateScrollButtons = () => {
+    const el = carouselRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 0);
+    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 1);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
 
   useEffect(() => {
+    const el = carouselRef.current;
+    if (!el) return;
+    updateScrollButtons();
+    el.addEventListener("scroll", updateScrollButtons);
+    window.addEventListener("resize", updateScrollButtons);
+    return () => {
+      el.removeEventListener("scroll", updateScrollButtons);
+      window.removeEventListener("resize", updateScrollButtons);
+    };
+  }, [sameCategoryProperties]);
+
+  useEffect(() => {
     setLoading(true);
     setProperty(null);
     setSameCategoryProperties([]);
-  
+
     const fetchProperty = async () => {
       try {
         let allData = [];
         let page = 1;
         let pageCount = 1;
-  
+
         // Load in small chunks (safe for mobile)
         do {
           const res = await fetch(
             `https://api.impexcapitalgroup.com/api/properties?populate=image&pagination[page]=${page}&pagination[pageSize]=25`
           );
-  
+
           if (!res.ok) throw new Error("Network error");
-  
+
           const json = await res.json();
-  
+
           allData = [...allData, ...json.data];
           pageCount = json.meta.pagination.pageCount;
           page++;
         } while (page <= pageCount);
-  
+
         // Now find matching slug in frontend
         const foundProperty = allData.find(
           (item) => createSlug(item.title || "") === slug
         );
-  
+
         if (!foundProperty) {
           throw new Error("Property not found");
         }
-  
+
         const prop = {
           id: foundProperty.id,
           category: foundProperty.category,
@@ -68,9 +89,9 @@ const PropertyDetail = () => {
             ? `https://api.impexcapitalgroup.com${foundProperty.image.url}`
             : "https://via.placeholder.com/600x400?text=No+Image",
         };
-  
+
         setProperty(prop);
-  
+
         // Same category
         const sameCategory = allData
           .filter(
@@ -89,7 +110,7 @@ const PropertyDetail = () => {
               ? `https://api.impexcapitalgroup.com${item.image.url}`
               : "https://via.placeholder.com/600x400?text=No+Image",
           }));
-  
+
         setSameCategoryProperties(sameCategory);
         setLoading(false);
       } catch (err) {
@@ -97,7 +118,7 @@ const PropertyDetail = () => {
         setLoading(false);
       }
     };
-  
+
     fetchProperty();
   }, [slug]);
 
@@ -177,14 +198,16 @@ const PropertyDetail = () => {
               <h2>More {getCategoryLabel(property.category)} Properties</h2>
             </div>
             <div className="carousel-wrapper">
-              <button
-                className="carousel-nav carousel-nav-left"
-                onClick={() => scrollCarousel("left")}
-                aria-label="Scroll left"
-                title="Previous"
-              >
-                <i className="fa-solid fa-chevron-left"></i>
-              </button>
+              {canScrollLeft && (
+                <button
+                  className="carousel-nav carousel-nav-left"
+                  onClick={() => scrollCarousel("left")}
+                  aria-label="Scroll left"
+                  title="Previous"
+                >
+                  <i className="fa-solid fa-chevron-left"></i>
+                </button>
+              )}
               <div className="property-carousel" ref={carouselRef}>
                 {sameCategoryProperties.map((item) => (
                   <div
@@ -203,14 +226,16 @@ const PropertyDetail = () => {
                   </div>
                 ))}
               </div>
-              <button
-                className="carousel-nav carousel-nav-right"
-                onClick={() => scrollCarousel("right")}
-                aria-label="Scroll right"
-                title="Next"
-              >
-                <i className="fa-solid fa-chevron-right"></i>
-              </button>
+              {canScrollRight && (
+                <button
+                  className="carousel-nav carousel-nav-right"
+                  onClick={() => scrollCarousel("right")}
+                  aria-label="Scroll right"
+                  title="Next"
+                >
+                  <i className="fa-solid fa-chevron-right"></i>
+                </button>
+              )}
             </div>
           </section>
         )}

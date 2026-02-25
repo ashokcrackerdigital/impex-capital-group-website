@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import "./ArticleDetail.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import SEO from "../../components/SEO";
 import { articlesSummary } from "./articlesSummary";
 import { articlesContent } from "./articlesContent";
 
@@ -34,6 +35,11 @@ const ArticleDetail = () => {
 
   return (
     <>
+      <SEO
+        title={article.title}
+        description={article.excerpt}
+        ogType="article"
+      />
       <Navbar />
       <article className="article-detail">
         {/* Hero Section */}

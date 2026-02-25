@@ -124,14 +124,21 @@ const Contact = () => {
     // Hide errors when user starts typing
     const hideErrorOnTyping = (e) => {
       const field = e.target;
-      field.classList.remove("field-error");
+      field.classList.remove("field-error", "requiredError");
 
       const row = field.closest(".vboutEmbedFormRow");
       if (row) {
+        // Remove error classes from ALL inputs in the row
+        // (handles intl-tel-input wrapped phone field where e.target may differ)
+        row.querySelectorAll("input, textarea").forEach(input => {
+          input.classList.remove("field-error", "requiredError");
+        });
+
         // Hide VBOUT's generated error labels
+        // Use setProperty with "important" to override CSS !important rules
         const errorLabels = row.querySelectorAll(".vfb-error, label.error, span.error, .vbout-error");
         errorLabels.forEach(label => {
-          label.style.display = "none";
+          label.style.setProperty("display", "none", "important");
         });
 
         // Clear custom error message if it exists
@@ -143,6 +150,8 @@ const Contact = () => {
     };
 
     form.addEventListener("input", hideErrorOnTyping);
+    form.addEventListener("keydown", hideErrorOnTyping);
+    form.addEventListener("change", hideErrorOnTyping);
 
     const observer = new MutationObserver(() => {
       // 2. Check for JSON errors in the original response box
@@ -203,6 +212,8 @@ const Contact = () => {
 
     return () => {
       form.removeEventListener("input", hideErrorOnTyping);
+      form.removeEventListener("keydown", hideErrorOnTyping);
+      form.removeEventListener("change", hideErrorOnTyping);
       observer.disconnect();
     };
   }, []);
