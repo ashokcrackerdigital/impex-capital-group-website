@@ -8,17 +8,17 @@ import { articlesSummary } from "./articlesSummary";
 import { articlesContent } from "./articlesContent";
 
 const ArticleDetail = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
 
-  const summary = articlesSummary.find((a) => a.id === parseInt(id));
-  const content = articlesContent.find((a) => a.id === parseInt(id));
+  const summary = articlesSummary.find((a) => a.slug === slug);
+  const content = summary ? articlesContent.find((a) => a.id === summary.id) : null;
 
   const article = summary && content ? { ...summary, ...content } : null;
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [id]);
+  }, [slug]);
 
   if (!article) {
     return (

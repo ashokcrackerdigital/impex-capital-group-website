@@ -6,6 +6,7 @@ import impexLogo from "../../assets/images/logo.png";
 export const articlesSummary = [
     {
         id: 1,
+        slug: "strong-core-fundamentals-creating-attractive-opportunities-despite-market-jitters",
         badge: "Feature Story",
         date: "Dec 01, 2022 • Houston Multifamily",
         dateDay: "01",
@@ -21,6 +22,7 @@ export const articlesSummary = [
     },
     {
         id: 2,
+        slug: "top-10-metrics-every-multifamily-investor-should-know",
         badge: "Investor Guide",
         date: "Aug 20, 2022 • Research & Education",
         dateDay: "20",
@@ -36,6 +38,7 @@ export const articlesSummary = [
     },
     {
         id: 3,
+        slug: "why-multifamily-investing-may-be-your-best-investment-bet-during-the-recession",
         badge: "Cycle View",
         date: "Aug 09, 2022 • Recession Playbook",
         dateDay: "09",
