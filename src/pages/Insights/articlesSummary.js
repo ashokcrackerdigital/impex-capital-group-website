@@ -13,8 +13,10 @@ export const articlesSummary = [
         dateMonth: "Dec",
         categories: "MULTIFAMILY, REAL ESTATE",
         title: "Strong Core Fundamentals Creating Attractive Opportunities despite Market Jitters",
+        seoTitle: "Attractive Opportunities Despite Market Jitters",
         excerpt:
             "While macro headlines focus on volatility, resilient rent rolls, muted new supply and compelling basis levels are continuing to create institutional‑grade opportunities across select Sun Belt markets.",
+        seoDescription: "Resilient rent rolls, muted supply, and compelling basis levels create institutional-grade multifamily opportunities across Sun Belt markets.",
         img: article1Img,
         readTime: "6 min read",
         source: "Impex Capital Group",
@@ -29,8 +31,10 @@ export const articlesSummary = [
         dateMonth: "Aug",
         categories: "MULTIFAMILY, REAL ESTATE",
         title: "Top 10 Metrics That Every Multifamily Investor Should Know",
+        seoTitle: "Top 10 Metrics Every Multifamily Investor Should Know",
         excerpt:
             "From DSCR and yield‑on‑cost to loss‑to‑lease and retention, this primer walks through the key metrics sophisticated investors rely on when underwriting, executing and monitoring multifamily strategies.",
+        seoDescription: "Key multifamily metrics from DSCR to loss-to-lease that sophisticated investors use for underwriting and monitoring strategies.",
         img: shutterstockImg,
         readTime: "8 min read",
         source: "Impex Capital Group",
@@ -45,8 +49,10 @@ export const articlesSummary = [
         dateMonth: "Aug",
         categories: "MULTIFAMILY, REAL ESTATE",
         title: "Why Multifamily Investing May Be Your Best Investment Bet During The Recession",
+        seoTitle: "Why Multifamily Is Your Best Bet During a Recession",
         excerpt:
             "Structural undersupply, essential‑need housing and favorable replacement‑cost dynamics have made Class A and B multifamily a core ballast in diversified portfolios through multiple downturns.",
+        seoDescription: "How structural undersupply and essential-need housing make Class A and B multifamily a resilient investment through economic downturns.",
         img: article2Img,
         readTime: "7 min read",
         source: "Impex Capital Group",
