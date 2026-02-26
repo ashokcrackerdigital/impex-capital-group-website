@@ -32,67 +32,71 @@ const Contact = () => {
 
     if (!form || !responseBox) return;
 
-    // Initialize phone field country selector to India (+91)
+    // Initialize phone field country selector to Canada (+1)
     const initPhoneField = () => {
       const phoneInput = form.querySelector('input[type="tel"][name="vbout_EmbedForm[field][631386]"]');
       if (!phoneInput) return;
 
       if (phoneInput && false) {
         // Disabled pre-filling +91 so HTML5/VBOUT required validation can trigger
-        phoneInput.value = '+91';
+        phoneInput.value = '+1';
       }
 
-      // Wait for VBOUT to initialize the country selector
+      // Wait for intl-tel-input to initialize, then set country to Canada
       let attempts = 0;
       const maxAttempts = 50; // 5 seconds max
 
       const checkCountrySelector = setInterval(() => {
         attempts++;
+
+        // Method 1: Use intl-tel-input API directly (most reliable)
+        if (window.intlTelInputGlobals) {
+          const itiInstance = window.intlTelInputGlobals.getInstance(phoneInput);
+          if (itiInstance) {
+            itiInstance.setCountry('ca');
+            clearInterval(checkCountrySelector);
+            return;
+          }
+        }
+
+        // Method 2: Find the flag container and click Canada
         const phoneRow = phoneInput.closest('.vboutEmbedFormRow');
         if (!phoneRow) {
           if (attempts >= maxAttempts) clearInterval(checkCountrySelector);
           return;
         }
 
-        // Find country selector (could be select, div with class, etc.)
-        const countrySelect = phoneRow.querySelector('select, [class*="country"], [class*="flag"], [data-country], [class*="phone-country"]');
-
-        if (countrySelect) {
+        // Look for intl-tel-input's country list item for Canada
+        const canadaItem = phoneRow.querySelector('[data-country-code="ca"], li[data-dial-code="1"][data-country-code="ca"]');
+        if (canadaItem) {
+          canadaItem.click();
           clearInterval(checkCountrySelector);
+          return;
+        }
 
-          // Set to India (+91)
-          if (countrySelect.tagName === 'SELECT') {
-            // Try to find India option
-            const indiaOption = Array.from(countrySelect.options).find(opt =>
-              opt.value.toLowerCase() === 'in' ||
-              opt.value === '91' ||
-              opt.value === '+91' ||
-              opt.textContent.toLowerCase().includes('india') ||
-              opt.textContent.includes('+91') ||
-              opt.getAttribute('data-code') === '91'
-            );
-            if (indiaOption) {
-              countrySelect.value = indiaOption.value;
-              const changeEvent = new Event('change', { bubbles: true });
-              countrySelect.dispatchEvent(changeEvent);
-            }
-          } else {
-            // For div-based selectors, try to set data attributes
-            if (countrySelect.setAttribute) {
-              countrySelect.setAttribute('data-country', 'in');
-              countrySelect.setAttribute('data-code', '91');
-            }
+        // Method 3: Find select-based country dropdown
+        const countrySelect = phoneRow.querySelector('select');
+        if (countrySelect) {
+          const canadaOption = Array.from(countrySelect.options).find(opt =>
+            opt.value.toLowerCase() === 'ca'
+          );
+          if (canadaOption) {
+            countrySelect.value = canadaOption.value;
+            const changeEvent = new Event('change', { bubbles: true });
+            countrySelect.dispatchEvent(changeEvent);
+            clearInterval(checkCountrySelector);
+            return;
           }
+        }
 
-          // Let the native VBOUT/intl-tel-input script handle its own country dropdown state
-        } else if (attempts >= maxAttempts) {
+        if (attempts >= maxAttempts) {
           clearInterval(checkCountrySelector);
         }
       }, 100);
 
-      // Keep India +91 prefilled visually
+      // Keep Canada +1 prefilled visually
       if (phoneInput && phoneInput.value.trim() === '') {
-        phoneInput.value = '+91';
+        phoneInput.value = '+1';
       }
 
       // Add mousedown intercept on submit to clear +91 precisely before VBOUT validation
@@ -101,13 +105,13 @@ const Contact = () => {
       if (submitBtn && !submitBtn.dataset.phoneIntercepted) {
         submitBtn.dataset.phoneIntercepted = 'true';
         submitBtn.addEventListener('mousedown', () => {
-          if (phoneInput && phoneInput.value.trim() === '+91') {
+          if (phoneInput && phoneInput.value.trim() === '+1') {
             phoneInput.value = ''; // temporarily clear it so validation fails
 
             // Restore it a short time later in case the observer misses it
             setTimeout(() => {
               if (phoneInput.value === '') {
-                phoneInput.value = '+91';
+                phoneInput.value = '+1';
               }
             }, 500);
           }
@@ -193,10 +197,10 @@ const Contact = () => {
           first.focus();
         }
 
-        // Restore +91 if we temporarily cleared it for validation
+        // Restore +1 if we temporarily cleared it for validation
         const phoneInput = form.querySelector('input[type="tel"]');
         if (phoneInput && phoneInput.value.trim() === '') {
-          phoneInput.value = '+91';
+          phoneInput.value = '+1';
         }
       }
     });
