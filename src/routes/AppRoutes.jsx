@@ -37,7 +37,7 @@ const AppRoutes = () => {
                 <Route path="/portfolio/property/:slug" element={<PropertyDetail />} />
                 <Route path="/investors" element={<Investors />} />
                 <Route path="/insights" element={<Insights />} />
-                <Route path="/insights/article/:id" element={<ArticleDetail />} />
+                <Route path="/insights/article/:slug" element={<ArticleDetail />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/multifamily" element={<Multifamily />} />
                 <Route path="/land" element={<Land />} />

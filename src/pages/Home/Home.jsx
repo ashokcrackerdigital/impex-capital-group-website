@@ -348,11 +348,11 @@ const Home = () => {
                 </div>
                 <div className="news-content">
                   <div className="news-categories">{article.categories}</div>
-                  <Link to={`/insights/article/${article.id}`} className="news-title-link">
+                  <Link to={`/insights/article/${article.slug}`} className="news-title-link">
                     <h3>{article.title}</h3>
                   </Link>
                   <div className="news-meta">{formattedDate}</div>
-                  <Link to={`/insights/article/${article.id}`} className="read-btn">
+                  <Link to={`/insights/article/${article.slug}`} className="read-btn">
                     Read Article
                   </Link>
                 </div>

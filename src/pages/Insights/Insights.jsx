@@ -26,8 +26,8 @@ const Insights = () => {
     return () => window.removeEventListener("scroll", reveal);
   }, []);
 
-  const handleArticleClick = (articleId) => {
-    navigate(`/insights/article/${articleId}`);
+  const handleArticleClick = (articleSlug) => {
+    navigate(`/insights/article/${articleSlug}`);
   };
 
   return (
@@ -99,7 +99,7 @@ const Insights = () => {
             <article
               key={i}
               className="news-card reveal"
-              onClick={() => handleArticleClick(item.id)}
+              onClick={() => handleArticleClick(item.slug)}
               style={{ cursor: 'pointer' }}
             >
               <div className="news-img-wrapper">
