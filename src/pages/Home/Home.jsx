@@ -352,8 +352,12 @@ const Home = () => {
                     <h3>{article.title}</h3>
                   </Link>
                   <div className="news-meta">{formattedDate}</div>
-                  <Link to={`/insights/article/${article.slug}`} className="read-btn">
-                    Read Article
+                  <Link
+                    to={`/insights/article/${article.slug}`}
+                    className="read-btn"
+                    data-tooltip="View full article details"
+                  >
+                    Read Article <i className="fas fa-arrow-right"></i>
                   </Link>
                 </div>
               </div>

@@ -7,6 +7,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
 import StructuredData from "../../components/StructuredData";
+import SEO from "../../components/SEO";
 
 const createSlug = (title = "") =>
   title
@@ -88,42 +89,42 @@ const Hotel = () => {
   /* ONLY CHANGE: CMS DATA FETCH */
   useEffect(() => {
     let isMounted = true;
-  
+
     const fetchHotelProperties = async () => {
       try {
         let allData = [];
         let page = 1;
         let pageCount = 1;
-  
+
         do {
           const params = new URLSearchParams();
           params.append("filters[category][$eq]", "Hotel");
           params.append("populate", "image");
           params.append("pagination[page]", page);
           params.append("pagination[pageSize]", 20);
-  
+
           const res = await fetch(
             `https://api.impexcapitalgroup.com/api/properties?${params.toString()}`,
-            {cache: "no-store"}
+            { cache: "no-store" }
           );
-  
+
           if (!res.ok) throw new Error("Network error");
-  
+
           const json = await res.json();
-  
+
           allData = [...allData, ...json.data];
           pageCount = json.meta.pagination.pageCount;
           page++;
         } while (page <= pageCount);
-  
+
         if (!isMounted) return;
-  
+
         const formatted = allData.map((item) => {
           const imageUrl =
             item.image?.url ||
             item.image?.data?.attributes?.url ||
             "";
-        
+
           return {
             id: item.id,
             slug: createSlug(item.title || ""),
@@ -134,15 +135,15 @@ const Hotel = () => {
               : "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
           };
         });
-  
+
         setProperties(formatted);
       } catch (err) {
         console.error("Error fetching hotel properties:", err);
       }
     };
-  
+
     fetchHotelProperties();
-  
+
     return () => {
       isMounted = false;
     };
@@ -150,6 +151,10 @@ const Hotel = () => {
 
   return (
     <>
+      <SEO
+        title="Hospitality & Hotel Asset Investments | Impex Capital Group"
+        description="Impex Capital Group invests in premium hotel and hospitality assets in strategic business and leisure markets across the United States."
+      />
       <StructuredData
         breadcrumbs={[
           { name: "Home", url: "https://impexcapitalgroup.com" },
@@ -268,10 +273,10 @@ const Hotel = () => {
         <div className="properties-grid">
           {properties.map((prop) => {
             const imageUrl = prop.image;
-            
+
             return (
-              <div 
-                key={prop.id} 
+              <div
+                key={prop.id}
                 className="property-card"
                 onClick={() => navigate(`/portfolio/property/${prop.slug}`, { state: { from: 'hotel' } })}
                 style={{ cursor: 'pointer' }}
