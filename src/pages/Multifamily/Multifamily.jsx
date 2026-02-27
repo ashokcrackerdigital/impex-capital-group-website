@@ -9,6 +9,7 @@ import FooterCTA from "../../components/Footer/FooterCTA";
 
 import multifamilyImg from "../../assets/images/multifamily.webp";
 import StructuredData from "../../components/StructuredData";
+import SEO from "../../components/SEO";
 
 const createSlug = (title = "") =>
   title
@@ -90,42 +91,42 @@ const Multifamily = () => {
   /* ONLY CHANGE: CMS DATA FETCH */
   useEffect(() => {
     let isMounted = true;
-  
+
     const fetchMultifamily = async () => {
       try {
         let allData = [];
         let page = 1;
         let pageCount = 1;
-  
+
         do {
           const params = new URLSearchParams();
           params.append("filters[category][$eq]", "Multifamily");
           params.append("populate", "image");
           params.append("pagination[page]", page);
           params.append("pagination[pageSize]", 20); // small chunk safe
-  
+
           const res = await fetch(
             `https://api.impexcapitalgroup.com/api/properties?${params.toString()}`,
-            {cache: "no-store"}
+            { cache: "no-store" }
           );
-  
+
           if (!res.ok) throw new Error("Network error");
-  
+
           const json = await res.json();
-  
+
           allData = [...allData, ...json.data];
           pageCount = json.meta.pagination.pageCount;
           page++;
         } while (page <= pageCount);
-  
+
         if (!isMounted) return;
-  
+
         const formatted = allData.map((item) => {
           const imageUrl =
             item.image?.url ||
             item.image?.data?.attributes?.url ||
             "";
-        
+
           return {
             id: item.id,
             slug: createSlug(item.title || ""),
@@ -136,15 +137,15 @@ const Multifamily = () => {
               : "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
           };
         });
-  
+
         setProperties(formatted);
       } catch (err) {
         console.error("Error fetching multifamily properties:", err);
       }
     };
-  
+
     fetchMultifamily();
-  
+
     return () => {
       isMounted = false;
     };
@@ -152,6 +153,10 @@ const Multifamily = () => {
 
   return (
     <>
+      <SEO
+        title="Multifamily Real Estate Investments | Impex Capital Group"
+        description="Explore our multifamily real estate portfolio. Impex Capital Group specializes in value-add multifamily acquisitions and management across high-growth U.S. markets."
+      />
       <StructuredData
         breadcrumbs={[
           { name: "Home", url: "https://impexcapitalgroup.com" },

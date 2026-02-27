@@ -9,6 +9,7 @@ import FooterCTA from "../../components/Footer/FooterCTA";
 
 import seniorLivingImg from "../../assets/images/Seniorliving.webp";
 import StructuredData from "../../components/StructuredData";
+import SEO from "../../components/SEO";
 
 const createSlug = (title = "") =>
   title
@@ -126,7 +127,7 @@ const Land = () => {
             item.image?.url ||
             item.image?.data?.attributes?.url ||
             "";
-        
+
           return {
             id: item.id,
             slug: createSlug(item.title || ""),
@@ -155,6 +156,10 @@ const Land = () => {
 
   return (
     <>
+      <SEO
+        title="Land Development & Strategic Investments | Impex Capital Group"
+        description="Impex Capital Group strategically acquires and entitles land in high-growth corridors for future residential, commercial, and mixed-use development."
+      />
       <StructuredData
         breadcrumbs={[
           { name: "Home", url: "https://impexcapitalgroup.com" },

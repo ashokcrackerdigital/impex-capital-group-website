@@ -183,8 +183,8 @@
   line-height: 1.8;
   padding: 0 1.5rem;
   word-break: normal;
-  overflow-wrap: normal;
-  white-space: nowrap;
+  overflow-wrap: break-word;
+  white-space: normal;
   margin: 0 auto;
   text-align: center;
   box-sizing: border-box;
@@ -196,8 +196,8 @@
   display: inline-block;
   max-width: 100%;
   word-break: normal;
-  overflow-wrap: normal;
-  white-space: nowrap;
+  overflow-wrap: break-word;
+  white-space: normal;
   text-align: center;
   margin: 0 auto;
   box-sizing: border-box;
