@@ -53,7 +53,7 @@ const Contact = () => {
         if (window.intlTelInputGlobals) {
           const itiInstance = window.intlTelInputGlobals.getInstance(phoneInput);
           if (itiInstance) {
-            itiInstance.setCountry('ca');
+            itiInstance.setCountry('us');
             clearInterval(checkCountrySelector);
             return;
           }
@@ -353,7 +353,7 @@ const Contact = () => {
 
                   <div className="vboutEmbedFormRow">
                     <label htmlFor="field-631406">Company</label>
-                    <input type="text" id="field-631406" name="vbout_EmbedForm[field][631406]" />
+                    <input type="text" id="field-631406" name="vbout_EmbedForm[field][631406]" required/>
                   </div>
 
                   <div className="vboutEmbedFormRow">
