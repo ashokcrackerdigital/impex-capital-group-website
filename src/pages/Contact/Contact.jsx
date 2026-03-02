@@ -290,7 +290,7 @@ const Contact = () => {
           <div className="contact-info-card">
             <i className="fas fa-envelope contact-icon"></i>
             <h3>Email Us</h3>
-            <p>General Enquiry</p>
+            <p>General Inquiry</p>
             <p>
               <a href="mailto: ">
                 investor_relations@impexcapitalgroup.com
