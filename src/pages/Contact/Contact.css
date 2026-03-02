@@ -564,17 +564,6 @@
   margin-left: 3px;
 }
 
-/* Hide star for Company field (not required) */
-#vboutEmbedFormWrapper-182767 label.no-required-star::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Fallback: Hide star for Company label using :has() selector */
-#vboutEmbedFormWrapper-182767 .vboutEmbedFormRow:has(input[name="vbout_EmbedForm[field][631406]"]) label::after {
-  content: none !important;
-  display: none !important;
-}
 
 /* ===============================
    INPUTS & TEXTAREA (HEIGHT FIX)
