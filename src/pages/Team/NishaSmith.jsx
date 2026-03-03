@@ -8,6 +8,7 @@ import FooterCTA from "../../components/Footer/FooterCTA";
 
 import nishaSmithImg from "../../assets/images/NishaSmith.webp";
 import StructuredData from "../../components/StructuredData";
+import SEO from "../../components/SEO";
 
 const heroSectionImage = "/assets/images/heroSetionImage.webp";
 
@@ -42,6 +43,12 @@ const NishaSmith = () => {
           bio:
             "Nisha Smith is the Director of Investor Relations at IMPEX Capital Group, where she plays a critical role in strengthening investor relationships, expanding market reach, and supporting the firm’s capital growth strategy."
         }}
+      />
+
+      <SEO
+        title="Nisha Smith | Director, Investor Relations | Impex Capital Group"
+        description="Profile of Nisha Smith, Director of Investor Relations at Impex Capital Group, strengthening investor relationships and supporting capital growth."
+        canonical="https://impexcapitalgroup.com/team/nisha-smith"
       />
 
       {/* ===== NAVBAR ===== */}

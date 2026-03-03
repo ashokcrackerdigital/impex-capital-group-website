@@ -187,7 +187,7 @@ const Portfolio = () => {
   return (
     <>
       <SEO
-        title="Our Portfolio | Impex Capital Group"
+        title="Real Estate Investment Portfolio | Impex Capital Group"
         description="Explore the Impex Capital Group portfolio, featuring over $1.8B+ in investments across multifamily, commercial, industrial, and land assets in the US."
         canonical="https://impexcapitalgroup.com/portfolio"
         ogImage="https://impexcapitalgroup.com/assets/images/heroSetionImage.webp"

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://impexcapitalgroup.netlify.app/sitemap.xml
+Sitemap: https://impexcapitalgroup.com/sitemap.xml

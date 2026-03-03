@@ -155,7 +155,7 @@ const ExitedPortfolio = () => {
   return (
     <>
       <SEO
-        title="Exited Portfolio | Impex Capital Group"
+        title="Realized & Exited Investments Portfolio | Impex Capital Group"
         description="A curated portfolio of successfully realized investments by Impex Capital Group, spanning multifamily, land, retail, hotel, and commercial assets."
         canonical="https://impexcapitalgroup.com/exited-portfolio"
       />

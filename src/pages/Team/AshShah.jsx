@@ -8,6 +8,7 @@ import FooterCTA from "../../components/Footer/FooterCTA";
 
 import ashShahImg from "../../assets/images/AshShah.webp";
 import StructuredData from "../../components/StructuredData";
+import SEO from "../../components/SEO";
 
 const heroSectionImage = "/assets/images/heroSetionImage.webp";
 
@@ -42,6 +43,12 @@ const AshShah = () => {
           bio:
             "Ash Shah is the President and CEO of Impex Capital Group, overseeing real estate investment strategy and asset management."
         }}
+      />
+
+      <SEO
+        title="Ash Shah | President & CEO | Impex Capital Group"
+        description="Profile of Ash Shah, President & CEO of Impex Capital Group, leading a $1.8B+ national commercial real estate portfolio across multiple asset classes."
+        canonical="https://impexcapitalgroup.com/team/ash-shah"
       />
 
       {/* ===== NAVBAR ===== */}
