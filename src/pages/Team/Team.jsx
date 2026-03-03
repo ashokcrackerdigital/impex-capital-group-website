@@ -101,8 +101,8 @@ const Team = () => {
         ]}
       />
       <SEO
-        title="Our Team"
-        description="Meet the leadership team at Impex Capital Group. Seasoned real estate operators and capital markets professionals with over 25 years of experience and a $1.8B+ portfolio."
+        title="Leadership Team & Investment Experts | Impex Capital Group"
+        description="Meet the leadership team at Impex Capital Group, experienced real estate and capital markets professionals with 25+ years of results."
         canonical="https://impexcapitalgroup.com/team"
       />
 

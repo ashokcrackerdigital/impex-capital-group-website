@@ -155,7 +155,7 @@ const Multifamily = () => {
     <>
       <SEO
         title="Multifamily Real Estate Investments | Impex Capital Group"
-        description="Explore our multifamily real estate portfolio. Impex Capital Group specializes in value-add multifamily acquisitions and management across high-growth U.S. markets."
+        description="Explore our multifamily real estate portfolio. Impex Capital Group specializes in value-add multifamily acquisitions across high‑growth U.S. markets."
       />
       <StructuredData
         breadcrumbs={[

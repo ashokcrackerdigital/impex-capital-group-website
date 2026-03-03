@@ -33,7 +33,7 @@ const Insights = () => {
   return (
     <>
       <SEO
-        title="Insights & News | Impex Capital Group"
+        title="Real Estate Insights & News | Impex Capital Group"
         description="Latest updates and market insights from Impex Capital Group including acquisitions, developments, and industry news."
         canonical="https://impexcapitalgroup.com/insights"
         ogImage="https://impexcapitalgroup.com/assets/images/heroSetionImage.webp"

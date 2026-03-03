@@ -3,6 +3,7 @@ import { useParams, useNavigate, useLocation } from "react-router-dom";
 import "./PropertyDetail.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import SEO from "../../components/SEO";
 
 const createSlug = (title = "") =>
   title
@@ -172,6 +173,13 @@ const PropertyDetail = () => {
 
   return (
     <>
+      <SEO
+        title={`${property.title} | ${getCategoryLabel(property.category)} | Impex Capital Group`}
+        description={`Details on ${property.title}, a ${getCategoryLabel(
+          property.category
+        )} asset${property.location ? ` located in ${property.location}` : ""} within the Impex Capital Group portfolio.`}
+        canonical={`https://impexcapitalgroup.com/portfolio/property/${slug}`}
+      />
       <Navbar />
       <div className="property-detail-page">
         {/* Main Content Section */}

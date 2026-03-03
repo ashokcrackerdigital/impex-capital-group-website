@@ -29,7 +29,7 @@ const Investors = () => {
   return (
     <>
       <SEO
-        title="Investors | Impex Capital Group"
+        title="Investor Relations & Opportunities | Impex Capital Group"
         description="Partnering with accredited investors to acquire, develop, and manage institutional-quality commercial real estate assets across high-growth U.S. markets."
         canonical="https://impexcapitalgroup.com/investors"
         ogImage="https://impexcapitalgroup.com/assets/images/heroSetionImage.webp"

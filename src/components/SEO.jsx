@@ -10,6 +10,7 @@ const SEO = ({
   ogImage,
   ogType = "website",
   twitterCard = "summary_large_image",
+  robots,
 }) => {
   const location = useLocation();
   const baseUrl = "https://impexcapitalgroup.com";
@@ -43,6 +44,9 @@ const SEO = ({
 
     // Standard Meta Tags
     updateMetaTag("description", null, description);
+
+    // Robots Meta Tag (defaults to index,follow)
+    updateMetaTag("robots", null, robots || "index, follow");
     
     // Canonical Link
     let canonicalLink = document.querySelector('link[rel="canonical"]');

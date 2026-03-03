@@ -227,7 +227,7 @@ const Contact = () => {
   return (
     <>
       <SEO
-        title="Contact Us | Impex Capital Group"
+        title="Contact Impex Capital Group | Investment & Partnership Inquiries"
         description="Get in touch with Impex Capital Group for investment opportunities, strategic partnerships, or general inquiries. Our team is here to assist you."
         canonical="https://impexcapitalgroup.com/contact"
       />
