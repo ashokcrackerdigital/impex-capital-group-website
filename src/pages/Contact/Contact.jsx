@@ -305,7 +305,7 @@ const Contact = () => {
         <div className="contact-form-container">
           <div className="form-header">
             <h2>Contact Us</h2>
-            <h4>Fill below form field for general enquiry</h4>
+            <h4>Fill below form field for general inquiry</h4>
           </div>
 
           <div className="contact-form-wrapper">
