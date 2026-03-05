@@ -47,11 +47,12 @@ const Navbar = () => {
           <ul className="menu-links">
             {[
               ["/", "Home", "01"],
-              ["/team", "Team", "02"],
-              ["/portfolio", "Portfolio", "03"],
-              ["/investors", "Investors", "04"],
-              ["/insights", "Insights", "05"],
-              ["/contact", "Contact", "06"],
+              ["/about", "About", "02"],
+              ["/team", "Team", "03"  ],
+              ["/portfolio", "Portfolio", "04"],
+              ["/investors", "Investors", "05"],
+              ["/insights", "Insights", "06"],
+              ["/contact", "Contact", "07"],
             ].map(([path, label, num]) => {
               const isActive = location.pathname === path;
               return (
