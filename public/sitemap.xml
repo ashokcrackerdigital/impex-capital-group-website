@@ -77,20 +77,21 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Insights Article Detail Pages (slugs must match routes) -->
   <url>
-    <loc>https://impexcapitalgroup.com/insights/article/1</loc>
+    <loc>https://impexcapitalgroup.com/insights/article/strong-core-fundamentals-creating-attractive-opportunities-despite-market-jitters</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://impexcapitalgroup.com/insights/article/2</loc>
+    <loc>https://impexcapitalgroup.com/insights/article/top-10-metrics-every-multifamily-investor-should-know</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://impexcapitalgroup.com/insights/article/3</loc>
+    <loc>https://impexcapitalgroup.com/insights/article/why-multifamily-investing-may-be-your-best-investment-bet-during-the-recession</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
