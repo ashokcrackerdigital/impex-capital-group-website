@@ -201,9 +201,8 @@
 }
 
 .menu-footer {
-  position: absolute;
-  bottom: 40px;
-  /* comfortable bottom space without overlapping contact */
+  position: relative;
+  bottom: auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -211,6 +210,7 @@
   color: #666;
   opacity: 0;
   transition: 0.5s 0.8s;
+  margin-top: 2rem;
 }
 
 .menu-overlay.active .menu-footer {
@@ -267,63 +267,6 @@
      MOBILE
   ========================= */
 
-@media (min-width: 769px) {
-
-  /* Desktop footer layout for screens 769px and above */
-  .menu-footer {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    position: absolute !important;
-    bottom: 40px !important;
-    left: 5% !important;
-    right: 5% !important;
-    width: auto !important;
-    margin-top: 0 !important;
-  }
-
-  .menu-footer-item {
-    display: inline !important;
-  }
-
-  .menu-footer-item:nth-child(1)::after {
-    content: " " !important;
-  }
-
-  .menu-footer-item:nth-child(2) {
-    display: inline !important;
-    margin-left: 0.5rem !important;
-  }
-
-  .menu-footer-item:nth-child(2) .menu-email-link {
-    color: #666 !important;
-  }
-
-  .menu-footer-item:nth-child(2) .menu-email-link:hover {
-    color: #d4af37 !important;
-    text-decoration: underline !important;
-  }
-
-  .menu-footer-item.menu-socials {
-    display: block !important;
-    margin-left: auto !important;
-  }
-
-  .menu-socials a {
-    margin-left: 0 !important;
-    color: white !important;
-    white-space: nowrap !important;
-    text-decoration: none !important;
-    transition: all 0.3s ease !important;
-  }
-
-  .menu-socials a:hover {
-    color: #d4af37 !important;
-    text-decoration: underline !important;
-  }
-}
-
 @media (max-width: 1024px) {
   .navbar {
     padding: 1.5rem 5%;
@@ -377,25 +320,32 @@
   }
 }
 
-/* 1440px fix - reduce font size to fit properly, ensure footer doesn't overlap */
+/* 1440px / laptop fix - keep footer visible without overlapping Contact */
 @media (min-width: 1025px) and (max-width: 1600px) {
   .menu-container {
-    padding: 7rem 5% 6rem;
+    padding: 6rem 5% 4rem;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    min-height: 100vh;
+  }
+
+  .menu-links {
+    margin-top: 0;
   }
 
   .menu-links li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
   }
 
   .link-reset {
-    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
-    padding: 0.1rem 0;
+    font-size: clamp(1.9rem, 2.4vw, 2.4rem);
+    padding: 0.15rem 0;
   }
 
   .menu-footer {
-    bottom: 50px;
-    padding-top: 1.5rem;
+    margin-top: 1.2rem;
+    padding-top: 0.75rem;
   }
 }
 
