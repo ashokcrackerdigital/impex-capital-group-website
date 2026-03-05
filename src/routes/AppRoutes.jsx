@@ -18,6 +18,7 @@ const ExitedPortfolio = lazy(() => import("../pages/ExitedPortfolio/ExitedPortfo
 const Portfolio = lazy(() => import("../pages/Portfolio/Portfolio"));
 const PropertyDetail = lazy(() => import("../pages/Portfolio/PropertyDetail"));
 const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
+const About = lazy(() => import("../pages/About/About"));
 
 const Loading = () => (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
@@ -30,6 +31,7 @@ const AppRoutes = () => {
         <Suspense fallback={<Loading />}>
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/team/ash-shah" element={<AshShah />} />
                 <Route path="/team/nisha-smith" element={<NishaSmith />} />

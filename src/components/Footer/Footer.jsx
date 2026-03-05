@@ -23,6 +23,9 @@ const Footer = () => {
             <Link to="/" className={isActive("/") ? "active" : ""}>
               Home
             </Link>
+            <Link to="/about" className={isActive("/about") ? "active" : ""}>
+              About
+            </Link>
             <Link to="/team" className={isActive("/team") ? "active" : ""}>
               Team
             </Link>
