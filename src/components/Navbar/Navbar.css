@@ -112,6 +112,7 @@
   width: 100%;
   height: 100vh;
   background: #080808;
+  color: #ffffff;
   z-index: 999;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
@@ -123,6 +124,13 @@
 
 .menu-overlay.active {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.menu-overlay a,
+.menu-overlay li,
+.menu-overlay .menu-email-link,
+.menu-overlay .menu-footer-item {
+  color: #ffffff;
 }
 
 .menu-container {
@@ -188,7 +196,7 @@
   position: absolute;
   top: 30%;
   right: 0;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   color: #d4af37;
   opacity: 0;
   transition: 0.5s;
@@ -207,7 +215,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 0.8rem;
-  color: #666;
+  color: #ffffff;
   opacity: 0;
   transition: 0.5s 0.8s;
   margin-top: 2rem;
@@ -220,7 +228,6 @@
 .menu-footer-item {
   display: inline;
 }
-
 .menu-footer-item:nth-child(1)::after {
   content: " ";
 }
@@ -228,10 +235,6 @@
 .menu-footer-item:nth-child(2) {
   display: inline;
   margin-left: 0.5rem;
-}
-
-.menu-footer-item:nth-child(2) .menu-email-link {
-  color: #666;
 }
 
 .menu-socials {
@@ -252,7 +255,7 @@
 }
 
 .menu-email-link {
-  color: inherit;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -260,7 +263,7 @@
 
 .menu-email-link:hover {
   text-decoration: underline;
-  color: #d4af37;
+  color: #d4af37 !important;
 }
 
 /* =========================
@@ -462,4 +465,5 @@
   .menu-footer {
     padding-bottom: 0.75rem;
   }
+  
 }
