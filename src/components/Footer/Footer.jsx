@@ -74,13 +74,14 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link"
+            aria-label="View Impex Capital Group office location on Google Maps"
           >
             5251 Westheimer Suite 925, Houston, TX 77056
           </a>
           <br />
-          <a href="tel:+18334673924" className="footer-link">(1-833-467-3924)</a>
+          <a href="tel:+18334673924" className="footer-link" aria-label="Call Impex Capital Group at 1-833-467-3924">(1-833-467-3924)</a>
           {' | '}
-          <a href="mailto:investor_relations@impexcapitalgroup.com" className="footer-link">
+          <a href="mailto:investor_relations@impexcapitalgroup.com" className="footer-link" aria-label="Email Impex Capital Group at investor_relations@impexcapitalgroup.com">
             investor_relations@impexcapitalgroup.com
           </a>
         </div>
