@@ -180,7 +180,7 @@
 
 .about-card {
   background-color: #0a0a0a;
-  border: 1px solid #1f2937;
+  border: 1px solid var(--border-color);
   padding: 2.25rem 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
@@ -188,7 +188,7 @@
 .about-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 30px rgba(212, 175, 55, 0.12);
-  border-color: rgba(212, 175, 55, 0.4);
+  border-color: #d4af37;
 }
 
 .about-card-num {
@@ -196,7 +196,7 @@
   font-family: "Playfair Display", serif;
   font-size: 3.5rem;
   font-weight: 700;
-  color: #111827;
+  color: #d4af37;
   margin-bottom: 0.75rem;
 }
 
@@ -249,6 +249,7 @@
   top: 0;
   left: 0;
   display: block;
+  transform: translateZ(0);
   -webkit-transform: translateZ(0);
 }
 
