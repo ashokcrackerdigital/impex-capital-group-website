@@ -273,6 +273,7 @@ const Contact = () => {
                 href="https://www.google.com/maps/place/Impex+Capital+Group/@29.7398124,-95.4676206,20.67z/data=!3m1!5s0x8640c1660088901f:0x27ab5d914c39924f!4m6!3m5!1s0x8640b7d5c58b68a1:0x94eb814eccad0500!8m2!3d29.7398767!4d-95.4671945!16s%2Fg%2F11p17yth42?authuser=0&entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="View Impex Capital Group office location on Google Maps"
               >
                 5251&nbsp;Westheimer&nbsp;Suite&nbsp;925<br />
                 Houston, TX 77056
@@ -284,7 +285,7 @@ const Contact = () => {
             <h3>Call Us</h3>
             <p>1-833-IMPEX-CG</p>
             <p>
-              <a href="tel:+18334673924">(1-833-467-3924)</a>
+              <a href="tel:+18334673924" aria-label="Call Impex Capital Group at 1-833-467-3924">(1-833-467-3924)</a>
             </p>
           </div>
           <div className="contact-info-card">
@@ -292,7 +293,7 @@ const Contact = () => {
             <h3>Email Us</h3>
             <p>General Inquiry</p>
             <p>
-              <a href="mailto: ">
+              <a href="mailto: " aria-label="Email Impex Capital Group at investor_relations@impexcapitalgroup.com">
                 investor_relations@impexcapitalgroup.com
               </a>
             </p>
