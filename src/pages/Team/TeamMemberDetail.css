@@ -153,6 +153,10 @@
   line-height: 1.5;
 }
 
+.member-hero-edu + .member-hero-edu {
+  margin-top: 0.35rem;
+}
+
 /* =========================
    BIO SECTION
 ========================= */

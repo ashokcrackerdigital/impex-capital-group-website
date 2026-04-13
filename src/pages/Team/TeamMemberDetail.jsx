@@ -89,7 +89,13 @@ const TeamMemberDetail = () => {
             <h1 className="member-hero-name">{name}</h1>
             <p className="member-hero-title">{role}</p>
             <p className="member-hero-company">{detail.companyLine}</p>
-            {detail.educationLine ? (
+            {detail.educationLines?.length ? (
+              detail.educationLines.map((line, i) => (
+                <p key={i} className="member-hero-edu">
+                  {line}
+                </p>
+              ))
+            ) : detail.educationLine ? (
               <p className="member-hero-edu">{detail.educationLine}</p>
             ) : null}
           </div>

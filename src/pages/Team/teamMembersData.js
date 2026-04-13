@@ -1,5 +1,7 @@
 import ashShahImg from "../../assets/images/AshHeadshot.png";
 import nishaSmithImg from "../../assets/images/NishaPic.png";
+import barryChienImg from "../../assets/images/BarryChien.png";
+import rajeevImg from "../../assets/images/Rajeev.png";
 
 export const TEAM_SECTION_INTRO = {
   title: "Leadership",
@@ -82,7 +84,7 @@ export const TEAM_MEMBERS = [
     structuredPersonBio:
       "Nisha Smith is the Director of Investor Relations at IMPEX Capital Group, where she plays a critical role in strengthening investor relationships, expanding market reach, and supporting the firm’s capital growth strategy.",
     detail: {
-      heroEyebrow: "Director, Investor Relations",
+      heroEyebrow: "Executive Leadership",
       heroRoleLine: "Director, Investor Relations",
       companyLine: "IMPEX Capital Group",
       bioKicker: "EXECUTIVE PROFILE",
@@ -113,6 +115,129 @@ export const TEAM_MEMBERS = [
             "Management Roles, DoubleTree Hotels",
             "Real Estate Consultant – Indian & U.S. Markets",
             "Director, Investor Relations – IMPEX Capital Group",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "barry-chien",
+    name: "Barry Chien",
+    role: "Chief Investment Officer",
+    image: barryChienImg,
+    bio: [
+      "Barry Chien is Chief Investment Officer of Impex Capital Group, with over two decades of investment experience across the United States and Asia in origination, underwriting, structuring, execution, and portfolio management.",
+      "He has completed more than $400 million in direct real estate investments across residential, hospitality, multifamily, and commercial sectors, including a $204 million condominium development in Seattle, a $53 million office-to-hotel conversion under the Canopy by Hilton brand, and $30 million financing for a value-add data center in Houston.",
+      "Barry has also managed over $500 million in private equity fund allocations on behalf of institutional investors, including U.S. public pension funds, sovereign wealth funds, and family offices.",
+      "Prior to Impex, he held leadership roles at Suma Monde Kapital Partners and at Greentown, a publicly listed real estate developer. He began his career at Deutsche Bank’s RREEF and Jade Invest, focusing on private equity allocations and co-investment opportunities for U.S. pension funds and global sovereign wealth funds.",
+    ],
+    seo: {
+      title: "Barry Chien | Chief Investment Officer | Impex Capital Group",
+      description:
+        "Profile of Barry Chien, Chief Investment Officer at Impex Capital Group, leading strategic real estate and private equity investments across the U.S. and Asia.",
+    },
+    structuredPersonBio:
+      "Barry Chien is Chief Investment Officer of Impex Capital Group, overseeing investment strategy, underwriting, and portfolio management across multiple asset classes.",
+    detail: {
+      heroEyebrow: "Executive Leadership",
+      heroRoleLine: "Chief Investment Officer",
+      companyLine: "IMPEX Capital Group",
+      educationLines: [
+        "BBA, University of Texas at Austin (McCombs School of Business)",
+        "MBA, Cheung Kong Graduate School of Business",
+      ],
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: "Driving Strategic Investments, Delivering Global Value",
+      longBio: [
+        "Barry Chien serves as the Chief Investment Officer of IMPEX Capital Group, bringing over two decades of investment experience across the United States and Asia. He has led full-lifecycle real estate transactions, including origination, underwriting, structuring, execution, and portfolio management.",
+        "Over his career, Barry has completed more than $400 million in direct real estate investments across residential, hospitality, multifamily, and commercial sectors. His notable projects include a $204 million condominium development in Seattle, a $53 million office-to-hotel conversion under the Canopy by Hilton brand, and the $30 million financing of a value-add data center in Houston.",
+        "In addition to direct investments, Barry has managed over $500 million in private equity fund allocations on behalf of institutional investors, including U.S. public pension funds, sovereign wealth funds, and family offices. His expertise includes rigorous due diligence, manager selection, and strategic portfolio construction across North America and Asia.",
+        "Prior to joining IMPEX Capital Group, Barry held leadership roles at Suma Monde Kapital Partners and a publicly listed real estate developer, Greentown. He began his career at Deutsche Bank’s RREEF and Jade Invest, where he focused on private equity allocations and co-investment opportunities for U.S. pension funds and global sovereign wealth funds.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Education & Professional Background",
+      eduCards: [
+        {
+          variant: "list",
+          iconClass: "fa-solid fa-graduation-cap",
+          heading: "Education",
+          items: [
+            "BBA – University of Texas at Austin (McCombs School of Business)",
+            "MBA – Cheung Kong Graduate School of Business",
+          ],
+        },
+        {
+          variant: "list",
+          iconClass: "fa-regular fa-star",
+          heading: "Professional Highlights",
+          items: [
+            "20+ years of global investment experience",
+            "$400M+ in direct real estate transactions",
+            "$500M+ managed in private equity allocations",
+            "Experience across U.S. & Asian markets",
+            "Institutional investor exposure including pension funds & sovereign wealth funds",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "rajeev",
+    name: "Rajeev",
+    role: "Strategic Partner – Data Centers & Investments",
+    image: rajeevImg,
+    bio: [
+      "Rajeev is a valued business partner in Impex Capital Group’s strategic initiatives, leading cost optimization and driving accretive NOI across the firm’s portfolio and the broader commercial real estate ecosystem.",
+      "He is an integral member of the Impex team focused on the pursuit and acquisition of data center assets across the United States. As a business and technology leader, he specializes in high-potential opportunities within AI-driven and EDGE data center infrastructure.",
+      "Rajeev has also invested as a Limited Partner in multiple commercial real estate projects across the United States, with combined portfolio exposure of approximately $500 million.",
+    ],
+    seo: {
+      title:
+        "Rajeev | Strategic Partner – Data Centers & Investments | Impex Capital Group",
+      description:
+        "Profile of Rajeev, Strategic Partner focused on data centers and investments at Impex Capital Group, driving innovation in AI and EDGE infrastructure and strategic growth.",
+    },
+    structuredPersonBio:
+      "Rajeev is a strategic partner at Impex Capital Group focused on data center investments, cost optimization, and accretive NOI across the portfolio.",
+    detail: {
+      heroEyebrow: "Executive Leadership",
+      heroRoleLine: "Strategic Partner – Data Centers & Investments",
+      companyLine: "IMPEX Capital Group",
+      educationLines: [
+        "Business & Technology Leader",
+        "Global Investment & Advisory Experience",
+      ],
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: "Driving Innovation in Data Centers & Strategic Growth",
+      longBio: [
+        "Rajeev is a valued business partner in IMPEX Capital Group’s strategic initiatives, where he leads cost optimization efforts and drives accretive NOI across the firm’s portfolio and the broader commercial real estate ecosystem.",
+        "He is also an integral member of the Impex team, focusing on the pursuit and acquisition of data center assets across the United States. As an innovator and a distinguished business and technology professional, Rajeev specializes in identifying high-potential opportunities within AI-driven and EDGE data center infrastructure.",
+        "In addition to his strategic role, Rajeev has made significant investments as a Limited Partner in multiple commercial real estate projects across the United States, with a combined portfolio value of approximately $500 million.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Professional Background & Expertise",
+      eduCards: [
+        {
+          variant: "list",
+          iconClass: "fa-solid fa-server",
+          heading: "Areas of Expertise",
+          items: [
+            "AI & EDGE Data Centers",
+            "Commercial Real Estate Investments",
+            "Cost Optimization & NOI Growth",
+            "Strategic Acquisitions & Partnerships",
+          ],
+        },
+        {
+          variant: "list",
+          iconClass: "fa-regular fa-star",
+          heading: "Professional Highlights",
+          items: [
+            "Managing Director – Accenture",
+            "Experience at Deloitte & PwC",
+            "$500M+ CRE portfolio exposure as Limited Partner",
+            "Global experience across 6+ regions",
+            "Focus on next-generation data center investments",
           ],
         },
       ],
