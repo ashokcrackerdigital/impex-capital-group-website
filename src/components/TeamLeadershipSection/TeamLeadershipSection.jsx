@@ -13,32 +13,33 @@ const TeamLeadershipSection = ({ members, title, intro }) => {
   const total = members.length;
   const current = members[currentMember];
 
-  const scrollToBio = () => {
-    setTimeout(() => {
-      const el = document.getElementById("team-lead-bio-anchor");
-      if (el) {
-        const yOffset = -100;
-        const y =
-          el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: "smooth" });
-      }
-    }, 0);
+  const scrollToSectionTop = () => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document
+          .getElementById("team-lead-profile-anchor")
+          ?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
   };
 
   const goToMember = (offset) => {
     setCurrentMember((prev) => (prev + offset + total) % total);
-    scrollToBio();
+    scrollToSectionTop();
   };
 
   const goToMemberByIndex = (index) => {
     setCurrentMember(index);
-    scrollToBio();
+    scrollToSectionTop();
   };
 
   if (!total || !current) return null;
 
   return (
-    <section className="team-section team-leadership-root">
+    <section
+      id="team-lead-profile-anchor"
+      className="team-section team-leadership-root"
+    >
       <div className="team-header-centered reveal">
         <h2>{title}</h2>
         <p>{intro}</p>
