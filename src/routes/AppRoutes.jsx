@@ -5,8 +5,7 @@ import Home from "../pages/Home/Home";
 
 // Lazy load other pages
 const Team = lazy(() => import("../pages/Team/Team"));
-const AshShah = lazy(() => import("../pages/Team/AshShah"));
-const NishaSmith = lazy(() => import("../pages/Team/NishaSmith"));
+const TeamMemberDetail = lazy(() => import("../pages/Team/TeamMemberDetail"));
 const Contact = lazy(() => import("../pages/Contact/Contact"));
 const Insights = lazy(() => import("../pages/Insights/Insights"));
 const ArticleDetail = lazy(() => import("../pages/Insights/ArticleDetail"));
@@ -33,8 +32,7 @@ const AppRoutes = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/team" element={<Team />} />
-                <Route path="/team/ash-shah" element={<AshShah />} />
-                <Route path="/team/nisha-smith" element={<NishaSmith />} />
+                <Route path="/team/:slug" element={<TeamMemberDetail />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/portfolio/property/:slug" element={<PropertyDetail />} />
                 <Route path="/investors" element={<Investors />} />

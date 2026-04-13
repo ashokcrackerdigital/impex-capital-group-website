@@ -1,0 +1,125 @@
+import ashShahImg from "../../assets/images/AshHeadshot.png";
+import nishaSmithImg from "../../assets/images/NishaPic.png";
+
+export const TEAM_SECTION_INTRO = {
+  title: "Leadership",
+  body:
+    "Impex Capital Group's principals bring decades of institutional real estate experience, combining disciplined underwriting with entrepreneurial execution across multifamily, industrial, hospitality and mixed‑use strategies.",
+};
+
+export const TEAM_MEMBERS = [
+  {
+    slug: "ash-shah",
+    name: "Ash Shah",
+    role: "President & CEO",
+    image: ashShahImg,
+    bio: [
+      "Ash Shah is the President & CEO of Impex Capital Group, a Houston-based commercial real estate investment firm that owns and manages over $1.8 billion in properties across the United States, including approximately $800 million in Houston and throughout Texas.",
+      "To date, Impex has acquired over 10,000 multifamily units, 1,500 units of new multifamily development & build-to-rent projects, 600,000 square feet of industrial & commercial office, and 400,000 square feet of retail & mixed-use assets. Ash's portfolio also includes hotels, assisted-living with memory care, storage facilities and land for housing development.",
+      "Prior to founding Impex Capital Group, Ash served as founder and CEO of Impex Global, a plastic films, paper and packaging company with operations across North America and multiple international markets, which he successfully exited to a private equity firm in 2012.",
+      "Ash holds an MBA from Thunderbird School of Global Management and has been recognized by the Houston Business Journal and Inc. 5000 as a \"Top 100\" and \"Fastest Growing Company\" leader. He is a former \"International Entrepreneur of the Year\" award recipient from the Indo-American Chamber of Commerce and a member of the Forbes Financial Council.",
+    ],
+    seo: {
+      title: "Ash Shah | President & CEO | Impex Capital Group",
+      description:
+        "Profile of Ash Shah, President & CEO of Impex Capital Group, leading a $1.8B+ national commercial real estate portfolio across multiple asset classes.",
+    },
+    structuredPersonBio:
+      "Ash Shah is the President and CEO of Impex Capital Group, overseeing real estate investment strategy and asset management.",
+    detail: {
+      heroEyebrow: "Executive Leadership",
+      heroRoleLine: "President & CEO",
+      companyLine: "IMPEX Capital Group",
+      educationLine: "MBA, Thunderbird Business School",
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: "Leading Vision, Driving Excellence",
+      longBio: [
+        "Ash Shah is the President & CEO of IMPEX Capital Group, a Houston-based commercial real estate investment firm with a diversified national footprint. Under his leadership, the firm owns and manages over $1.8 billion in assets across the United States, including approximately $800 million in Houston and throughout Texas.",
+        "With extensive experience across multiple asset classes, Mr. Shah has played a pivotal role in the acquisition, development, and management of a large-scale real estate portfolio. To date, IMPEX Capital Group has acquired over 10,000 multifamily units, delivered 1,500 units of new multifamily and build-to-rent developments, and overseen 600,000 square feet of industrial and commercial office space, along with 400,000 square feet of retail and mixed-use properties.",
+        "Mr. Shah’s ownership and operational experience extends beyond traditional asset classes and includes hospitality assets, senior living and assisted living communities with memory care, storage facilities, and land parcels designated for residential development. His investment philosophy is centered on disciplined underwriting, operational excellence, and long-term value creation.",
+        "Currently, Mr. Shah serves as a Co-Sponsor, Key Principal, or Equity Owner in more than 50 properties, maintaining direct involvement across capital structuring, acquisitions, and asset performance.",
+        "Prior to entering the commercial real estate sector, Ash Shah was the Founder and CEO of Impex Global, a plastic films, paper, and packaging products company. He successfully expanded the business across North America and international markets before completing a strategic exit to a private equity firm in 2012.",
+        "Ash holds an MBA from the Thunderbird Business School of International Management. His leadership and entrepreneurial success have been recognized by the Houston Business Journal and Inc. 5000 Magazine, where his company was ranked among the “Top 100” and “Fastest Growing Companies.” He is also a recipient of the “International Entrepreneur of the Year” award from the Indo-American Chamber of Commerce and is a member of the Forbes Financial Council.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Education & Awards",
+      eduCards: [
+        {
+          variant: "text",
+          iconClass: "fa-solid fa-graduation-cap",
+          heading: "Education",
+          body: "MBA from Thunderbird Business School of International Management",
+        },
+        {
+          variant: "list",
+          iconClass: "fa-regular fa-star",
+          heading: "Recognition",
+          items: [
+            '"Top 100" and "Fastest Growing Companies" by Houston Business Journal',
+            "Recognized by Inc. 5000 Magazine",
+            '"International Entrepreneur of the Year" by Indo-American Chamber of Commerce',
+            "Member of the Forbes Financial Council",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "nisha-smith",
+    name: "Nisha Smith",
+    role: "Director, Investor Relations",
+    image: nishaSmithImg,
+    bio: [
+      "Nisha Smith brings over 25 years of experience in hospitality, banking and real estate, including leadership roles with DoubleTree Hotel and Citibank, where she served as Vice President and helped build the Non-Resident Indian (NRI) business across the Southern United States.",
+      "Since 2011, Nisha has advised thousands of investors on real estate strategies across India and the U.S., helping them deploy hundreds of millions of dollars into institutional-quality properties tailored to their long-term financial goals.",
+      "At Impex Capital Group, she leads investor relations, focusing on communication, education and relationship-building with global investors. Nisha is based in Houston and maintains deep ties with the broader NRI community and developers across the U.S. and India.",
+    ],
+    seo: {
+      title: "Nisha Smith | Director, Investor Relations | Impex Capital Group",
+      description:
+        "Profile of Nisha Smith, Director of Investor Relations at Impex Capital Group, strengthening investor relationships and supporting capital growth.",
+    },
+    structuredPersonBio:
+      "Nisha Smith is the Director of Investor Relations at IMPEX Capital Group, where she plays a critical role in strengthening investor relationships, expanding market reach, and supporting the firm’s capital growth strategy.",
+    detail: {
+      heroEyebrow: "Director, Investor Relations",
+      heroRoleLine: "Director, Investor Relations",
+      companyLine: "IMPEX Capital Group",
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: ["Leading Relationships, Driving", "Investor Confidence"],
+      longBio: [
+        "Nisha Smith is the Director of Investor Relations at IMPEX Capital Group, where she plays a critical role in strengthening investor relationships, expanding market reach, and supporting the firm’s capital growth strategy.",
+        "With over 25 years of professional experience across financial services, hospitality, and real estate advisory, Nisha brings a relationship-driven and globally informed perspective to investor engagement.",
+        "At IMPEX Capital Group, Nisha supports the firm’s investor platform by aligning investor objectives with strategic real estate opportunities across the United States. Her focus includes investor communications, capital introductions, long-term relationship management, and supporting the firm’s growth across multifamily, commercial, and development assets.",
+        "Nisha’s career spans senior leadership roles with globally recognized organizations, including Citibank and DoubleTree Hotels. During her tenure at Citibank, she served as Vice President and was instrumental in developing and coordinating the bank’s Non-Resident Indian (NRI) business across the Southern United States. In this role, she led new business development initiatives and managed thousands of client relationships, delivering customized financial solutions to an international investor base.",
+        "In 2011, Nisha transitioned into real estate advisory as a consultant for the Indian real estate market, where she provided in-depth market insights and investment guidance to NRIs across North America and other global regions. She built long-term client relationships by designing investment strategies that enabled portfolio diversification and sustainable wealth creation. Her advisory work has supported thousands of NRIs in successfully investing hundreds of millions of dollars in real estate projects across India. Today, Nisha has redirected her expertise toward U.S. real estate investments, leveraging her global network to enhance market penetration, promote investment opportunities, and attract individual investors to the U.S. market.",
+        "Nisha is based in Houston, Texas, and maintains extensive relationships within the NRI community across the United States, as well as with real estate developers and investment partners in both the U.S. and India.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Education & Professional Experience",
+      eduCards: [
+        {
+          variant: "text",
+          iconClass: "fa-solid fa-graduation-cap",
+          heading: "Education",
+          body: "Extensive professional training and leadership experience across financial services, hospitality, and real estate advisory sectors",
+        },
+        {
+          variant: "list",
+          iconClass: "fa-regular fa-star",
+          heading: "Professional Experience",
+          items: [
+            "Vice President, Citibank",
+            "Management Roles, DoubleTree Hotels",
+            "Real Estate Consultant – Indian & U.S. Markets",
+            "Director, Investor Relations – IMPEX Capital Group",
+          ],
+        },
+      ],
+    },
+  },
+];
+
+export function getTeamMemberBySlug(slug) {
+  return TEAM_MEMBERS.find((m) => m.slug === slug) ?? null;
+}

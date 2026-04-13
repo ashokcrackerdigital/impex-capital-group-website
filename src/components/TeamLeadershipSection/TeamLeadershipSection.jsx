@@ -1,0 +1,126 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+import "./TeamLeadershipSection.css";
+
+function formatPositionLabel(index, total) {
+  const width = Math.max(2, String(total).length);
+  return `${String(index + 1).padStart(width, "0")} / ${String(total).padStart(width, "0")}`;
+}
+
+const TeamLeadershipSection = ({ members, title, intro }) => {
+  const [currentMember, setCurrentMember] = useState(0);
+  const total = members.length;
+  const current = members[currentMember];
+
+  const scrollToBio = () => {
+    setTimeout(() => {
+      const el = document.getElementById("team-lead-bio-anchor");
+      if (el) {
+        const yOffset = -100;
+        const y =
+          el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 0);
+  };
+
+  const goToMember = (offset) => {
+    setCurrentMember((prev) => (prev + offset + total) % total);
+    scrollToBio();
+  };
+
+  const goToMemberByIndex = (index) => {
+    setCurrentMember(index);
+    scrollToBio();
+  };
+
+  if (!total || !current) return null;
+
+  return (
+    <section className="team-section team-leadership-root">
+      <div className="team-header-centered reveal">
+        <h2>{title}</h2>
+        <p>{intro}</p>
+      </div>
+
+      <div className="team-leadership reveal">
+        <div className="team-lead-visual-block">
+          <div className="team-lead-image-frame">
+            <img src={current.image} alt={current.name} />
+          </div>
+
+          <div className="team-lead-toolbar">
+            <div className="team-lead-identity">
+              <h3 className="team-lead-name">{current.name}</h3>
+              <p className="team-lead-role">{current.role}</p>
+              <p className="team-lead-kicker">Executive Profiles</p>
+              <div className="team-lead-accent-line" aria-hidden="true" />
+            </div>
+
+            <div className="team-lead-controls">
+              <div className="team-lead-thumbs" role="tablist" aria-label="Team members">
+                {members.map((member, index) => (
+                  <button
+                    key={member.slug ?? member.name}
+                    type="button"
+                    role="tab"
+                    aria-selected={index === currentMember}
+                    className={`team-lead-thumb ${index === currentMember ? "active" : ""}`}
+                    onClick={() => goToMemberByIndex(index)}
+                    aria-label={`View ${member.name}`}
+                  >
+                    <img src={member.image} alt="" />
+                  </button>
+                ))}
+              </div>
+
+              <div className="team-lead-nav" aria-label="Profile navigation">
+                <button
+                  type="button"
+                  className="team-lead-nav-btn"
+                  onClick={() => goToMember(-1)}
+                  aria-label="Previous team member"
+                >
+                  <i className="fa-solid fa-chevron-left" aria-hidden="true" />
+                </button>
+                <span className="team-lead-index">
+                  {formatPositionLabel(currentMember, total)}
+                </span>
+                <button
+                  type="button"
+                  className="team-lead-nav-btn"
+                  onClick={() => goToMember(1)}
+                  aria-label="Next team member"
+                >
+                  <i className="fa-solid fa-chevron-right" aria-hidden="true" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="team-lead-bio-anchor" className="team-lead-bio-block">
+          <div className="team-lead-bio-text">
+            {current.bio.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+
+          <div className="team-lead-cta">
+            {current.slug ? (
+              <Link
+                to={`/team/${current.slug}`}
+                className="btn-gold-outline"
+              >
+                View More
+              </Link>
+            ) : null}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TeamLeadershipSection;
