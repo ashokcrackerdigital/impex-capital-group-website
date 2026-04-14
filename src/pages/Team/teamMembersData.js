@@ -7,6 +7,7 @@ import michaelImg from "../../assets/images/Michael.png";
 import jodiSrubarImg from "../../assets/images/Jodi.png";
 import leenaMehtaImg from "../../assets/images/Leena.png";
 import aryanShahImg from "../../assets/images/Aryan_Shah.png";
+import logoImg from "../../assets/images/logo.png";
 
 export const TEAM_SECTION_INTRO = {
   title: "Leadership",
@@ -530,6 +531,127 @@ export const TEAM_MEMBERS = [
             "Strong analytical mindset",
             "Exposure to investment & strategy work",
             "Early-stage experience in real estate",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "doug-bergen",
+    name: "Doug Bergen",
+    role: "Senior Real Estate Professional",
+    image: logoImg,
+    bio: [
+      "Doug Bergen is a seasoned commercial real estate professional with over 20 years of experience in multifamily development and investment strategy.",
+      "He previously served as Senior Vice President of Investments at Sueba USA, a long-standing real estate development firm, where he focused on land acquisitions, dispositions, business development, joint ventures, equity placements, and investor relations.",
+      "Doug has successfully placed over $200 million in equity across approximately 15 multifamily developments and led a $45 million recapitalization of a three-asset portfolio, which was ultimately sold for over $160 million in 2021.",
+      "He has also personally participated in multiple real estate investments as both a General Partner and Limited Partner, bringing a well-rounded perspective to investment strategy and execution. Doug holds a B.B.A. in Finance from Baylor University.",
+    ],
+    seo: {
+      title:
+        "Doug Bergen | Senior Real Estate Professional | Impex Capital Group",
+      description:
+        "Profile of Doug Bergen, Senior Real Estate Professional at Impex Capital Group, focused on multifamily development, capital raising, and investor-focused growth.",
+    },
+    structuredPersonBio:
+      "Doug Bergen is a senior real estate professional at IMPEX Capital Group with 20+ years of experience in multifamily development, capital formation, and investment execution.",
+    detail: {
+      heroEyebrow: "Executive Leadership",
+      heroRoleLine: "Senior Real Estate Professional",
+      companyLine: "IMPEX Capital Group",
+      educationLine: "20+ Years Experience in Commercial Real Estate",
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: "Driving Investment Strategy & Capital Growth",
+      longBio: [
+        "Doug Bergen is a seasoned commercial real estate professional with over 20 years of experience in multifamily development and investment strategy.",
+        "He previously served as Senior Vice President of Investments at Sueba USA, a long-standing real estate development firm, where he focused on land acquisitions, dispositions, business development, joint ventures, equity placements, and investor relations.",
+        "Doug has successfully placed over $200 million in equity across approximately 15 multifamily developments and led a $45 million recapitalization of a three-asset portfolio, which was ultimately sold for over $160 million in 2021.",
+        "He has also personally participated in multiple real estate investments as both a General Partner and Limited Partner, bringing a well-rounded perspective to investment strategy and execution.",
+        "Doug holds a B.B.A. in Finance from Baylor University.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Experience & Expertise",
+      eduCards: [
+        {
+          variant: "list",
+          iconClass: "fa-solid fa-building",
+          heading: "Core Expertise",
+          items: [
+            "Multifamily Development",
+            "Capital Raising & Equity Placement",
+            "Joint Ventures & Partnerships",
+            "Investor Relations",
+          ],
+        },
+        {
+          variant: "list",
+          iconClass: "fa-regular fa-star",
+          heading: "Professional Highlights",
+          items: [
+            "20+ years of CRE experience",
+            "$200M+ equity placed",
+            "Led $160M+ portfolio exit",
+            "Experience as GP & LP investor",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "tapan-paul-patel",
+    name: 'Tapan ("Paul") Patel',
+    role: "Real Estate & Asset Management Professional",
+    image: logoImg,
+    bio: [
+      'Tapan ("Paul") Patel brings over 15 years of real estate experience in the Greater Houston area, with expertise spanning asset management, finance, construction management, and business operations.',
+      "He has held executive roles in property management and hotel ownership, overseeing portfolio performance, operational strategy, and property-level execution.",
+      "Paul combines technical expertise with a hands-on approach, with a strong focus on repositioning assets and driving value enhancement initiatives across the portfolio.",
+      "He holds an Associate Degree in Mathematics and Graphic Design from Blinn College and a Master's Degree in Interior Architecture from the University of Houston, which he leverages to guide the redesign and restoration of properties.",
+    ],
+    seo: {
+      title:
+        'Tapan ("Paul") Patel | Real Estate & Asset Management Professional | Impex Capital Group',
+      description:
+        'Profile of Tapan ("Paul") Patel at Impex Capital Group, focused on asset management, operations, and value-enhancement strategy.',
+    },
+    structuredPersonBio:
+      'Tapan ("Paul") Patel is a real estate and asset management professional at IMPEX Capital Group with 15+ years of experience in operations, repositioning, and value creation.',
+    detail: {
+      heroEyebrow: "Executive Leadership",
+      heroRoleLine: "Real Estate & Asset Management Professional",
+      companyLine: "IMPEX Capital Group",
+      educationLine: "15+ Years Experience",
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: "Enhancing Asset Value Through Strategic Execution",
+      longBio: [
+        'Tapan ("Paul") Patel brings over 15 years of real estate experience in the Greater Houston area, with expertise spanning asset management, finance, construction management, and business operations.',
+        "He has held executive roles in property management and hotel ownership, overseeing portfolio performance, operational strategy, and property-level execution.",
+        "Paul combines technical expertise with a hands-on approach, with a strong focus on repositioning assets and driving value enhancement initiatives across the portfolio.",
+        "He holds an Associate Degree in Mathematics and Graphic Design from Blinn College and a Master's Degree in Interior Architecture from the University of Houston, which he leverages to guide the redesign and restoration of properties.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Experience & Expertise",
+      eduCards: [
+        {
+          variant: "list",
+          iconClass: "fa-solid fa-layer-group",
+          heading: "Core Expertise",
+          items: [
+            "Asset Management",
+            "Construction & Operations",
+            "Property Repositioning",
+            "Value Enhancement",
+          ],
+        },
+        {
+          variant: "list",
+          iconClass: "fa-regular fa-star",
+          heading: "Professional Highlights",
+          items: [
+            "15+ years of real estate experience",
+            "Experience in hotel ownership & operations",
+            "Strong execution in asset repositioning",
+            "Background in design & architecture",
           ],
         },
       ],
