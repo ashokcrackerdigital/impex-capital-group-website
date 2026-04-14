@@ -6,6 +6,7 @@ import fahdMulawwahImg from "../../assets/images/FahdMulawwah.png";
 import michaelImg from "../../assets/images/Michael.png";
 import jodiSrubarImg from "../../assets/images/Jodi.png";
 import leenaMehtaImg from "../../assets/images/Leena.png";
+import aryanShahImg from "../../assets/images/Aryan_Shah.png";
 
 export const TEAM_SECTION_INTRO = {
   title: "Leadership",
@@ -474,6 +475,61 @@ export const TEAM_MEMBERS = [
             "Expertise in property-related coordination",
             "Supports strategic initiatives & partnerships",
             "Focus on operational efficiency",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "aryan-shah",
+    name: "Aryan Shah",
+    role: "Analyst Intern",
+    image: aryanShahImg,
+    bio: [
+      "Aryan Shah is an Analyst Intern at IMPEX Capital Group, where he supports research, data analysis, and project execution across the firm's investment platform.",
+      "He brings a strong work ethic, analytical mindset, and eagerness to learn, contributing to team initiatives while building a solid foundation in finance and business strategy.",
+      "Aryan is currently pursuing a double major at the University of Texas at Austin, studying Plan II Honors and Business Honors, reflecting his strong academic and analytical capabilities.",
+    ],
+    seo: {
+      title: "Aryan Shah | Analyst Intern | Impex Capital Group",
+      description:
+        "Profile of Aryan Shah, Analyst Intern at Impex Capital Group, supporting research, data-driven analysis, and investment execution initiatives.",
+    },
+    structuredPersonBio:
+      "Aryan Shah is an Analyst Intern at IMPEX Capital Group supporting research, data analysis, and project execution across the investment platform.",
+    detail: {
+      heroEyebrow: "Executive Leadership",
+      heroRoleLine: "Analyst Intern",
+      companyLine: "IMPEX Capital Group",
+      educationLine: "Student – University of Texas at Austin",
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: "Supporting Research & Data-Driven Insights",
+      longBio: [
+        "Aryan Shah is an Analyst Intern at IMPEX Capital Group, where he supports research, data analysis, and project execution across the firm's investment platform.",
+        "He brings a strong work ethic, analytical mindset, and eagerness to learn, contributing to team initiatives while building a solid foundation in finance and business strategy.",
+        "Aryan is currently pursuing a double major at the University of Texas at Austin, studying Plan II Honors and Business Honors, reflecting his strong academic and analytical capabilities.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Education & Highlights",
+      eduCards: [
+        {
+          variant: "list",
+          iconClass: "fa-solid fa-graduation-cap",
+          heading: "Education",
+          items: [
+            "University of Texas at Austin",
+            "Plan II Honors & Business Honors",
+          ],
+        },
+        {
+          variant: "list",
+          iconClass: "fa-regular fa-star",
+          heading: "Professional Highlights",
+          items: [
+            "Research & data analysis support",
+            "Strong analytical mindset",
+            "Exposure to investment & strategy work",
+            "Early-stage experience in real estate",
           ],
         },
       ],
