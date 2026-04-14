@@ -55,7 +55,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 72% 30%;
+  /* Keep extra breathing room above face; crop from bottom instead */
+  object-position: 72% 18%;
   display: block;
 }
 
@@ -347,7 +348,7 @@
   }
 
   .member-hero-bg-img {
-    object-position: 68% 24%;
+    object-position: 68% 16%;
   }
 }
 
