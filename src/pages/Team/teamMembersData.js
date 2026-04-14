@@ -8,7 +8,9 @@ import jodiSrubarImg from "../../assets/images/Jodi.png";
 import leenaMehtaImg from "../../assets/images/Leena.png";
 import aryanShahImg from "../../assets/images/Aryan_Shah.png";
 import PaulImg from "../../assets/images/Paul.png";
+import DougBergenImg from "../../assets/images/doug.png";
 import davidWallaceImg from "../../assets/images/David.png";
+import krishShahImg from "../../assets/images/Krish.PNG";
 
 export const TEAM_SECTION_INTRO = {
   title: "Leadership",
@@ -541,7 +543,7 @@ export const TEAM_MEMBERS = [
     slug: "doug-bergen",
     name: "Doug Bergen",
     role: "Senior Real Estate Professional",
-    image: PaulImg,
+    image: DougBergenImg,
     bio: [
       "Doug Bergen is a seasoned commercial real estate professional with over 20 years of experience in multifamily development and investment strategy.",
       "He previously served as Senior Vice President of Investments at Sueba USA, a long-standing real estate development firm, where he focused on land acquisitions, dispositions, business development, joint ventures, equity placements, and investor relations.",
@@ -721,6 +723,66 @@ export const TEAM_MEMBERS = [
             "$6B+ PPP transaction experience",
             "Former Mayor - Sugar Land, Texas",
             "Former CEO - The Grantham Company",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "krish-shah",
+    name: "Krish Shah",
+    role: "Senior Analyst - Associate",
+    image: krishShahImg,
+    bio: [
+      "Krish Shah is a Senior Analyst – Associate at IMPEX Capital Group, where he supports the firm’s strategic initiatives, business development, and pipeline management.",
+      "In his role, Krish assists in sourcing and evaluating investment opportunities, conducting financial analysis, and supporting the execution of new projects and partnerships. His work contributes to advancing the firm’s ongoing development efforts and long-term growth strategy.",
+      "With a strong academic foundation in finance and entrepreneurship, Krish brings a data-driven and analytical approach to real estate investments, supporting informed decision-making across the platform.",
+    ],
+    seo: {
+      title: "Krish Shah | Senior Analyst - Associate | Impex Capital Group",
+      description:
+        "Profile of Krish Shah, Senior Analyst - Associate at Impex Capital Group, supporting investment analysis, business development, and strategic growth execution.",
+    },
+    structuredPersonBio:
+      "Krish Shah is a Senior Analyst - Associate at IMPEX Capital Group supporting deal evaluation, financial analysis, and growth-focused strategic initiatives.",
+    detail: {
+      heroEyebrow: "Executive Leadership",
+      heroRoleLine: "Senior Analyst - Associate",
+      companyLine: "IMPEX Capital Group",
+      educationLines: [
+        "Bachelor's in Finance (Pursuing), Rice University",
+        "Minor in Entrepreneurship",
+      ],
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: "Supporting Strategic Growth & Investment Execution",
+      longBio: [
+        "Krish Shah is a Senior Analyst – Associate at IMPEX Capital Group, where he supports the firm’s strategic initiatives, business development, and pipeline management.",
+        "In his role, Krish assists in sourcing and evaluating investment opportunities, conducting financial analysis, and supporting the execution of new projects and partnerships. His work contributes to advancing the firm’s ongoing development efforts and long-term growth strategy.",
+        "With a strong academic foundation in finance and entrepreneurship, Krish brings a data-driven and analytical approach to real estate investments, supporting informed decision-making across the platform.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Education & Early Career",
+      eduCards: [
+        {
+          variant: "list",
+          iconClass: "fa-solid fa-graduation-cap",
+          heading: "Education",
+          items: [
+            "Bachelor's Degree in Finance (Pursuing)",
+            "Rice University",
+            "Minor in Entrepreneurship",
+          ],
+        },
+        {
+          variant: "list",
+          iconClass: "fa-regular fa-star",
+          heading: "Professional Highlights",
+          items: [
+            "Investment analysis & deal evaluation",
+            "Financial modeling & research support",
+            "Pipeline & business development involvement",
+            "Exposure to real estate investment strategy",
+            "Focus on growth & execution",
           ],
         },
       ],
