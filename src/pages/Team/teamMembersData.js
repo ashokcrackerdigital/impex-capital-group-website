@@ -7,7 +7,8 @@ import michaelImg from "../../assets/images/Michael.png";
 import jodiSrubarImg from "../../assets/images/Jodi.png";
 import leenaMehtaImg from "../../assets/images/Leena.png";
 import aryanShahImg from "../../assets/images/Aryan_Shah.png";
-import logoImg from "../../assets/images/logo.png";
+import PaulImg from "../../assets/images/Paul.png";
+import davidWallaceImg from "../../assets/images/David.png";
 
 export const TEAM_SECTION_INTRO = {
   title: "Leadership",
@@ -540,7 +541,7 @@ export const TEAM_MEMBERS = [
     slug: "doug-bergen",
     name: "Doug Bergen",
     role: "Senior Real Estate Professional",
-    image: logoImg,
+    image: PaulImg,
     bio: [
       "Doug Bergen is a seasoned commercial real estate professional with over 20 years of experience in multifamily development and investment strategy.",
       "He previously served as Senior Vice President of Investments at Sueba USA, a long-standing real estate development firm, where he focused on land acquisitions, dispositions, business development, joint ventures, equity placements, and investor relations.",
@@ -599,9 +600,9 @@ export const TEAM_MEMBERS = [
   },
   {
     slug: "tapan-paul-patel",
-    name: 'Tapan ("Paul") Patel',
+    name: 'Tapan Patel',
     role: "Real Estate & Asset Management Professional",
-    image: logoImg,
+    image: PaulImg,
     bio: [
       'Tapan ("Paul") Patel brings over 15 years of real estate experience in the Greater Houston area, with expertise spanning asset management, finance, construction management, and business operations.',
       "He has held executive roles in property management and hotel ownership, overseeing portfolio performance, operational strategy, and property-level execution.",
@@ -652,6 +653,74 @@ export const TEAM_MEMBERS = [
             "Experience in hotel ownership & operations",
             "Strong execution in asset repositioning",
             "Background in design & architecture",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "david-wallace",
+    name: "David Wallace",
+    role: "Chief Development Officer",
+    image: davidWallaceImg,
+    bio: [
+      "David Wallace serves as the Chief Development Officer of IMPEX Capital Group, bringing over 40 years of experience in real estate development, acquisitions, and corporate formation.",
+      "Throughout his career, he has been involved in the formation of over 200 companies and has successfully secured billions of dollars in equity and debt financing from both public and private sector sources.",
+      "Mr. Wallace has also played a key role as a principal or representative in over $6 billion of public-private partnership (PPP) transactions, demonstrating deep expertise in structuring complex, large-scale investment and development projects.",
+      "He began his career in 1982 as Vice President at Equity Management Corporation, a Dallas-based real estate syndication firm, where he was responsible for the acquisition and disposition of over $250 million in assets across multifamily, hospitality, office, retail, and mixed-use developments.",
+      "In addition to his real estate career, Mr. Wallace has served three terms as Mayor of the City of Sugar Land, Texas, reflecting his leadership and commitment to community development.",
+      "He also served as CEO of The Grantham Company, a family office for the Thatcher family in the United Kingdom, where he oversaw strategic investments and business operations.",
+    ],
+    seo: {
+      title: "David Wallace | Chief Development Officer | Impex Capital Group",
+      description:
+        "Profile of David Wallace, Chief Development Officer at Impex Capital Group, leading large-scale development, capital formation, and strategic growth initiatives.",
+    },
+    structuredPersonBio:
+      "David Wallace is Chief Development Officer at IMPEX Capital Group with 40+ years of experience in real estate development, capital formation, and complex public-private transactions.",
+    detail: {
+      heroEyebrow: "Executive Leadership",
+      heroRoleLine: "Chief Development Officer",
+      companyLine: "IMPEX Capital Group",
+      educationLine:
+        "40+ Years Experience in Real Estate Development & Capital Formation",
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: "Driving Large-Scale Development & Strategic Capital Growth",
+      longBio: [
+        "David Wallace serves as the Chief Development Officer of IMPEX Capital Group, bringing over 40 years of experience in real estate development, acquisitions, and corporate formation.",
+        "Throughout his career, he has been involved in the formation of over 200 companies and has successfully secured billions of dollars in equity and debt financing from both public and private sector sources.",
+        "Mr. Wallace has also played a key role as a principal or representative in over $6 billion of public-private partnership (PPP) transactions, demonstrating deep expertise in structuring complex, large-scale investment and development projects.",
+        "He began his career in 1982 as Vice President at Equity Management Corporation, a Dallas-based real estate syndication firm, where he was responsible for the acquisition and disposition of over $250 million in assets across multifamily, hospitality, office, retail, and mixed-use developments.",
+        "In addition to his real estate career, Mr. Wallace has served three terms as Mayor of the City of Sugar Land, Texas, reflecting his leadership and commitment to community development.",
+        "He also served as CEO of The Grantham Company, a family office for the Thatcher family in the United Kingdom, where he oversaw strategic investments and business operations.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Experience & Expertise",
+      eduCards: [
+        {
+          variant: "list",
+          iconClass: "fa-solid fa-graduation-cap",
+          heading: "Education",
+          items: [
+            "Bachelor of Business Administration - Real Estate Finance",
+            "University of North Texas",
+            "Graduate Studies - FinTech",
+            "Wharton School of Business",
+            "Graduate Studies - Artificial Intelligence",
+            "MIT Sloan School of Management",
+          ],
+        },
+        {
+          variant: "list",
+          iconClass: "fa-regular fa-star",
+          heading: "Professional Highlights",
+          items: [
+            "40+ years of real estate leadership experience",
+            "200+ companies formed across multiple sectors",
+            "Billions raised in equity & debt financing",
+            "$6B+ PPP transaction experience",
+            "Former Mayor - Sugar Land, Texas",
+            "Former CEO - The Grantham Company",
           ],
         },
       ],
