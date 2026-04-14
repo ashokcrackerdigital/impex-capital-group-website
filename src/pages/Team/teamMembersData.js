@@ -3,6 +3,7 @@ import nishaSmithImg from "../../assets/images/NishaPic.png";
 import barryChienImg from "../../assets/images/BarryChien.png";
 import rajeevImg from "../../assets/images/Rajeev.png";
 import fahdMulawwahImg from "../../assets/images/FahdMulawwah.png";
+import michaelImg from "../../assets/images/Michael.png";
 
 export const TEAM_SECTION_INTRO = {
   title: "Leadership",
@@ -116,6 +117,66 @@ export const TEAM_MEMBERS = [
             "Management Roles, DoubleTree Hotels",
             "Real Estate Consultant – Indian & U.S. Markets",
             "Director, Investor Relations – IMPEX Capital Group",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "michael",
+    name: "Michael",
+    role: "Managing Director",
+    image: michaelImg,
+    bio: [
+      "Michael is a senior commercial real estate and financial services executive with more than 30 years of leadership experience spanning capital markets, real estate finance, and development.",
+      "Over the course of his career, he has held senior leadership roles at global financial institutions including Wells Fargo, Bank of America, and Citigroup, where he led large-scale revenue platforms, built high-performing national teams, and managed complex multi-billion-dollar P&L operations.",
+      "Michael brings deep expertise in institutional capital formation, cross-border partnerships, and strategic business development across global markets. He has partnered with institutional investors, private capital sources, and operating sponsors across the United States, Europe, the Middle East, and Southeast Asia, structuring and scaling disciplined real estate investment strategies.",
+      "As Managing Director at IMPEX Capital Group, Michael focuses on expanding strategic partnerships, sourcing multi-asset investment opportunities, and aligning global capital with high-quality commercial real estate platforms to drive long-term value creation.",
+    ],
+    seo: {
+      title: "Michael | Managing Director | Impex Capital Group",
+      description:
+        "Profile of Michael, Managing Director at Impex Capital Group, focused on global capital strategy, strategic partnerships, and commercial real estate growth.",
+    },
+    structuredPersonBio:
+      "Michael is Managing Director at IMPEX Capital Group, leading strategic partnerships and global capital alignment across commercial real estate investments.",
+    detail: {
+      heroEyebrow: "Executive Leadership",
+      heroRoleLine: "Managing Director",
+      companyLine: "IMPEX Capital Group",
+      educationLine: "30+ Years Experience in Capital Markets & Real Estate",
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: "Driving Global Capital Strategy & Strategic Partnerships",
+      longBio: [
+        "Michael is a senior commercial real estate and financial services executive with more than 30 years of leadership experience spanning capital markets, real estate finance, and development.",
+        "Over the course of his career, he has held senior leadership roles at global financial institutions including Wells Fargo, Bank of America, and Citigroup, where he led large-scale revenue platforms, built high-performing national teams, and managed complex multi-billion-dollar P&L operations.",
+        "Michael brings deep expertise in institutional capital formation, cross-border partnerships, and strategic business development across global markets. He has partnered with institutional investors, private capital sources, and operating sponsors across the United States, Europe, the Middle East, and Southeast Asia, structuring and scaling disciplined real estate investment strategies.",
+        "As Managing Director at IMPEX Capital Group, Michael focuses on expanding strategic partnerships, sourcing multi-asset investment opportunities, and aligning global capital with high-quality commercial real estate platforms to drive long-term value creation.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Experience & Expertise",
+      eduCards: [
+        {
+          variant: "list",
+          iconClass: "fa-solid fa-chart-line",
+          heading: "Core Expertise",
+          items: [
+            "Capital Markets & Real Estate Finance",
+            "Institutional Capital Formation",
+            "Cross-Border Investment Strategies",
+            "Strategic Business Development",
+          ],
+        },
+        {
+          variant: "list",
+          iconClass: "fa-regular fa-star",
+          heading: "Professional Highlights",
+          items: [
+            "30+ years of leadership experience",
+            "Senior roles at Wells Fargo, Bank of America & Citigroup",
+            "Managed multi-billion-dollar P&L operations",
+            "Global experience across US, Europe, Middle East & Asia",
+            "Expertise in institutional partnerships & capital strategy",
           ],
         },
       ],
