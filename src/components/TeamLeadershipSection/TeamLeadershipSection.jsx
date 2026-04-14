@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./TeamLeadershipSection.css";
+
+const THUMB_VISIBLE = 4;
 
 function formatPositionLabel(index, total) {
   const width = Math.max(2, String(total).length);
@@ -10,8 +12,25 @@ function formatPositionLabel(index, total) {
 
 const TeamLeadershipSection = ({ members, title, intro }) => {
   const [currentMember, setCurrentMember] = useState(0);
+  const [thumbWindowStart, setThumbWindowStart] = useState(0);
   const total = members.length;
   const current = members[currentMember];
+
+  useEffect(() => {
+    if (total <= THUMB_VISIBLE) {
+      setThumbWindowStart(0);
+      return;
+    }
+    setThumbWindowStart((prev) => {
+      if (currentMember < prev) {
+        return Math.max(0, currentMember);
+      }
+      if (currentMember >= prev + THUMB_VISIBLE) {
+        return Math.max(0, currentMember - THUMB_VISIBLE + 1);
+      }
+      return prev;
+    });
+  }, [currentMember, total]);
 
   const scrollToSectionTop = () => {
     requestAnimationFrame(() => {
@@ -60,20 +79,29 @@ const TeamLeadershipSection = ({ members, title, intro }) => {
             </div>
 
             <div className="team-lead-controls">
-              <div className="team-lead-thumbs" role="tablist" aria-label="Team members">
-                {members.map((member, index) => (
-                  <button
-                    key={member.slug ?? member.name}
-                    type="button"
-                    role="tab"
-                    aria-selected={index === currentMember}
-                    className={`team-lead-thumb ${index === currentMember ? "active" : ""}`}
-                    onClick={() => goToMemberByIndex(index)}
-                    aria-label={`View ${member.name}`}
-                  >
-                    <img src={member.image} alt="" />
-                  </button>
-                ))}
+              <div
+                className={`team-lead-thumbs-viewport${total <= THUMB_VISIBLE ? " team-lead-thumbs-viewport--fit" : ""}`}
+                style={{ "--tw-start": thumbWindowStart }}
+              >
+                <div
+                  className="team-lead-thumbs-track"
+                  role="tablist"
+                  aria-label="Team members"
+                >
+                  {members.map((member, index) => (
+                    <button
+                      key={member.slug ?? member.name}
+                      type="button"
+                      role="tab"
+                      aria-selected={index === currentMember}
+                      className={`team-lead-thumb ${index === currentMember ? "active" : ""}`}
+                      onClick={() => goToMemberByIndex(index)}
+                      aria-label={`View ${member.name}`}
+                    >
+                      <img src={member.image} alt="" />
+                    </button>
+                  ))}
+                </div>
               </div>
 
               <div className="team-lead-nav" aria-label="Profile navigation">

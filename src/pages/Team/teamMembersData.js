@@ -2,6 +2,7 @@ import ashShahImg from "../../assets/images/AshHeadshot.png";
 import nishaSmithImg from "../../assets/images/NishaPic.png";
 import barryChienImg from "../../assets/images/BarryChien.png";
 import rajeevImg from "../../assets/images/Rajeev.png";
+import fahdMulawwahImg from "../../assets/images/FahdMulawwah.png";
 
 export const TEAM_SECTION_INTRO = {
   title: "Leadership",
@@ -238,6 +239,64 @@ export const TEAM_MEMBERS = [
             "$500M+ CRE portfolio exposure as Limited Partner",
             "Global experience across 6+ regions",
             "Focus on next-generation data center investments",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "fahd-mulawwah",
+    name: "Fahd Mulawwah",
+    role: "Managing Director of Investments",
+    image: fahdMulawwahImg,
+    bio: [
+      "Fahd Mulawwah is Managing Director of Investments at Impex Capital Group, leading the firm’s investment strategy and credit enhancement initiatives across key U.S. markets.",
+      "With over $5 billion in career transaction experience, he brings deep expertise in single-family rental (SFR), build-to-rent (BTR), and multifamily—from underwriting and capital structuring through portfolio construction and execution.",
+      "Previously he was Managing Director of Investments at Shieldstone Holdings, focused on affordable and workforce housing across the Southeast and Mid-Atlantic.",
+      "He has managed and deployed more than $4 billion in institutional capital, combining rigorous underwriting, strategic deployment, and risk management across market cycles.",
+    ],
+    seo: {
+      title:
+        "Fahd Mulawwah | Managing Director of Investments | Impex Capital Group",
+      description:
+        "Profile of Fahd Mulawwah, Managing Director of Investments at Impex Capital Group, leading strategy, credit enhancement, and institutional real estate execution.",
+    },
+    structuredPersonBio:
+      "Fahd Mulawwah is Managing Director of Investments at Impex Capital Group, leading investment strategy, credit enhancement, and high-value real estate execution.",
+    detail: {
+      heroEyebrow: "Executive Leadership",
+      heroRoleLine: "Managing Director of Investments",
+      companyLine: "IMPEX Capital Group",
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: "Leading Strategy, Driving Institutional Growth",
+      longBio: [
+        "Fahd Mulawwah serves as Managing Director of Investments at IMPEX Capital Group, where he leads the firm’s investment strategy and credit enhancement initiatives. With a strong institutional background, he plays a critical role in identifying, structuring, and executing high-value real estate investments across key U.S. markets.",
+        "With over $5 billion in career transaction experience, Fahd brings deep expertise across single-family rental (SFR), build-to-rent (BTR), and multifamily acquisitions. His experience spans the full investment lifecycle, including underwriting, capital structuring, portfolio construction, and execution, ensuring disciplined and performance-driven investment outcomes.",
+        "Prior to joining IMPEX Capital Group, Fahd served as Managing Director of Investments at Shieldstone Holdings, a Miami-based commercial real estate investment and development firm. There, he focused on affordable and workforce housing investments across the Southeast and Mid-Atlantic regions of the United States, further strengthening his expertise in scalable and impact-driven real estate strategies.",
+        "Throughout his career, Fahd has managed and deployed over $4 billion in institutional capital, working with leading investment platforms. His approach combines rigorous underwriting discipline, strategic capital deployment, and risk management, enabling consistent performance across diverse market cycles.",
+        "Fahd’s investment philosophy is centered on long-term value creation, disciplined execution, and strategic partnerships, aligning closely with IMPEX Capital Group’s mission to deliver sustainable growth and strong returns for its investors.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Education & Expertise",
+      eduCards: [
+        {
+          variant: "list",
+          iconClass: "fa-solid fa-chart-line",
+          heading: "Investment Expertise",
+          items: [
+            "Over $5 Billion in Career Transactions",
+            "Institutional SFR, BTR & Multifamily Investments",
+            "Portfolio Construction & Capital Deployment",
+          ],
+        },
+        {
+          variant: "list",
+          iconClass: "fa-solid fa-briefcase",
+          heading: "Leadership Experience",
+          items: [
+            "Managing Director – IMPEX Capital Group",
+            "Former Managing Director – Shieldstone Holdings",
+            "Expertise in Credit Structuring & Risk Management",
           ],
         },
       ],
