@@ -4,6 +4,8 @@ import barryChienImg from "../../assets/images/BarryChien.png";
 import rajeevImg from "../../assets/images/Rajeev.png";
 import fahdMulawwahImg from "../../assets/images/FahdMulawwah.png";
 import michaelImg from "../../assets/images/Michael.png";
+import jodiSrubarImg from "../../assets/images/Jodi.png";
+import leenaMehtaImg from "../../assets/images/Leena.png";
 
 export const TEAM_SECTION_INTRO = {
   title: "Leadership",
@@ -358,6 +360,120 @@ export const TEAM_MEMBERS = [
             "Managing Director – IMPEX Capital Group",
             "Former Managing Director – Shieldstone Holdings",
             "Expertise in Credit Structuring & Risk Management",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "jodi-srubar",
+    name: "Jodi Srubar",
+    role: "Administrative Assistant",
+    image: jodiSrubarImg,
+    bio: [
+      "Jodi Srubar is an Administrative Assistant at IMPEX Capital Group, bringing over 20 years of experience in operations, coordination, and project support across both residential and commercial environments.",
+      "She is known for her strong attention to detail, problem-solving ability, and organizational expertise, developed through years of hands-on experience in fast-paced professional settings.",
+      "In her current role, Jodi supports day-to-day administrative functions, helping ensure the smooth execution of internal processes and contributing to the overall efficiency of company operations.",
+    ],
+    seo: {
+      title: "Jodi Srubar | Administrative Assistant | Impex Capital Group",
+      description:
+        "Profile of Jodi Srubar, Administrative Assistant at Impex Capital Group, supporting operational excellence, project coordination, and organizational efficiency.",
+    },
+    structuredPersonBio:
+      "Jodi Srubar is an Administrative Assistant at IMPEX Capital Group with 20+ years of experience in operations, coordination, and process efficiency.",
+    detail: {
+      heroEyebrow: "Executive Leadership",
+      heroRoleLine: "Administrative Assistant",
+      companyLine: "IMPEX Capital Group",
+      educationLine: "20+ Years Experience in Operations & Coordination",
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: "Ensuring Operational Excellence & Efficiency",
+      longBio: [
+        "Jodi Srubar is an Administrative Assistant at IMPEX Capital Group, bringing over 20 years of experience in operations, coordination, and project support across both residential and commercial environments.",
+        "She is known for her strong attention to detail, problem-solving ability, and organizational expertise, developed through years of hands-on experience in fast-paced professional settings.",
+        "In her current role, Jodi supports day-to-day administrative functions, helping ensure the smooth execution of internal processes and contributing to the overall efficiency of company operations.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Experience & Expertise",
+      eduCards: [
+        {
+          variant: "list",
+          iconClass: "fa-solid fa-list-check",
+          heading: "Core Strengths",
+          items: [
+            "Operations & Administrative Support",
+            "Project Coordination",
+            "Organizational Management",
+            "Process Efficiency",
+          ],
+        },
+        {
+          variant: "list",
+          iconClass: "fa-regular fa-star",
+          heading: "Professional Highlights",
+          items: [
+            "20+ years of administrative experience",
+            "Strong attention to detail & organization",
+            "Experience across residential & commercial projects",
+            "Operational support & coordination expertise",
+            "Focus on efficiency & execution",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "leena-mehta",
+    name: "Leena Mehta",
+    role: "Account Executive",
+    image: leenaMehtaImg,
+    bio: [
+      "Leena Mehta is an Account Executive at IMPEX Capital Group with a strong track record in managing client relationships, driving growth, and delivering results across diverse projects.",
+      "She is known for her strong organizational skills and deep understanding of property needs, enabling her to effectively support both clients and internal teams.",
+      "Leena plays a key role in ensuring smooth day-to-day operations, while also supporting the firm’s strategic initiatives and partnerships, contributing to long-term business growth and client satisfaction.",
+    ],
+    seo: {
+      title: "Leena Mehta | Account Executive | Impex Capital Group",
+      description:
+        "Profile of Leena Mehta, Account Executive at Impex Capital Group, focused on client relationships, operational coordination, and strategic partnership support.",
+    },
+    structuredPersonBio:
+      "Leena Mehta is an Account Executive at IMPEX Capital Group supporting client relationship management, operational coordination, and strategic growth initiatives.",
+    detail: {
+      heroEyebrow: "Executive Leadership",
+      heroRoleLine: "Account Executive",
+      companyLine: "IMPEX Capital Group",
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: "Driving Client Relationships & Operational Excellence",
+      longBio: [
+        "Leena Mehta is an Account Executive at IMPEX Capital Group with a strong track record in managing client relationships, driving growth, and delivering results across diverse projects.",
+        "She is known for her strong organizational skills and deep understanding of property needs, enabling her to effectively support both clients and internal teams.",
+        "Leena plays a key role in ensuring smooth day-to-day operations, while also supporting the firm’s strategic initiatives and partnerships, contributing to long-term business growth and client satisfaction.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Experience & Expertise",
+      eduCards: [
+        {
+          variant: "list",
+          iconClass: "fa-solid fa-handshake",
+          heading: "Core Expertise",
+          items: [
+            "Client Relationship Management",
+            "Operational Coordination",
+            "Project Execution",
+            "Strategic Partnership Support",
+          ],
+        },
+        {
+          variant: "list",
+          iconClass: "fa-regular fa-star",
+          heading: "Professional Highlights",
+          items: [
+            "Strong track record in client management",
+            "Expertise in property-related coordination",
+            "Supports strategic initiatives & partnerships",
+            "Focus on operational efficiency",
           ],
         },
       ],
