@@ -90,7 +90,7 @@ const TeamLeadershipSection = ({ members, title, intro }) => {
           <div className="team-lead-image-frame">
             <picture className="team-lead-picture">
               {current.mobileImage ? (
-                <source media="(max-width: 768px)" srcSet={current.mobileImage} />
+                <source media="(max-width: 425px)" srcSet={current.mobileImage} />
               ) : null}
               <img src={current.image} alt={current.name} />
             </picture>

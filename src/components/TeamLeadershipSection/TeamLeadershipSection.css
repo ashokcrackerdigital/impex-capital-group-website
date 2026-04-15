@@ -322,7 +322,7 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .team-leadership-root.team-section {
     overflow: visible;
     padding: 3.5rem 5% 4rem;
@@ -374,7 +374,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 425px) {
   .team-leadership-root.team-section {
     overflow: visible;
     padding: 3.75rem 5% 4.5rem;
@@ -436,7 +436,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   /* Mobile flow: image -> controls -> name/role -> description */
   .team-lead-toolbar {
     gap: 0.45rem;

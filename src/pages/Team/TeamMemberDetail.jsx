@@ -77,7 +77,7 @@ const TeamMemberDetail = () => {
         <div className="member-hero-bg">
           <picture className="member-hero-bg-picture">
             {mobileImage ? (
-              <source media="(max-width: 768px)" srcSet={mobileImage} />
+              <source media="(max-width: 425px)" srcSet={mobileImage} />
             ) : null}
             <img
               src={image}

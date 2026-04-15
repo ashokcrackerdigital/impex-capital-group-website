@@ -338,7 +338,7 @@
 /* =========================
    RESPONSIVE
 ========================= */
-@media (max-width: 1024px) {
+@media (max-width: 425px) {
   .member-hero-overlay {
     background: linear-gradient(
       180deg,
@@ -358,7 +358,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .member-hero {
     min-height: 100vh;
     height: 100vh;
