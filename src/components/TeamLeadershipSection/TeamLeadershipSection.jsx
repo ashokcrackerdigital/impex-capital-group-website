@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./TeamLeadershipSection.css";
@@ -13,6 +13,8 @@ function formatPositionLabel(index, total) {
 const TeamLeadershipSection = ({ members, title, intro }) => {
   const [currentMember, setCurrentMember] = useState(0);
   const [thumbWindowStart, setThumbWindowStart] = useState(0);
+  const thumbsViewportRef = useRef(null);
+  const activeThumbRef = useRef(null);
   const total = members.length;
   const current = members[currentMember];
 
@@ -31,6 +33,25 @@ const TeamLeadershipSection = ({ members, title, intro }) => {
       return prev;
     });
   }, [currentMember, total]);
+
+  useEffect(() => {
+    if (!window.matchMedia("(max-width: 1024px)").matches) {
+      return;
+    }
+
+    const viewport = thumbsViewportRef.current;
+    const activeThumb = activeThumbRef.current;
+    if (!viewport || !activeThumb) {
+      return;
+    }
+
+    const targetLeft =
+      activeThumb.offsetLeft - (viewport.clientWidth - activeThumb.clientWidth) / 2;
+    viewport.scrollTo({
+      left: Math.max(0, targetLeft),
+      behavior: "smooth",
+    });
+  }, [currentMember]);
 
   const scrollToSectionTop = () => {
     requestAnimationFrame(() => {
@@ -87,6 +108,7 @@ const TeamLeadershipSection = ({ members, title, intro }) => {
               <div
                 className={`team-lead-thumbs-viewport${total <= THUMB_VISIBLE ? " team-lead-thumbs-viewport--fit" : ""}`}
                 style={{ "--tw-start": thumbWindowStart }}
+                ref={thumbsViewportRef}
               >
                 <div
                   className="team-lead-thumbs-track"
@@ -102,6 +124,7 @@ const TeamLeadershipSection = ({ members, title, intro }) => {
                       className={`team-lead-thumb ${index === currentMember ? "active" : ""}`}
                       onClick={() => goToMemberByIndex(index)}
                       aria-label={`View ${member.name}`}
+                      ref={index === currentMember ? activeThumbRef : null}
                     >
                       <img src={member.image} alt="" />
                     </button>

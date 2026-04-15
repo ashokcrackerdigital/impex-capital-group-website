@@ -249,6 +249,20 @@
   border-color: var(--tl-gold);
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .team-lead-nav-btn:hover {
+    background: transparent;
+    color: var(--tl-text);
+    border-color: var(--tl-border);
+  }
+
+  .team-lead-nav-btn:active {
+    background: var(--tl-gold);
+    color: #0a0a0a;
+    border-color: var(--tl-gold);
+  }
+}
+
 .team-lead-index {
   font-family: ui-monospace, monospace;
   font-size: 0.72rem;
@@ -309,10 +323,16 @@
 }
 
 @media (max-width: 768px) {
+  .team-leadership-root.team-section {
+    overflow: visible;
+    padding: 3.5rem 5% 4rem;
+  }
+
   .team-lead-toolbar {
     flex-direction: column;
     align-items: stretch;
-    margin-top: 1.35rem;
+    margin-top: 1.1rem;
+    gap: 1rem;
   }
 
   .team-lead-controls {
@@ -340,7 +360,104 @@
   }
 
   .team-lead-image-frame img {
-    height: max(200px, min(70vh, 640px));
+    height: min(52vh, 420px);
+    object-position: center 18%;
+  }
+
+  .team-lead-bio-block {
+    margin-top: 1.4rem;
+  }
+
+  .team-lead-bio-text {
+    margin-bottom: 1.5rem;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 1024px) {
+  .team-leadership-root.team-section {
+    overflow: visible;
+    padding: 3.75rem 5% 4.5rem;
+  }
+
+  .team-lead-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0.65rem;
+    margin-top: 0.9rem;
+  }
+
+  .team-lead-identity {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .team-lead-controls {
+    width: 100%;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .team-lead-thumbs-viewport {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.2rem;
+  }
+
+  .team-lead-thumbs-track {
+    width: max-content;
+    padding: 0 0.2rem;
+    justify-content: flex-start;
+    transform: none !important;
+  }
+
+  .team-lead-nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .team-lead-image-frame img {
+    height: clamp(220px, 48vh, 420px);
+    object-position: center 16%;
+  }
+
+  .team-lead-bio-block {
+    margin-top: 0.6rem;
+  }
+
+  .team-lead-bio-text {
+    margin-bottom: 1.2rem;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile flow: image -> controls -> name/role -> description */
+  .team-lead-toolbar {
+    gap: 0.45rem;
+  }
+
+  .team-lead-controls {
+    order: 1;
+    margin-top: 0.15rem;
+  }
+
+  .team-lead-identity {
+    order: 2;
+    margin-top: 0.2rem;
+  }
+
+  .team-lead-kicker {
+    margin-top: 0.8rem;
+  }
+
+  .team-lead-bio-block {
+    margin-top: 0.7rem;
   }
 }
 
