@@ -67,7 +67,12 @@ const TeamLeadershipSection = ({ members, title, intro }) => {
       <div className="team-leadership reveal">
         <div className="team-lead-visual-block">
           <div className="team-lead-image-frame">
-            <img src={current.image} alt={current.name} />
+            <picture className="team-lead-picture">
+              {current.mobileImage ? (
+                <source media="(max-width: 768px)" srcSet={current.mobileImage} />
+              ) : null}
+              <img src={current.image} alt={current.name} />
+            </picture>
           </div>
 
           <div className="team-lead-toolbar">

@@ -1,16 +1,29 @@
 import ashShahImg from "../../assets/images/AshHeadshot.png";
+import ashShahImgMobile from "../../assets/images/ashShahImgMobile.png";
 import nishaSmithImg from "../../assets/images/NishaPic.png";
+import nishaSmithImgMobile from "../../assets/images/nishaSmithImgMobile.png";
 import barryChienImg from "../../assets/images/BarryChien.png";
+import barryChienImgMobile from "../../assets/images/barryChienImgMobile.png";
 import rajeevImg from "../../assets/images/Rajeev.png";
+import rajeevImgMobile from "../../assets/images/rajeevImgMobile.png";
 import fahdMulawwahImg from "../../assets/images/FahdMulawwah.png";
+import fahdMulawwahImgMobile from "../../assets/images/fahdMulawwahImgMobile.png";
 import michaelImg from "../../assets/images/Michael.png";
+import michaelImgMobile from "../../assets/images/michaelImgMobile.png";
 import jodiSrubarImg from "../../assets/images/Jodi.png";
+import jodiSrubarImgMobile from "../../assets/images/jodiSrubarImgMobile.png";
 import leenaMehtaImg from "../../assets/images/Leena.png";
+import leenaMehtaImgMobile from "../../assets/images/leenaMehtaImgMobile.png";
 import aryanShahImg from "../../assets/images/Aryan_Shah.png";
+import aryanShahImgMobile from "../../assets/images/aryanShahImgMobile.png";
 import PaulImg from "../../assets/images/Paul.png";
+import PaulImgMobile from "../../assets/images/PaulImgMobile.png";
 import DougBergenImg from "../../assets/images/doug.png";
+import DougBergenImgMobile from "../../assets/images/dougImgMobile.png";
 import davidWallaceImg from "../../assets/images/David.png";
+import davidWallaceImgMobile from "../../assets/images/davidWallaceImgMobile.png";
 import krishShahImg from "../../assets/images/Krish.PNG";
+import krishShahImgMobile from "../../assets/images/krishShahImgMobile.png";
 
 export const TEAM_SECTION_INTRO = {
   title: "Leadership",
@@ -24,6 +37,7 @@ export const TEAM_MEMBERS = [
     name: "Ash Shah",
     role: "President & CEO",
     image: ashShahImg,
+    mobileImage: ashShahImgMobile,
     bio: [
       "Ash Shah is the President & CEO of Impex Capital Group, a Houston-based commercial real estate investment firm that owns and manages over $1.8 billion in properties across the United States, including approximately $800 million in Houston and throughout Texas.",
       "To date, Impex has acquired over 10,000 multifamily units, 1,500 units of new multifamily development & build-to-rent projects, 600,000 square feet of industrial & commercial office, and 400,000 square feet of retail & mixed-use assets. Ash's portfolio also includes hotels, assisted-living with memory care, storage facilities and land for housing development.",
@@ -80,6 +94,7 @@ export const TEAM_MEMBERS = [
     name: "Nisha Smith",
     role: "Director, Investor Relations",
     image: nishaSmithImg,
+    mobileImage: nishaSmithImgMobile,
     bio: [
       "Nisha Smith brings over 25 years of experience in hospitality, banking and real estate, including leadership roles with DoubleTree Hotel and Citibank, where she served as Vice President and helped build the Non-Resident Indian (NRI) business across the Southern United States.",
       "Since 2011, Nisha has advised thousands of investors on real estate strategies across India and the U.S., helping them deploy hundreds of millions of dollars into institutional-quality properties tailored to their long-term financial goals.",
@@ -134,6 +149,7 @@ export const TEAM_MEMBERS = [
     name: "Michael",
     role: "Managing Director",
     image: michaelImg,
+    mobileImage: michaelImgMobile,
     bio: [
       "Michael is a senior commercial real estate and financial services executive with more than 30 years of leadership experience spanning capital markets, real estate finance, and development.",
       "Over the course of his career, he has held senior leadership roles at global financial institutions including Wells Fargo, Bank of America, and Citigroup, where he led large-scale revenue platforms, built high-performing national teams, and managed complex multi-billion-dollar P&L operations.",
@@ -194,6 +210,7 @@ export const TEAM_MEMBERS = [
     name: "Barry Chien",
     role: "Chief Investment Officer",
     image: barryChienImg,
+    mobileImage: barryChienImgMobile,
     bio: [
       "Barry Chien is Chief Investment Officer of Impex Capital Group, with over two decades of investment experience across the United States and Asia in origination, underwriting, structuring, execution, and portfolio management.",
       "He has completed more than $400 million in direct real estate investments across residential, hospitality, multifamily, and commercial sectors, including a $204 million condominium development in Seattle, a $53 million office-to-hotel conversion under the Canopy by Hilton brand, and $30 million financing for a value-add data center in Houston.",
@@ -255,6 +272,7 @@ export const TEAM_MEMBERS = [
     name: "Rajeev",
     role: "Strategic Partner – Data Centers & Investments",
     image: rajeevImg,
+    mobileImage: rajeevImgMobile,
     bio: [
       "Rajeev is a valued business partner in Impex Capital Group’s strategic initiatives, leading cost optimization and driving accretive NOI across the firm’s portfolio and the broader commercial real estate ecosystem.",
       "He is an integral member of the Impex team focused on the pursuit and acquisition of data center assets across the United States. As a business and technology leader, he specializes in high-potential opportunities within AI-driven and EDGE data center infrastructure.",
@@ -317,6 +335,7 @@ export const TEAM_MEMBERS = [
     name: "Fahd Mulawwah",
     role: "Managing Director of Investments",
     image: fahdMulawwahImg,
+    mobileImage: fahdMulawwahImgMobile,
     bio: [
       "Fahd Mulawwah is Managing Director of Investments at Impex Capital Group, leading the firm’s investment strategy and credit enhancement initiatives across key U.S. markets.",
       "With over $5 billion in career transaction experience, he brings deep expertise in single-family rental (SFR), build-to-rent (BTR), and multifamily—from underwriting and capital structuring through portfolio construction and execution.",
@@ -375,6 +394,7 @@ export const TEAM_MEMBERS = [
     name: "Jodi Srubar",
     role: "Administrative Assistant",
     image: jodiSrubarImg,
+    mobileImage: jodiSrubarImgMobile,
     bio: [
       "Jodi Srubar is an Administrative Assistant at IMPEX Capital Group, bringing over 20 years of experience in operations, coordination, and project support across both residential and commercial environments.",
       "She is known for her strong attention to detail, problem-solving ability, and organizational expertise, developed through years of hands-on experience in fast-paced professional settings.",
@@ -433,6 +453,7 @@ export const TEAM_MEMBERS = [
     name: "Leena Mehta",
     role: "Account Executive",
     image: leenaMehtaImg,
+    mobileImage: leenaMehtaImgMobile,
     bio: [
       "Leena Mehta is an Account Executive at IMPEX Capital Group with a strong track record in managing client relationships, driving growth, and delivering results across diverse projects.",
       "She is known for her strong organizational skills and deep understanding of property needs, enabling her to effectively support both clients and internal teams.",
@@ -489,6 +510,7 @@ export const TEAM_MEMBERS = [
     name: "Aryan Shah",
     role: "Analyst Intern",
     image: aryanShahImg,
+    mobileImage: aryanShahImgMobile,
     bio: [
       "Aryan Shah is an Analyst Intern at IMPEX Capital Group, where he supports research, data analysis, and project execution across the firm's investment platform.",
       "He brings a strong work ethic, analytical mindset, and eagerness to learn, contributing to team initiatives while building a solid foundation in finance and business strategy.",
@@ -544,6 +566,7 @@ export const TEAM_MEMBERS = [
     name: "Doug Bergen",
     role: "Senior Real Estate Professional",
     image: DougBergenImg,
+    mobileImage: DougBergenImgMobile,
     bio: [
       "Doug Bergen is a seasoned commercial real estate professional with over 20 years of experience in multifamily development and investment strategy.",
       "He previously served as Senior Vice President of Investments at Sueba USA, a long-standing real estate development firm, where he focused on land acquisitions, dispositions, business development, joint ventures, equity placements, and investor relations.",
@@ -605,6 +628,7 @@ export const TEAM_MEMBERS = [
     name: 'Tapan Patel',
     role: "Real Estate & Asset Management Professional",
     image: PaulImg,
+    mobileImage: PaulImgMobile,
     bio: [
       'Tapan ("Paul") Patel brings over 15 years of real estate experience in the Greater Houston area, with expertise spanning asset management, finance, construction management, and business operations.',
       "He has held executive roles in property management and hotel ownership, overseeing portfolio performance, operational strategy, and property-level execution.",
@@ -665,6 +689,7 @@ export const TEAM_MEMBERS = [
     name: "David Wallace",
     role: "Chief Development Officer",
     image: davidWallaceImg,
+    mobileImage: davidWallaceImgMobile,
     bio: [
       "David Wallace serves as the Chief Development Officer of IMPEX Capital Group, bringing over 40 years of experience in real estate development, acquisitions, and corporate formation.",
       "Throughout his career, he has been involved in the formation of over 200 companies and has successfully secured billions of dollars in equity and debt financing from both public and private sector sources.",
@@ -733,6 +758,7 @@ export const TEAM_MEMBERS = [
     name: "Krish Shah",
     role: "Senior Analyst - Associate",
     image: krishShahImg,
+    mobileImage: krishShahImgMobile,
     bio: [
       "Krish Shah is a Senior Analyst – Associate at IMPEX Capital Group, where he supports the firm’s strategic initiatives, business development, and pipeline management.",
       "In his role, Krish assists in sourcing and evaluating investment opportunities, conducting financial analysis, and supporting the execution of new projects and partnerships. His work contributes to advancing the firm’s ongoing development efforts and long-term growth strategy.",

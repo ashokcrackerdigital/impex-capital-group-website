@@ -33,7 +33,8 @@ const TeamMemberDetail = () => {
     return <Navigate to="/team" replace />;
   }
 
-  const { name, role, image, seo, structuredPersonBio, detail } = member;
+  const { name, role, image, mobileImage, seo, structuredPersonBio, detail } =
+    member;
   const canonical = `https://impexcapitalgroup.com/team/${member.slug}`;
 
   const bioTitleContent = Array.isArray(detail.bioTitle) ? (
@@ -74,12 +75,17 @@ const TeamMemberDetail = () => {
 
       <section className="member-hero" aria-label={`Profile hero for ${name}`}>
         <div className="member-hero-bg">
-          <img
-            src={image}
-            alt={name}
-            className="member-hero-bg-img"
-            decoding="async"
-          />
+          <picture className="member-hero-bg-picture">
+            {mobileImage ? (
+              <source media="(max-width: 768px)" srcSet={mobileImage} />
+            ) : null}
+            <img
+              src={image}
+              alt={name}
+              className="member-hero-bg-img"
+              decoding="async"
+            />
+          </picture>
         </div>
         <div className="member-hero-overlay" aria-hidden="true" />
 
