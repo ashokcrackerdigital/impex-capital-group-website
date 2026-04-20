@@ -146,12 +146,12 @@ export const TEAM_MEMBERS = [
   },
   {
     slug: "michael",
-    name: "Michael",
+    name: "Michael Munshi",
     role: "Managing Director",
     image: michaelImg,
     mobileImage: michaelImgMobile,
     bio: [
-      "Michael is a senior commercial real estate and financial services executive with more than 30 years of leadership experience spanning capital markets, real estate finance, and development.",
+      "Michael Munshi is a senior commercial real estate and financial services executive with more than 30 years of leadership experience spanning capital markets, real estate finance, and development.",
       "Over the course of his career, he has held senior leadership roles at global financial institutions including Wells Fargo, Bank of America, and Citigroup, where he led large-scale revenue platforms, built high-performing national teams, and managed complex multi-billion-dollar P&L operations.",
       "Michael brings deep expertise in institutional capital formation, cross-border partnerships, and strategic business development across global markets. He has partnered with institutional investors, private capital sources, and operating sponsors across the United States, Europe, the Middle East, and Southeast Asia, structuring and scaling disciplined real estate investment strategies.",
       "As Managing Director at IMPEX Capital Group, Michael focuses on expanding strategic partnerships, sourcing multi-asset investment opportunities, and aligning global capital with high-quality commercial real estate platforms to drive long-term value creation.",
@@ -269,12 +269,12 @@ export const TEAM_MEMBERS = [
   },
   {
     slug: "rajeev",
-    name: "Rajeev",
+    name: "Rajeev Thorat",
     role: "Strategic Partner – Data Centers & Investments",
     image: rajeevImg,
     mobileImage: rajeevImgMobile,
     bio: [
-      "Rajeev is a valued business partner in Impex Capital Group’s strategic initiatives, leading cost optimization and driving accretive NOI across the firm’s portfolio and the broader commercial real estate ecosystem.",
+      "Rajeev Thorat is a valued business partner in Impex Capital Group’s strategic initiatives, leading cost optimization and driving accretive NOI across the firm’s portfolio and the broader commercial real estate ecosystem.",
       "He is an integral member of the Impex team focused on the pursuit and acquisition of data center assets across the United States. As a business and technology leader, he specializes in high-potential opportunities within AI-driven and EDGE data center infrastructure.",
       "Rajeev has also invested as a Limited Partner in multiple commercial real estate projects across the United States, with combined portfolio exposure of approximately $500 million.",
     ],
