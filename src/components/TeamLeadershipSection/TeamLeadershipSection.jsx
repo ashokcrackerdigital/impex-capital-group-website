@@ -53,24 +53,12 @@ const TeamLeadershipSection = ({ members, title, intro }) => {
     });
   }, [currentMember]);
 
-  const scrollToSectionTop = () => {
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        document
-          .getElementById("team-lead-profile-anchor")
-          ?.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    });
-  };
-
   const goToMember = (offset) => {
     setCurrentMember((prev) => (prev + offset + total) % total);
-    scrollToSectionTop();
   };
 
   const goToMemberByIndex = (index) => {
     setCurrentMember(index);
-    scrollToSectionTop();
   };
 
   if (!total || !current) return null;
