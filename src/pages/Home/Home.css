@@ -925,6 +925,32 @@ img {
   font-weight: 600;
 }
 
+.linkedin-feed-section {
+  padding: 4rem 10% 8rem;
+  background: var(--bg-panel);
+}
+
+.linkedin-feed-section .news-header h2 {
+  margin-bottom: 2.5rem;
+}
+
+.linkedin-feed-section [class^="elfsight-app-"] {
+  width: 100%;
+}
+
+/* Hide Elfsight owner toolbar + free branding badge */
+.linkedin-feed-section [class*="es-widget-toolbar"],
+.linkedin-feed-section [class*="eapps-widget-toolbar"],
+.linkedin-feed-section [class*="global-styles__BadgeWrapper"],
+.linkedin-feed-section [class*="WidgetToolbar"],
+.linkedin-feed-section a[href*="elfsight.com"],
+.linkedin-feed-section [title*="Free LinkedIn Feed Widget"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 /* =========================
    MOBILE
 ========================= */
@@ -1140,6 +1166,20 @@ img {
 
   .news-header h2 {
     margin-bottom: 0rem;
+    text-align: center !important;
+  }
+
+  .linkedin-feed-section {
+    padding: 0 0 3rem !important;
+  }
+
+  .linkedin-feed-section .news-header {
+    padding: 0 5%;
+  }
+
+  .linkedin-feed-section .news-header h2 {
+    margin-bottom: 1.25rem !important;
+    font-size: 2rem !important;
     text-align: center !important;
   }
 
