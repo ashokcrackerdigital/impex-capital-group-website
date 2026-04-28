@@ -13,7 +13,6 @@ import seniorLivingImg from "../../assets/images/Seniorliving.webp";
 import topInvestorImg from "../../assets/images/topinvestor.webp";
 import bottomInvestorImg from "../../assets/images/Bottominvestor.webp";
 import StructuredData from "../../components/StructuredData";
-import { articlesSummary as articles } from "../Insights/articlesSummary";
 
 const multifamilyImg = "/assets/images/multifamily.webp";
 
@@ -32,6 +31,23 @@ const Home = () => {
     reveal();
 
     return () => window.removeEventListener("scroll", reveal);
+  }, []);
+
+  useEffect(() => {
+    const existingScript = document.getElementById("elfsight-platform-script");
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://elfsightcdn.com/platform.js";
+    script.async = true;
+    script.id = "elfsight-platform-script";
+    document.body.appendChild(script);
+
+    return () => {
+      script.remove();
+    };
   }, []);
 
   return (
@@ -330,43 +346,13 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ===== NEWS ===== */}
-      <section className="news-section reveal">
+      <section className="linkedin-feed-section reveal">
         <div className="news-header">
-          <h2>Latest News</h2>
+          <h2>LinkedIn Feed</h2>
         </div>
-        <div className="news-grid">
-          {articles.slice(0, 3).map((article) => {
-            // Extract month and year from date (format: "Dec 01, 2022 • Houston Multifamily")
-            const dateMatch = article.date.match(/(\w+)\s+\d+,\s+(\d+)/);
-            const formattedDate = dateMatch
-              ? `${dateMatch[1]} ${dateMatch[2]}`
-              : article.date.split(' • ')[0];
-
-            return (
-              <div key={article.id} className="news-card">
-                <div className="news-img-wrapper">
-                  <img src={article.img} className="news-img" alt={article.title} />
-                  <div className="news-badge">{article.badge}</div>
-                </div>
-                <div className="news-content">
-                  <div className="news-categories">{article.categories}</div>
-                  <Link to={`/insights/article/${article.slug}`} className="news-title-link">
-                    <h3>{article.title}</h3>
-                  </Link>
-                  <div className="news-meta">{formattedDate}</div>
-                  <Link
-                    to={`/insights/article/${article.slug}`}
-                    className="read-btn"
-                    data-tooltip="View full article details"
-                  >
-                    Read Article <i className="fas fa-arrow-right"></i>
-                  </Link>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <div
+          className="elfsight-app-35ad7f62-3168-4c39-b646-88177f2602a1"
+        />
       </section>
 
       {/* ===== CTA + FOOTER ===== */}
