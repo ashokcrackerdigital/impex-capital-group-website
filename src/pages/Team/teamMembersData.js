@@ -39,18 +39,18 @@ export const TEAM_MEMBERS = [
     image: ashShahImg,
     mobileImage: ashShahImgMobile,
     bio: [
-      "Ash Shah is the President & CEO of Impex Capital Group, a Houston-based commercial real estate investment firm that owns and manages over $1.8 billion in properties across the United States, including approximately $800 million in Houston and throughout Texas.",
+      "Ash Shah is the Founder, President & CEO of Impex Capital Group, a Houston-based commercial real estate investment firm that owns and manages over $1.8 billion in properties across the United States, including approximately $800 million in Houston and throughout Texas.",
       "To date, Impex has acquired over 10,000 multifamily units, 1,500 units of new multifamily development & build-to-rent projects, 600,000 square feet of industrial & commercial office, and 400,000 square feet of retail & mixed-use assets. Ash's portfolio also includes hotels, assisted-living with memory care, storage facilities and land for housing development.",
       "Prior to founding Impex Capital Group, Ash served as founder and CEO of Impex Global, a plastic films, paper and packaging company with operations across North America and multiple international markets, which he successfully exited to a private equity firm in 2012.",
       "Ash holds an MBA from Thunderbird School of Global Management and has been recognized by the Houston Business Journal and Inc. 5000 as a \"Top 100\" and \"Fastest Growing Company\" leader. He is a former \"International Entrepreneur of the Year\" award recipient from the Indo-American Chamber of Commerce and a member of the Forbes Financial Council.",
     ],
     seo: {
-      title: "Ash Shah | President & CEO | Impex Capital Group",
+      title: "Ash Shah | Founder, President & CEO | Impex Capital Group",
       description:
-        "Profile of Ash Shah, President & CEO of Impex Capital Group, leading a $1.8B+ national commercial real estate portfolio across multiple asset classes.",
+        "Profile of Ash Shah, Founder, President & CEO of Impex Capital Group, leading a $1.8B+ national commercial real estate portfolio across multiple asset classes.",
     },
     structuredPersonBio:
-      "Ash Shah is the President and CEO of Impex Capital Group, overseeing real estate investment strategy and asset management.",
+      "Ash Shah is the Founder, President and CEO of Impex Capital Group, overseeing real estate investment strategy and asset management.",
     detail: {
       heroEyebrow: "Executive Leadership",
       heroRoleLine: "President & CEO",
@@ -59,7 +59,7 @@ export const TEAM_MEMBERS = [
       bioKicker: "EXECUTIVE PROFILE",
       bioTitle: "Leading Vision, Driving Excellence",
       longBio: [
-        "Ash Shah is the President & CEO of IMPEX Capital Group, a Houston-based commercial real estate investment firm with a diversified national footprint. Under his leadership, the firm owns and manages over $1.8 billion in assets across the United States, including approximately $800 million in Houston and throughout Texas.",
+        "Ash Shah is the Founder, President & CEO of IMPEX Capital Group, a Houston-based commercial real estate investment firm with a diversified national footprint. Under his leadership, the firm owns and manages over $1.8 billion in assets across the United States, including approximately $800 million in Houston and throughout Texas.",
         "With extensive experience across multiple asset classes, Mr. Shah has played a pivotal role in the acquisition, development, and management of a large-scale real estate portfolio. To date, IMPEX Capital Group has acquired over 10,000 multifamily units, delivered 1,500 units of new multifamily and build-to-rent developments, and overseen 600,000 square feet of industrial and commercial office space, along with 400,000 square feet of retail and mixed-use properties.",
         "Mr. Shah’s ownership and operational experience extends beyond traditional asset classes and includes hospitality assets, senior living and assisted living communities with memory care, storage facilities, and land parcels designated for residential development. His investment philosophy is centered on disciplined underwriting, operational excellence, and long-term value creation.",
         "Currently, Mr. Shah serves as a Co-Sponsor, Key Principal, or Equity Owner in more than 50 properties, maintaining direct involvement across capital structuring, acquisitions, and asset performance.",
@@ -96,27 +96,27 @@ export const TEAM_MEMBERS = [
     image: michaelImg,
     mobileImage: michaelImgMobile,
     bio: [
-      "Michael Munshi is a senior commercial real estate and financial services executive with more than 30 years of leadership experience spanning capital markets, real estate finance, and development.",
+      "Michael Munshi is a Managing Director, Business Development with more than 30 years of leadership experience spanning capital markets, real estate finance, and development.",
       "Over the course of his career, he has held senior leadership roles at global financial institutions including Wells Fargo, Bank of America, and Citigroup, where he led large-scale revenue platforms, built high-performing national teams, and managed complex multi-billion-dollar P&L operations.",
       "Michael brings deep expertise in institutional capital formation, cross-border partnerships, and strategic business development across global markets. He has partnered with institutional investors, private capital sources, and operating sponsors across the United States, Europe, the Middle East, and Southeast Asia, structuring and scaling disciplined real estate investment strategies.",
       "As Managing Director at IMPEX Capital Group, Michael focuses on expanding strategic partnerships, sourcing multi-asset investment opportunities, and aligning global capital with high-quality commercial real estate platforms to drive long-term value creation.",
     ],
     seo: {
-      title: "Michael | Managing Director | Impex Capital Group",
+      title: "Michael | Managing Director, Business Development | Impex Capital Group",
       description:
-        "Profile of Michael, Managing Director at Impex Capital Group, focused on global capital strategy, strategic partnerships, and commercial real estate growth.",
+        "Profile of Michael, Managing Director, Business Development at Impex Capital Group, focused on global capital strategy, strategic partnerships, and commercial real estate growth.",
     },
     structuredPersonBio:
-      "Michael is Managing Director at IMPEX Capital Group, leading strategic partnerships and global capital alignment across commercial real estate investments.",
+      "Michael is Managing Director, Business Development at IMPEX Capital Group, leading strategic partnerships and global capital alignment across commercial real estate investments.",
     detail: {
       heroEyebrow: "Executive Leadership",
-      heroRoleLine: "Managing Director",
+      heroRoleLine: "Managing Director, Business Development",
       companyLine: "IMPEX Capital Group",
       educationLine: "30+ Years Experience in Capital Markets & Real Estate",
       bioKicker: "EXECUTIVE PROFILE",
       bioTitle: "Driving Global Capital Strategy & Strategic Partnerships",
       longBio: [
-        "Michael is a senior commercial real estate and financial services executive with more than 30 years of leadership experience spanning capital markets, real estate finance, and development.",
+        "Michael is a Managing Director, Business Development with more than 30 years of leadership experience spanning capital markets, real estate finance, and development.",
         "Over the course of his career, he has held senior leadership roles at global financial institutions including Wells Fargo, Bank of America, and Citigroup, where he led large-scale revenue platforms, built high-performing national teams, and managed complex multi-billion-dollar P&L operations.",
         "Michael brings deep expertise in institutional capital formation, cross-border partnerships, and strategic business development across global markets. He has partnered with institutional investors, private capital sources, and operating sponsors across the United States, Europe, the Middle East, and Southeast Asia, structuring and scaling disciplined real estate investment strategies.",
         "As Managing Director at IMPEX Capital Group, Michael focuses on expanding strategic partnerships, sourcing multi-asset investment opportunities, and aligning global capital with high-quality commercial real estate platforms to drive long-term value creation.",
@@ -162,20 +162,20 @@ export const TEAM_MEMBERS = [
       "At Impex Capital Group, she leads investor relations, focusing on communication, education and relationship-building with global investors. Nisha is based in Houston and maintains deep ties with the broader NRI community and developers across the U.S. and India.",
     ],
     seo: {
-      title: "Nisha Smith | Director, Investor Relations | Impex Capital Group",
+      title: "Nisha Smith | Director of Operations | Impex Capital Group",
       description:
-        "Profile of Nisha Smith, Director of Investor Relations at Impex Capital Group, strengthening investor relationships and supporting capital growth.",
+        "Profile of Nisha Smith, Director of Operations at Impex Capital Group, strengthening investor relationships and supporting capital growth.",
     },
     structuredPersonBio:
-      "Nisha Smith is the Director of Investor Relations at IMPEX Capital Group, where she plays a critical role in strengthening investor relationships, expanding market reach, and supporting the firm’s capital growth strategy.",
+      "Nisha Smith is the Director of Operations at IMPEX Capital Group, where she plays a critical role in strengthening investor relationships, expanding market reach, and supporting the firm’s capital growth strategy.",
     detail: {
       heroEyebrow: "Executive Leadership",
-      heroRoleLine: "Director, Investor Relations",
+      heroRoleLine: "Director of Operations",
       companyLine: "IMPEX Capital Group",
       bioKicker: "EXECUTIVE PROFILE",
       bioTitle: ["Leading Relationships, Driving", "Investor Confidence"],
       longBio: [
-        "Nisha Smith is the Director of Investor Relations at IMPEX Capital Group, where she plays a critical role in strengthening investor relationships, expanding market reach, and supporting the firm’s capital growth strategy.",
+        "Nisha Smith is the Director of Operations at IMPEX Capital Group, where she plays a critical role in strengthening investor relationships, expanding market reach, and supporting the firm’s capital growth strategy.",
         "With over 25 years of professional experience across financial services, hospitality, and real estate advisory, Nisha brings a relationship-driven and globally informed perspective to investor engagement.",
         "At IMPEX Capital Group, Nisha supports the firm’s investor platform by aligning investor objectives with strategic real estate opportunities across the United States. Her focus includes investor communications, capital introductions, long-term relationship management, and supporting the firm’s growth across multifamily, commercial, and development assets.",
         "Nisha’s career spans senior leadership roles with globally recognized organizations, including Citibank and DoubleTree Hotels. During her tenure at Citibank, she served as Vice President and was instrumental in developing and coordinating the bank’s Non-Resident Indian (NRI) business across the Southern United States. In this role, she led new business development initiatives and managed thousands of client relationships, delivering customized financial solutions to an international investor base.",
@@ -212,28 +212,28 @@ export const TEAM_MEMBERS = [
     image: DougBergenImg,
     mobileImage: DougBergenImgMobile,
     bio: [
-      "Doug Bergen is a seasoned commercial real estate professional with over 20 years of experience in multifamily development and investment strategy.",
+      "Doug Bergen is a Director of Special Projects with over 20 years of experience in multifamily development and investment strategy.",
       "He previously served as Senior Vice President of Investments at Sueba USA, a long-standing real estate development firm, where he focused on land acquisitions, dispositions, business development, joint ventures, equity placements, and investor relations.",
       "Doug has successfully placed over $200 million in equity across approximately 15 multifamily developments and led a $45 million recapitalization of a three-asset portfolio, which was ultimately sold for over $160 million in 2021.",
       "He has also personally participated in multiple real estate investments as both a General Partner and Limited Partner, bringing a well-rounded perspective to investment strategy and execution. Doug holds a B.B.A. in Finance from Baylor University.",
     ],
     seo: {
       title:
-        "Doug Bergen | Senior Real Estate Professional | Impex Capital Group",
+        "Doug Bergen | Director of Special Projects | Impex Capital Group",
       description:
-        "Profile of Doug Bergen, Senior Real Estate Professional at Impex Capital Group, focused on multifamily development, capital raising, and investor-focused growth.",
+        "Profile of Doug Bergen, Director of Special Projects at Impex Capital Group, focused on multifamily development, capital raising, and investor-focused growth.",
     },
     structuredPersonBio:
-      "Doug Bergen is a senior real estate professional at IMPEX Capital Group with 20+ years of experience in multifamily development, capital formation, and investment execution.",
+      "Doug Bergen is a Director of Special Projects at IMPEX Capital Group with 20+ years of experience in multifamily development, capital formation, and investment execution.",
     detail: {
       heroEyebrow: "Executive Leadership",
-      heroRoleLine: "Senior Real Estate Professional",
+      heroRoleLine: "Director of Special Projects",
       companyLine: "IMPEX Capital Group",
       educationLine: "20+ Years Experience in Commercial Real Estate",
       bioKicker: "EXECUTIVE PROFILE",
       bioTitle: "Driving Investment Strategy & Capital Growth",
       longBio: [
-        "Doug Bergen is a seasoned commercial real estate professional with over 20 years of experience in multifamily development and investment strategy.",
+        "Doug Bergen is a Director of Special Projects with over 20 years of experience in multifamily development and investment strategy.",
         "He previously served as Senior Vice President of Investments at Sueba USA, a long-standing real estate development firm, where he focused on land acquisitions, dispositions, business development, joint ventures, equity placements, and investor relations.",
         "Doug has successfully placed over $200 million in equity across approximately 15 multifamily developments and led a $45 million recapitalization of a three-asset portfolio, which was ultimately sold for over $160 million in 2021.",
         "He has also personally participated in multiple real estate investments as both a General Partner and Limited Partner, bringing a well-rounded perspective to investment strategy and execution.",
@@ -343,13 +343,14 @@ export const TEAM_MEMBERS = [
     image: rajeevImg,
     mobileImage: rajeevImgMobile,
     bio: [
-      "Rajeev Thorat is a valued business partner in Impex Capital Group’s strategic initiatives, leading cost optimization and driving accretive NOI across the firm’s portfolio and the broader commercial real estate ecosystem.",
-      "He is an integral member of the Impex team focused on the pursuit and acquisition of data center assets across the United States. As a business and technology leader, he specializes in high-potential opportunities within AI-driven and EDGE data center infrastructure.",
-      "Rajeev has also invested as a Limited Partner in multiple commercial real estate projects across the United States, with combined portfolio exposure of approximately $500 million.",
+      "Rajeev Thorat is a valued business partner at IMPEX Capital Group, where he leads strategic initiatives focused on cost optimization and driving accretive NOI across the firm’s real estate portfolio. He plays a key role in enhancing operational efficiency and value creation for Impex properties and the broader commercial real estate sector.",
+      "Rajeev is also actively involved in the pursuit and acquisition of Data Centers across the United States, with a strong focus on emerging opportunities in AI and EDGE Data Center infrastructure. As an innovator and experienced Business and Technology Professional, he specializes in identifying high-potential investment opportunities aligned with future-forward technologies.",
+      "In addition to his strategic role, Rajeev has made significant investments as a Limited Partner in multiple commercial real estate projects across the United States, with a combined valuation of approximately $500 million.",
+      "With a career spanning several decades, Rajeev has held senior leadership roles including Managing Director at Accenture, along with prior experience at Deloitte and PwC. His global experience extends across the United States, United Kingdom, Europe, India, Japan, and Singapore, bringing a broad international perspective to his work.",
     ],
     seo: {
       title:
-        "Rajeev | Strategic Partner – Data Centers & Investments | Impex Capital Group",
+        "Rajeev | Lead – Strategic Initiatives | Impex Capital Group",
       description:
         "Profile of Rajeev, Strategic Partner focused on data centers and investments at Impex Capital Group, driving innovation in AI and EDGE infrastructure and strategic growth.",
     },
@@ -357,7 +358,7 @@ export const TEAM_MEMBERS = [
       "Rajeev is a strategic partner at Impex Capital Group focused on data center investments, cost optimization, and accretive NOI across the portfolio.",
     detail: {
       heroEyebrow: "Executive Leadership",
-      heroRoleLine: "Strategic Partner – Data Centers & Investments",
+      heroRoleLine: "Lead – Strategic Initiatives",
       companyLine: "IMPEX Capital Group",
       educationLines: [
         "Business & Technology Leader",
@@ -366,9 +367,10 @@ export const TEAM_MEMBERS = [
       bioKicker: "EXECUTIVE PROFILE",
       bioTitle: "Driving Innovation in Data Centers & Strategic Growth",
       longBio: [
-        "Rajeev is a valued business partner in IMPEX Capital Group’s strategic initiatives, where he leads cost optimization efforts and drives accretive NOI across the firm’s portfolio and the broader commercial real estate ecosystem.",
-        "He is also an integral member of the Impex team, focusing on the pursuit and acquisition of data center assets across the United States. As an innovator and a distinguished business and technology professional, Rajeev specializes in identifying high-potential opportunities within AI-driven and EDGE data center infrastructure.",
-        "In addition to his strategic role, Rajeev has made significant investments as a Limited Partner in multiple commercial real estate projects across the United States, with a combined portfolio value of approximately $500 million.",
+        "Rajeev Thorat is a valued business partner at IMPEX Capital Group, where he leads strategic initiatives focused on cost optimization and driving accretive NOI across the firm’s real estate portfolio. He plays a key role in enhancing operational efficiency and value creation for Impex properties and the broader commercial real estate sector.",
+        "Rajeev is also actively involved in the pursuit and acquisition of Data Centers across the United States, with a strong focus on emerging opportunities in AI and EDGE Data Center infrastructure. As an innovator and experienced Business and Technology Professional, he specializes in identifying high-potential investment opportunities aligned with future-forward technologies.",
+        "In addition to his strategic role, Rajeev has made significant investments as a Limited Partner in multiple commercial real estate projects across the United States, with a combined valuation of approximately $500 million.",
+        "With a career spanning several decades, Rajeev has held senior leadership roles including Managing Director at Accenture, along with prior experience at Deloitte and PwC. His global experience extends across the United States, United Kingdom, Europe, India, Japan, and Singapore, bringing a broad international perspective to his work.",
       ],
       eduKicker: "RECOGNITION",
       eduTitle: "Professional Background & Expertise",
@@ -467,9 +469,9 @@ export const TEAM_MEMBERS = [
     image: krishShahImg,
     mobileImage: krishShahImgMobile,
     bio: [
-      "Krish Shah is a Senior Analyst – Associate at IMPEX Capital Group, where he supports the firm’s strategic initiatives, business development, and pipeline management.",
-      "In his role, Krish assists in sourcing and evaluating investment opportunities, conducting financial analysis, and supporting the execution of new projects and partnerships. His work contributes to advancing the firm’s ongoing development efforts and long-term growth strategy.",
-      "With a strong academic foundation in finance and entrepreneurship, Krish brings a data-driven and analytical approach to real estate investments, supporting informed decision-making across the platform.",
+      "Krish Shah is an asset manager at IMPEX Capital Group, where he supports the firm’s initiatives across strategic planning, business development, and pipeline management. In his role, he contributes to the firm’s investment activities by assisting with sourcing and evaluating opportunities, conducting financial analysis, and supporting the execution of new projects and partnerships.",
+      "Krish plays an active role in advancing the firm’s growth by working closely with internal teams to support data-driven decision-making and investment evaluation processes. His involvement spans early-stage opportunity assessment to execution support, helping strengthen the firm’s overall investment pipeline.",
+      "With a strong interest in finance and entrepreneurship, Krish brings an analytical mindset and a proactive approach to his work, contributing to ongoing development and strategic initiatives within the organization.",
     ],
     seo: {
       title: "Krish Shah | Senior Analyst | Impex Capital Group",
@@ -489,9 +491,9 @@ export const TEAM_MEMBERS = [
       bioKicker: "EXECUTIVE PROFILE",
       bioTitle: "Supporting Strategic Growth & Investment Execution",
       longBio: [
-        "Krish Shah is a Senior Analyst – Associate at IMPEX Capital Group, where he supports the firm’s strategic initiatives, business development, and pipeline management.",
-        "In his role, Krish assists in sourcing and evaluating investment opportunities, conducting financial analysis, and supporting the execution of new projects and partnerships. His work contributes to advancing the firm’s ongoing development efforts and long-term growth strategy.",
-        "With a strong academic foundation in finance and entrepreneurship, Krish brings a data-driven and analytical approach to real estate investments, supporting informed decision-making across the platform.",
+        "Krish Shah is an asset manager at IMPEX Capital Group, where he supports the firm’s initiatives across strategic planning, business development, and pipeline management. In his role, he contributes to the firm’s investment activities by assisting with sourcing and evaluating opportunities, conducting financial analysis, and supporting the execution of new projects and partnerships.",
+        "Krish plays an active role in advancing the firm’s growth by working closely with internal teams to support data-driven decision-making and investment evaluation processes. His involvement spans early-stage opportunity assessment to execution support, helping strengthen the firm’s overall investment pipeline.",
+        "With a strong interest in finance and entrepreneurship, Krish brings an analytical mindset and a proactive approach to his work, contributing to ongoing development and strategic initiatives within the organization.",
       ],
       eduKicker: "RECOGNITION",
       eduTitle: "Education & Early Career",
@@ -765,26 +767,26 @@ export const TEAM_MEMBERS = [
     image: aryanShahImg,
     mobileImage: aryanShahImgMobile,
     bio: [
-      "Aryan Shah is an Analyst Intern at IMPEX Capital Group, where he supports research, data analysis, and project execution across the firm's investment platform.",
+      "Aryan Shah is an Analyst at IMPEX Capital Group, where he supports research, data analysis, and project execution across the firm's investment platform.",
       "He brings a strong work ethic, analytical mindset, and eagerness to learn, contributing to team initiatives while building a solid foundation in finance and business strategy.",
       "Aryan is currently pursuing a double major at the University of Texas at Austin, studying Plan II Honors and Business Honors, reflecting his strong academic and analytical capabilities.",
     ],
     seo: {
-      title: "Aryan Shah | Analyst Intern | Impex Capital Group",
+      title: "Aryan Shah | Analyst | Impex Capital Group",
       description:
-        "Profile of Aryan Shah, Analyst Intern at Impex Capital Group, supporting research, data-driven analysis, and investment execution initiatives.",
+        "Profile of Aryan Shah, Analyst at Impex Capital Group, supporting research, data-driven analysis, and investment execution initiatives.",
     },
     structuredPersonBio:
-      "Aryan Shah is an Analyst Intern at IMPEX Capital Group supporting research, data analysis, and project execution across the investment platform.",
+      "Aryan Shah is an Analyst at IMPEX Capital Group supporting research, data analysis, and project execution across the investment platform.",
     detail: {
       heroEyebrow: "Executive Leadership",
-      heroRoleLine: "Analyst Intern",
+      heroRoleLine: "Analyst",
       companyLine: "IMPEX Capital Group",
       educationLine: "Student – University of Texas at Austin",
       bioKicker: "EXECUTIVE PROFILE",
       bioTitle: "Supporting Research & Data-Driven Insights",
       longBio: [
-        "Aryan Shah is an Analyst Intern at IMPEX Capital Group, where he supports research, data analysis, and project execution across the firm's investment platform.",
+        "Aryan Shah is an Analyst at IMPEX Capital Group, where he supports research, data analysis, and project execution across the firm's investment platform.",
         "He brings a strong work ethic, analytical mindset, and eagerness to learn, contributing to team initiatives while building a solid foundation in finance and business strategy.",
         "Aryan is currently pursuing a double major at the University of Texas at Austin, studying Plan II Honors and Business Honors, reflecting his strong academic and analytical capabilities.",
       ],
