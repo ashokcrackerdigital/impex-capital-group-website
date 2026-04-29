@@ -348,7 +348,7 @@ const Home = () => {
 
       <section className="linkedin-feed-section reveal">
         <div className="news-header">
-          <h2>LinkedIn Feed</h2>
+          <h2>Strategic Insights</h2>
         </div>
         <div
           className="elfsight-app-35ad7f62-3168-4c39-b646-88177f2602a1"
