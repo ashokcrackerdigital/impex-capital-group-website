@@ -403,7 +403,7 @@ export const TEAM_MEMBERS = [
   },
   {
     slug: "tapan-paul-patel",
-    name: 'Tapan Patel',
+    name: 'Paul (Tapan) Patel',
     role: "VP of Operations",
     image: PaulImg,
     mobileImage: PaulImgMobile,
