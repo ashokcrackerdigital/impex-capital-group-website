@@ -197,7 +197,7 @@ const ExitedPortfolio = () => {
       {/* ===== STATS ===== */}
       <div className="dynamic-stats reveal">
         <div className="stat-box">
-          <span className="stat-number">3</span>
+          <span className="stat-number">19</span>
           <span className="stat-label">Properties</span>
         </div>
         <div className="stat-box">

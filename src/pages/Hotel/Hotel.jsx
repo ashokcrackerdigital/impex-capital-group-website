@@ -192,7 +192,7 @@ const Hotel = () => {
       {/* ===== STATS ===== */}
       <div className="dynamic-stats reveal">
         <div className="stat-box">
-          <span className="stat-number">13</span>
+          <span className="stat-number">6</span>
           <span className="stat-label">Hotel Assets</span>
         </div>
         <div className="stat-box">
