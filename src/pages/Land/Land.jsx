@@ -238,7 +238,7 @@ const Land = () => {
       {/* ===== STATS ===== */}
       <div className="dynamic-stats reveal">
         <div className="stat-box">
-          <span className="stat-number">2</span>
+          <span className="stat-number">8</span>
           <span className="stat-label">Active Land Positions</span>
         </div>
         <div className="stat-box">
