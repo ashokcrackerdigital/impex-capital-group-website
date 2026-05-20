@@ -245,7 +245,7 @@ const Contact = () => {
           {
             question: "Where is Impex Capital Group located?",
             answer:
-              "Impex Capital Group is located at 5251 Westheimer Suite 925, Houston, TX 77056."
+              "Impex Capital Group is located at 5251 Westheimer Rd Suite 925, Houston, TX 77056."
           }
         ]}
       />
