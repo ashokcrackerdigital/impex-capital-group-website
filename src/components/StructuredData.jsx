@@ -50,7 +50,7 @@ const StructuredData = ({
       email: "investor_relations@impexcapitalgroup.com",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "5251 Westheimer Suite 925",
+        streetAddress: "5251 Westheimer Rd Suite 925",
         addressLocality: "Houston",
         addressRegion: "TX",
         postalCode: "77056",
