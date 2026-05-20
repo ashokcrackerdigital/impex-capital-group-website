@@ -275,7 +275,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 aria-label="View Impex Capital Group office location on Google Maps"
               >
-                5251&nbsp;Westheimer&nbsp;Suite&nbsp;925<br />
+                5251&nbsp;Westheimer&nbsp;Rd&nbsp;Suite&nbsp;925<br />
                 Houston, TX 77056
               </a>
             </p>
