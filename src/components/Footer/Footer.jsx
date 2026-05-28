@@ -42,12 +42,6 @@ const Footer = () => {
               Insights
             </Link>
             <Link
-              to="/investors"
-              className={isActive("/investors") ? "active" : ""}
-            >
-              Investors
-            </Link>
-            <Link
               to="/contact"
               className={isActive("/contact") ? "active" : ""}
             >

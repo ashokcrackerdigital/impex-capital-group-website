@@ -10,8 +10,8 @@ import SEO from "../../components/SEO";
 
 import heroVideo from "../../assets/videos/opt_Luxury_Apartment_Drone_Footage.mp4";
 import seniorLivingImg from "../../assets/images/Seniorliving.webp";
-import topInvestorImg from "../../assets/images/topinvestor.webp";
-import bottomInvestorImg from "../../assets/images/Bottominvestor.webp";
+// import topInvestorImg from "../../assets/images/topinvestor.webp";
+// import bottomInvestorImg from "../../assets/images/Bottominvestor.webp";
 import StructuredData from "../../components/StructuredData";
 
 const multifamilyImg = "/assets/images/multifamily.webp";
@@ -239,7 +239,7 @@ const Home = () => {
       </section>
 
       {/* ===== INVESTORS ===== */}
-      <section className="investors-section reveal">
+      {/* <section className="investors-section reveal">
         <div className="investors-visual">
           <img src={topInvestorImg} className="inv-img" alt="Investor" />
           <img src={bottomInvestorImg} className="inv-img" alt="Construction" />
@@ -263,7 +263,7 @@ const Home = () => {
             Investor Portal
           </Link>
         </div>
-      </section>
+      </section> */}
 
       {/* ===== MAP SECTION ===== */}
       <section className="map-section reveal">

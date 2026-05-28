@@ -9,7 +9,6 @@ const TeamMemberDetail = lazy(() => import("../pages/Team/TeamMemberDetail"));
 const Contact = lazy(() => import("../pages/Contact/Contact"));
 const Insights = lazy(() => import("../pages/Insights/Insights"));
 const ArticleDetail = lazy(() => import("../pages/Insights/ArticleDetail"));
-const Investors = lazy(() => import("../pages/Investors/Investors"));
 const Multifamily = lazy(() => import("../pages/Multifamily/Multifamily"));
 const Land = lazy(() => import("../pages/Land/Land"));
 const Hotel = lazy(() => import("../pages/Hotel/Hotel"));
@@ -35,7 +34,6 @@ const AppRoutes = () => {
                 <Route path="/team/:slug" element={<TeamMemberDetail />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/portfolio/property/:slug" element={<PropertyDetail />} />
-                <Route path="/investors" element={<Investors />} />
                 <Route path="/insights" element={<Insights />} />
                 <Route path="/insights/article/:slug" element={<ArticleDetail />} />
                 <Route path="/contact" element={<Contact />} />
