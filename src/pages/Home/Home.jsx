@@ -239,7 +239,7 @@ const Home = () => {
       </section>
 
       {/* ===== INVESTORS ===== */}
-      <section className="investors-section reveal">
+      {/* <section className="investors-section reveal">
         <div className="investors-visual">
           <img src={topInvestorImg} className="inv-img" alt="Investor" />
           <img src={bottomInvestorImg} className="inv-img" alt="Construction" />
@@ -263,7 +263,7 @@ const Home = () => {
             Investor Portal
           </Link>
         </div>
-      </section>
+      </section> */}
 
       {/* ===== MAP SECTION ===== */}
       <section className="map-section reveal">
