@@ -72,13 +72,25 @@
   </url>
 
   <url>
+    <loc>https://impexcapitalgroup.com/team/michael</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://impexcapitalgroup.com/team/nisha-smith</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://impexcapitalgroup.com/team/barry-chien</loc>
+    <loc>https://impexcapitalgroup.com/team/doug-bergen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/team/david-wallace</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -90,7 +102,43 @@
   </url>
 
   <url>
+    <loc>https://impexcapitalgroup.com/team/tapan-paul-patel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/team/krish-shah</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://impexcapitalgroup.com/team/fahd-mulawwah</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/team/barry-chien</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/team/leena-mehta</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/team/jodi-srubar</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/team/aryan-shah</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -113,4 +161,692 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Property Pages (auto-generated - do not edit manually) -->
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/ogden_senior_development</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/storage_plus_of_forney_forney_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/latrobe_storage_el_dorado_hills_ca</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/midway_plaza</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/kirkwood_office_atrium</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/hedgwig_place_houston_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/grand_parkway_land</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/katy_boardwalk</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/lakeside_estates_georgetown_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/covington_center_lot_delivery_project</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/trecap_houston_parkway_partners</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/georgibelle_business_park_houston_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/katy_boardwalk_hotel</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/sheraton_fl</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/springhill_suites_marriott_galveston_texas</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/cy_fair_retail</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/water_park_ii</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/lucciola_midtown_houston_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/century_business_park_houston_texas</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/britmore_park_industrial_houston_texas</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/sueba_mf_portfolio_houston_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/costa_mesa_houston_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/toll_tag_plaza</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/block_at_montrose</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/crestdale</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/dallas_office_grove</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/pineforest_apartments</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/san_remo_apartments</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/avalon_at_royal_oaks</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/village_at_uvalde</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/ascension_starcrest_oaks_of_marymount</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/oaktree</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/parkside_place_pasadena_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/the_henry_at_jones_road_houston_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/cheslyn_townhomes_spartanburg_sc</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/senderos_townhomes_parker_co</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/retreat_at_barbers_hill_mont_belvieu_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/pine_arbor_houston_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/valencia_grove_houston_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/city_heights_oklahoma_city_ok</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/harmony_apartments_arlington_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/porterwood_apartments_porter_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/blanca_apartments_houston_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/whitestone_crossing_cedar_park_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/terrace_at_2602_texas_city_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/trailside_oaks_leander_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/la_estancia_apartments_houston_tx</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/northwest_corners_apartments</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/costa_mesa</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/casa_verde_apartments</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/vesper_apartments_dallas_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/2121_brittmoore_business_park_houston_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/audubon_magnolia_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/bays_development_frisco_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/bianca_apartments_houston_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/blue_oval_stanton_tn</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/britt_290_business_park_houston_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/casa_verde_apartments_houston_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/cimarron_hills_georgetown_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/dpeg_galleria_park_houston_texas</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/dpeg_imperial_valley_office_houston_texas</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/janisch_road_houston_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/katy_boardwalk_mf_houston_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/lehmann_street_apartments_houston_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/lucciola_at_midtwon_houston_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/melber_line_travis_county_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/morton_ranch_katy_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/m_street_washington_dc</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/pasadena_twins_pasadena_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/pelican_greenhouse_katy_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/prospect_ridge_ft_collins_co</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/raintree_apartments_pasadena_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/red_roof_inn_san_antonio_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/rope_house_fishtown_philladelphia_pa</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/springwood_apartments_houston_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/suburban_studios_macon_north_macon_ga</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/suburban_studios_columbus_bradley_park_columbus_ga</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/the_arden_austin_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/town_east_mall_mesquite_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/trailhead_apartments_charlotte_nc</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/ventana_garden_apartments_houston_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/veridian_place_dallas_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/waterford_grove_houston_tx</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/the_fontenoy_los_angeles</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/clear_creek_rendering_denver</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/osprey_cove_north_jacksonville</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/the_langham_los_angeles</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/the_sir_francis_drake_los_angeles</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/the_piccadilly_los_angeles</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/park_wilshire_los_angeles</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/roosevelt_manor_rendering_seattle</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/east_blocks_phase_ii_a_rendering_houston</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/bloxom_industrial_park_rendering_kennedale</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/katy_pointe_rendering_katy</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/angelina_rendering_avondale</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/anderson_heights_rendering_waco</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/patterson_st_rendering_nashville</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/interdrive_building_houston</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- END Property Pages (auto-generated) -->
 </urlset>
