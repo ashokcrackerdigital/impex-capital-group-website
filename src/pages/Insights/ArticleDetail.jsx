@@ -55,7 +55,7 @@ const ArticleDetail = () => {
         {/* Hero Section */}
         <div className="article-hero">
           <div className="article-hero-image">
-            <img src={article.img} alt={`${article.title} Article Cover Image`} />
+            <img src={article.img} alt={`${article.title} | Impex Capital Group`} />
 
             <div className="article-hero-content">
               <div className="article-categories">{article.categories}</div>
