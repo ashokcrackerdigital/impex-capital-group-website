@@ -124,11 +124,13 @@ img {
   padding: 0 20px;
 }
 
-.hero h1 {
+.hero-title {
+  font-family: 'Playfair Display', serif;
   font-size: clamp(3rem, 6vw, 6rem);
   line-height: 1.1;
   margin-bottom: 1rem;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  font-weight: 400;
 }
 
 .hero-subtitle {
@@ -323,7 +325,7 @@ img {
   top: 0;
   left: 0;
   display: block;
-  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 @media (max-width: 768px) {

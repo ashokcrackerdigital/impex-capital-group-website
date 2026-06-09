@@ -4,7 +4,8 @@ const StructuredData = ({
   pageType = "general", // general | contact | leadership
   breadcrumbs = [],
   faqs = [],
-  person = null // Ash Shah / Nisha Smith ke liye
+  person = null, // Ash Shah / Nisha Smith ke liye
+  place = null
 }) => {
   useEffect(() => {
     // Remove old schemas (SPA safety)
@@ -75,15 +76,15 @@ const StructuredData = ({
     const breadcrumbSchema =
       breadcrumbs.length > 0
         ? {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: breadcrumbs.map((item, index) => ({
-              "@type": "ListItem",
-              position: index + 1,
-              name: item.name,
-              item: item.url
-            }))
-          }
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: breadcrumbs.map((item, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: item.name,
+            item: item.url
+          }))
+        }
         : null;
 
     /* ===============================
@@ -92,17 +93,17 @@ const StructuredData = ({
     const faqSchema =
       faqs.length > 0
         ? {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqs.map(faq => ({
-              "@type": "Question",
-              name: faq.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.answer
-              }
-            }))
-          }
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map(faq => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer
+            }
+          }))
+        }
         : null;
 
     /* ===============================
@@ -110,17 +111,30 @@ const StructuredData = ({
     =============================== */
     const personSchema = person
       ? {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: person.name,
-          jobTitle: person.role,
-          worksFor: {
-            "@type": "Organization",
-            name: "IMPEX Capital Group",
-            url: baseUrl
-          },
-          description: person.bio
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: person.name,
+        jobTitle: person.role,
+        worksFor: {
+          "@type": "Organization",
+          name: "IMPEX Capital Group",
+          url: baseUrl
+        },
+        description: person.bio,
+        sameAs: person.linkedin ? [person.linkedin] : undefined
+      }
+      : null;
+
+    const placeSchema = place
+      ? {
+        "@context": "https://schema.org",
+        "@type": "Place",
+        name: place.name,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: place.address
         }
+      }
       : null;
 
     const schemas = [
@@ -129,7 +143,8 @@ const StructuredData = ({
       websiteSchema,
       breadcrumbSchema,
       faqSchema,
-      personSchema
+      personSchema,
+      placeSchema
     ].filter(Boolean);
 
     schemas.forEach(schema => {
@@ -139,7 +154,7 @@ const StructuredData = ({
       script.text = JSON.stringify(schema, null, 2);
       document.head.appendChild(script);
     });
-  }, [pageType, breadcrumbs, faqs, person]);
+  }, [pageType, breadcrumbs, faqs, person, place]);
 
   return null;
 };

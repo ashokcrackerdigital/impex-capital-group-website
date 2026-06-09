@@ -114,7 +114,7 @@ const TeamLeadershipSection = ({ members, title, intro }) => {
                       aria-label={`View ${member.name}`}
                       ref={index === currentMember ? activeThumbRef : null}
                     >
-                      <img src={member.image} alt="" />
+                      <img src={member.image}  alt={`${member.name} - ${member.role} | Impex Capital Group`} />
                     </button>
                   ))}
                 </div>

@@ -7,6 +7,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import StructuredData from "../../components/StructuredData";
 import SEO from "../../components/SEO";
+import logoPlaceholder from "../../assets/images/logo_placeholder.png";
 
 const createSlug = (title = "") =>
   title
@@ -97,7 +98,7 @@ const Portfolio = () => {
               ? `https://api.impexcapitalgroup.com${item.image.formats.medium.url}`
               : item.image?.url
                 ? `https://api.impexcapitalgroup.com${item.image.url}`
-                : "https://via.placeholder.com/600x400?text=No+Image",
+                : logoPlaceholder,
           }
         });
 
@@ -188,7 +189,7 @@ const Portfolio = () => {
     <>
       <SEO
         title="Real Estate Investment Portfolio | Impex Capital Group"
-        description="Explore the Impex Capital Group portfolio, featuring over $1.8B+ in investments across multifamily, commercial, industrial, and land assets in the US."
+        description="Explore our diverse real estate investments, spanning value-add multifamily, land, hospitality, and commercial assets across the United States."
         canonical="https://impexcapitalgroup.com/portfolio"
         ogImage="https://impexcapitalgroup.com/assets/images/heroSetionImage.webp"
       />
@@ -218,7 +219,7 @@ const Portfolio = () => {
         <header className="page-header">
           <div className="header-content">
             <span className="header-subtitle">Our Investment Portfolio</span>
-            <h1>PORTFOLIO</h1>
+            <h1>Portfolio</h1>
             <p className="header-description">
               With over two decades of experience ranging from Multi Family, Offices,
               Industrial, Assisted Living and New Developments, Impex Capital Group
@@ -302,7 +303,7 @@ const Portfolio = () => {
                     <img
                       src={item.image}
                       className="p-img"
-                      alt={item.title}
+                      alt={`${item.title} | Impex Capital Group Portfolio`}
                       loading="lazy"
                     />
                     <div className="p-overlay">
