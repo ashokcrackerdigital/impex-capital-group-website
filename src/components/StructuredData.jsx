@@ -23,7 +23,7 @@ const StructuredData = ({
       "@id": `${baseUrl}#organization`,
       name: "IMPEX Capital Group",
       url: baseUrl,
-      logo: `${baseUrl}/assets/images/logo.png`,
+      logo: `${baseUrl}/public/logo.png`,
       sameAs: [
         "https://www.linkedin.com/company/impex-capital-group/"
       ],

@@ -32,8 +32,8 @@ const About = () => {
     return (
         <>
             <SEO
-                title="About Impex Capital Group | Real Estate Investment Firm"
-                description="Houston-based real estate investment firm focused on multifamily, commercial, land, and development opportunities across high-growth U.S. markets."
+                title="About Impex Capital Group | Our Investment Philosophy"
+                description="Discover our investment philosophy, real estate acquisition criteria, and how Impex Capital Group generates long-term value for investment partners."
                 canonical="https://impexcapitalgroup.com/about"
             />
             <StructuredData
@@ -98,7 +98,7 @@ const About = () => {
                         <div className="about-image-wrapper">
                             <img
                                 src={companyOverviewImg}
-                                alt="Modern office"
+                                alt="Impex Capital Group Corporate Headquarters Houston Office"
                                 className="about-image"
                             />
                             <div className="about-quote-card">
@@ -259,7 +259,7 @@ const About = () => {
                         <div className="about-image-wrapper framed">
                             <img
                                 src={ourApproachImg}
-                                alt="Team meeting"
+                                alt="Impex Capital Group Investment Team Meeting"
                                 className="about-image"
                             />
                             <div className="frame frame-top-right" />
