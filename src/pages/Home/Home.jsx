@@ -54,7 +54,7 @@ const Home = () => {
     <>
       <SEO
         title="Impex Capital Group | Real Estate Investment Firm Houston"
-        description="Premier real estate investment firm in Houston, TX, managing $450M+ in assets. Specializing in value-add multifamily, land, and commercial investments."
+        description="Impex Capital Group is a vertically integrated real estate investment firm in Houston, TX, managing value-add multifamily, land, and commercial assets."
         canonical="https://impexcapitalgroup.com/"
         ogImage="https://impexcapitalgroup.com/assets/images/multifamily.webp"
       />
@@ -107,11 +107,15 @@ const Home = () => {
           <span className="hero-subtitle">
             Building Value. Creating Opportunities.
           </span>
-          <h1 className="hero-title">
+          <h1 className="sr-only">
+            Impex Capital Group | Real Estate Investment Firm
+          </h1>
+
+          <h2 className="hero-title">
             A LEGACY OF
             <br />
             SUCCESS
-          </h1>
+          </h2>
         </div>
       </header>
 
@@ -275,7 +279,7 @@ const Home = () => {
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Blank_US_Map_%28states_only%29.svg"
             className="map-image"
-            alt="USA Map"
+            alt="Map of US states where Impex Capital Group owns land assets"
           />
 
           {/* Texas Locations */}
