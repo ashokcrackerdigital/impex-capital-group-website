@@ -4,6 +4,7 @@ import "./PropertyDetail.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import SEO from "../../components/SEO";
+import StructuredData from "../../components/StructuredData";
 
 const createSlug = (title = "") =>
   title
@@ -171,15 +172,44 @@ const PropertyDetail = () => {
     );
   }
 
+  const breadcrumbs = [
+    {
+      name: "Home",
+      url: "https://impexcapitalgroup.com"
+    },
+    {
+      name: "Portfolio",
+      url: "https://impexcapitalgroup.com/portfolio"
+    },
+    {
+      name: property.title,
+      url: `https://impexcapitalgroup.com/portfolio/property/${slug}`
+    }
+  ];
+
+  const placeData = property.location
+    ? {
+      name: property.title,
+      address: property.location
+    }
+    : null;
+
   return (
     <>
       <SEO
-        title={`${property.title} | ${getCategoryLabel(property.category)} | Impex Capital Group`}
-        description={`Details on ${property.title}, a ${getCategoryLabel(
+        title={`${property.title} | Real Estate Portfolio | Impex Capital Group`}
+        description={`Detailed overview of ${property.title}, a ${getCategoryLabel(
           property.category
-        )} asset${property.location ? ` located in ${property.location}` : ""} within the Impex Capital Group portfolio.`}
+        )} investment asset managed by Impex Capital Group${property.location ? ` in ${property.location}` : ""
+          }.`}
         canonical={`https://impexcapitalgroup.com/portfolio/property/${slug}`}
       />
+
+      <StructuredData
+        breadcrumbs={breadcrumbs}
+        place={placeData}
+      />
+
       <Navbar />
       <div className="property-detail-page">
         {/* Main Content Section */}
@@ -195,7 +225,7 @@ const PropertyDetail = () => {
 
           {/* Right Side - Large Image */}
           <div className="property-image-container">
-            <img src={property.image} alt={property.title} className="property-main-image" />
+            <img src={property.image} alt={`${property.title}${property.location ? ` - ${property.location}` : ""} | Impex Capital Group`} className="property-main-image" />
           </div>
         </section>
 
@@ -226,7 +256,7 @@ const PropertyDetail = () => {
                       navigate(`/portfolio/property/${item.slug}`, { state: { from } });
                     }}
                   >
-                    <img src={item.image} alt={item.title} />
+                    <img src={item.image} alt={`${item.title} | Impex Capital Group Portfolio`} />
                     <div className="carousel-item-overlay">
                       <h3>{item.title}</h3>
                       {item.location && <p>{item.location}</p>}

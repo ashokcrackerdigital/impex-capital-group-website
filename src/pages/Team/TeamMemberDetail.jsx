@@ -62,6 +62,7 @@ const TeamMemberDetail = () => {
           name,
           role,
           bio: structuredPersonBio,
+          linkedin: member.linkedin,
         }}
       />
 
@@ -81,7 +82,7 @@ const TeamMemberDetail = () => {
             ) : null}
             <img
               src={image}
-              alt={name}
+              alt={`${name} - ${role} Headshot`}
               className="member-hero-bg-img"
               decoding="async"
             />

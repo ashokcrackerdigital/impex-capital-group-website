@@ -42,8 +42,8 @@ const Team = () => {
         ]}
       />
       <SEO
-        title="Leadership Team & Investment Experts | Impex Capital Group"
-        description="Meet the leadership team at Impex Capital Group, experienced real estate and capital markets professionals with 25+ years of results."
+        title="Real Estate Investment Leadership Team | Impex Capital Group"
+        description="Meet the real estate operators, capital markets experts, and investment directors leading Impex Capital Group's national portfolio."
         canonical="https://impexcapitalgroup.com/team"
       />
 
@@ -52,7 +52,7 @@ const Team = () => {
       <section className="team-hero">
         <div className="team-hero-inner">
           <div className="hero-kicker">Leadership • Experience • Alignment</div>
-          <h1>OUR TEAM</h1>
+          <h1>Our Team</h1>
           <p className="hero-subcopy">
             Seasoned real estate operators and capital markets professionals
             aligned with investors through meaningful co‑investment and
