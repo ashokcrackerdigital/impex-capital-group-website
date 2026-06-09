@@ -33,8 +33,8 @@ const Insights = () => {
   return (
     <>
       <SEO
-        title="Real Estate Insights & News | Impex Capital Group"
-        description="Latest updates and market insights from Impex Capital Group including acquisitions, developments, and industry news."
+        title="Real Estate Investment Insights & News | Impex Capital Group"
+        description="Stay up to date with commercial real estate acquisitions, market analysis, developments, and corporate milestones from Impex Capital Group."
         canonical="https://impexcapitalgroup.com/insights"
         ogImage="https://impexcapitalgroup.com/assets/images/heroSetionImage.webp"
       />
@@ -42,18 +42,6 @@ const Insights = () => {
         breadcrumbs={[
           { name: "Home", url: "https://impexcapitalgroup.com" },
           { name: "Insights", url: "https://impexcapitalgroup.com/insights" }
-        ]}
-        faqs={[
-          {
-            question: "Where can I find news about Impex Capital Group?",
-            answer:
-              "Official news and updates about Impex Capital Group are published on the News page, covering acquisitions, developments, and company milestones."
-          },
-          {
-            question: "What type of updates does Impex Capital Group share?",
-            answer:
-              "Impex Capital Group shares updates related to real estate investments, fund activity, market expansion, and development projects."
-          }
         ]}
       />
       <Navbar />
@@ -64,7 +52,7 @@ const Insights = () => {
           <div className="hero-kicker">
             Press • Announcements • Market Coverage
           </div>
-          <h1>INSIGHTS</h1>
+          <h1>Insights</h1>
           <p className="hero-subcopy">
             Follow the latest acquisitions, developments, and milestones from
             Impex Capital Group – alongside third‑party coverage from leading
@@ -85,7 +73,7 @@ const Insights = () => {
       <section className="news-section">
         <div className="news-header reveal">
           <div>
-            <h2>Latest Headlines</h2>
+            <h2>Latest Real Estate News</h2>
             <p>
               Curated announcements from Impex Capital Group’s portfolio,
               including acquisitions, capital raises, and new development
@@ -103,7 +91,7 @@ const Insights = () => {
               style={{ cursor: 'pointer' }}
             >
               <div className="news-img-wrapper">
-                <img className="news-img" src={item.img} alt={item.title} loading="lazy" />
+                <img className="news-img" src={item.img} alt={`Insights article preview: ${item.title}`} loading="lazy" />
                 <div className="news-badge">{item.badge}</div>
               </div>
               <div className="news-content">

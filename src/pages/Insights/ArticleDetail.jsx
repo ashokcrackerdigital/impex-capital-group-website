@@ -6,6 +6,7 @@ import Footer from "../../components/Footer/Footer";
 import SEO from "../../components/SEO";
 import { articlesSummary } from "./articlesSummary";
 import { articlesContent } from "./articlesContent";
+import StructuredData from "../../components/StructuredData";
 
 const ArticleDetail = () => {
   const { slug } = useParams();
@@ -36,16 +37,25 @@ const ArticleDetail = () => {
   return (
     <>
       <SEO
-        title={article.seoTitle || article.title}
-        description={article.seoDescription || article.excerpt}
+        title={`${article.title} | Real Estate Insights | Impex Capital Group`}
+        description={`Read "${article.title}", featuring market analysis, acquisition data, and industry reports published by Impex Capital Group.`}
         ogType="article"
+      />
+      <StructuredData
+        article={{
+          title: article.title,
+          excerpt: article.excerpt,
+          img: article.img,
+          slug: article.slug,
+          publishDate: article.date || "2026-01-01"
+        }}
       />
       <Navbar />
       <article className="article-detail">
         {/* Hero Section */}
         <div className="article-hero">
           <div className="article-hero-image">
-            <img src={article.img} alt={article.title} />
+            <img src={article.img} alt={`${article.title} | Impex Capital Group`} />
 
             <div className="article-hero-content">
               <div className="article-categories">{article.categories}</div>

@@ -5,7 +5,8 @@ const StructuredData = ({
   breadcrumbs = [],
   faqs = [],
   person = null, // Ash Shah / Nisha Smith ke liye
-  place = null
+  place = null,
+  article = null
 }) => {
   useEffect(() => {
     // Remove old schemas (SPA safety)
@@ -24,7 +25,7 @@ const StructuredData = ({
       "@id": `${baseUrl}#organization`,
       name: "IMPEX Capital Group",
       url: baseUrl,
-      logo: `${baseUrl}/public/logo.png`,
+      logo: `${baseUrl}/logo.png`,
       sameAs: [
         "https://www.linkedin.com/company/impex-capital-group/"
       ],
@@ -137,6 +138,33 @@ const StructuredData = ({
       }
       : null;
 
+    const articleSchema = article
+      ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: article.title,
+        description: article.excerpt,
+        image: article.img,
+        datePublished: article.publishDate,
+        author: {
+          "@type": "Organization",
+          name: "Impex Capital Group"
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Impex Capital Group",
+          logo: {
+            "@type": "ImageObject",
+            url: `${baseUrl}/logo.png`
+          }
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `${baseUrl}/insights/article/${article.slug}`
+        }
+      }
+      : null;
+
     const schemas = [
       organizationSchema,
       localBusinessSchema,
@@ -144,7 +172,8 @@ const StructuredData = ({
       breadcrumbSchema,
       faqSchema,
       personSchema,
-      placeSchema
+      placeSchema,
+      articleSchema,
     ].filter(Boolean);
 
     schemas.forEach(schema => {
@@ -154,7 +183,7 @@ const StructuredData = ({
       script.text = JSON.stringify(schema, null, 2);
       document.head.appendChild(script);
     });
-  }, [pageType, breadcrumbs, faqs, person, place]);
+  }, [pageType, breadcrumbs, faqs, person, place, article]);
 
   return null;
 };
