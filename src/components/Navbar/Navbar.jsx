@@ -30,7 +30,14 @@ const Navbar = () => {
     <>
       <nav className="navbar" ref={navbarRef}>
         <Link to="/" className="logo" onClick={closeMenu}>
-          <img src={logoImg} alt="Impex Capital Group" className="logo-img" />
+          <img
+            src={logoImg}
+            alt="Impex Capital Group"
+            className="logo-img"
+            width={38}
+            height={38}
+            decoding="async"
+          />
           <span className="logo-text">IMPEX CAPITAL GROUP</span>
         </Link>
 
