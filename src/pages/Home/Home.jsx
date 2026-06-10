@@ -114,7 +114,7 @@ const Home = () => {
           <h2 className="hero-title">
             A LEGACY OF
             <br />
-            SUCCESS
+            {" "}SUCCESS
           </h2>
         </div>
       </header>

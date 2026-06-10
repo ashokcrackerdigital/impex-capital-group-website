@@ -42,7 +42,7 @@ const Team = () => {
         ]}
       />
       <SEO
-        title="Real Estate Investment Leadership Team | Impex Capital Group"
+        title="Impex Capital Leadership Team"
         description="Meet the real estate operators, capital markets experts, and investment directors leading Impex Capital Group's national portfolio."
         canonical="https://impexcapitalgroup.com/team"
       />

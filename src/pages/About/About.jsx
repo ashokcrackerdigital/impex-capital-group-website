@@ -63,7 +63,7 @@ const About = () => {
                         <h1 className="about-title">
                             About Impex
                             <br />
-                            Capital Group
+                            {" "}Capital Group
                         </h1>
                         <p className="about-subtitle">
                             Houston-based real estate investment firm creating long-term value
