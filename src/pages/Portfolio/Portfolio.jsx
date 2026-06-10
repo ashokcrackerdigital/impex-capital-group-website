@@ -238,7 +238,7 @@ const Portfolio = () => {
             </div>
             <div className="stat-item">
               <span className="stat-number">2.1B+</span>
-              <span className="stat-label">Investments</span>
+              <span className="stat-label">Portfolio Value</span>
             </div>
           </div>
         </section>
