@@ -40,7 +40,7 @@ const AppRoutes = () => {
                 <Route path="/multifamily" element={<Multifamily />} />
                 <Route path="/land" element={<Land />} />
                 <Route path="/exited-portfolio" element={<ExitedPortfolio />} />
-                <Route path="/commercial" element={<Hotel />} />
+                <Route path="/hotel" element={<Hotel />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Suspense>

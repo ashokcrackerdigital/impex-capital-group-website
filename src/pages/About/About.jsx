@@ -204,7 +204,7 @@ const About = () => {
                             </div>
                         </Link>
 
-                        <Link to="/commercial" className="about-sector-item clickable">
+                        <Link to="/hotel" className="about-sector-item clickable">
                             <div
                                 className="about-sector-bg"
                                 style={{

@@ -226,7 +226,7 @@ const Home = () => {
             </div>
           </Link>
 
-          <Link to="/commercial" className="sector-item clickable">
+          <Link to="/hotel" className="sector-item clickable">
             <div
               className="sector-bg"
               style={{

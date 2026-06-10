@@ -283,7 +283,7 @@ const PropertyDetail = () => {
           {(() => {
             const from = location.state?.from || new URLSearchParams(location.search).get('from') || 'portfolio';
             const backRoutes = {
-              'hotel': { path: '/commercial', label: 'Back to Hotel' },
+              'hotel': { path: '/hotel', label: 'Back to Hotel' },
               'multifamily': { path: '/multifamily', label: 'Back to Multifamily' },
               'land': { path: '/land', label: 'Back to Land' },
               'exited-portfolio': { path: '/exited-portfolio', label: 'Back to Exited Portfolio' },

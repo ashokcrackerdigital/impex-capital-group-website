@@ -152,13 +152,13 @@ const Hotel = () => {
   return (
     <>
       <SEO
-        title="Hospitality & Hotel Asset Investments | Impex Capital Group"
-        description="Impex Capital Group invests in premium hotel and hospitality assets in strategic business and leisure markets across the United States."
+        title="Hotel & Hospitality Investments | Impex Capital Group"
+        description="Audit of Impex Capital Group's commercial hospitality investments, acquiring premium hotel assets in high-demand business and leisure destinations."
       />
       <StructuredData
         breadcrumbs={[
           { name: "Home", url: "https://impexcapitalgroup.com" },
-          { name: "Hotel", url: "https://impexcapitalgroup.com/commercial" }
+          { name: "Hotel", url: "https://impexcapitalgroup.com/hotel" }
         ]}
         faqs={[
           {
