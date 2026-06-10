@@ -5,7 +5,6 @@ import "./NotFound.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import FooterCTA from "../../components/Footer/FooterCTA";
 import SEO from "../../components/SEO";
 
 const NotFound = () => {
