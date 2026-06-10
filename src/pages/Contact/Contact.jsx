@@ -227,8 +227,8 @@ const Contact = () => {
   return (
     <>
       <SEO
-        title="Contact Impex Capital Group | Investment & Partnership Inquiries"
-        description="Get in touch with Impex Capital Group for investment opportunities, strategic partnerships, or general inquiries. Our team is here to assist you."
+        title="Contact Impex Capital Group | Investment Inquiries"
+        description="Get in touch with Impex Capital Group. Contact our Houston office for real estate acquisitions, capital partnership, and investor relations."
         canonical="https://impexcapitalgroup.com/contact"
       />
       <StructuredData
@@ -293,7 +293,7 @@ const Contact = () => {
             <h3>Email Us</h3>
             <p>General Inquiry</p>
             <p>
-              <a href="mailto: " aria-label="Email Impex Capital Group at investor_relations@impexcapitalgroup.com">
+              <a href="mailto:investor_relations@impexcapitalgroup.com" aria-label="Email Impex Capital Group at investor_relations@impexcapitalgroup.com">
                 investor_relations@impexcapitalgroup.com
               </a>
             </p>
