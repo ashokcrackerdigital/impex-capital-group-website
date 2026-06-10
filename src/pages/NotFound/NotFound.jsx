@@ -36,7 +36,7 @@ const NotFound = () => {
 
             <section className="not-found-section reveal active">
                 <div className="not-found-content">
-                    <h1 className="not-found-title">404</h1>
+                    <h1 className="not-found-title">404 - Page Not Found</h1>
                     <h2 className="not-found-subtitle">Oops! Page Not Found</h2>
                     <p className="not-found-text">
                         The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
