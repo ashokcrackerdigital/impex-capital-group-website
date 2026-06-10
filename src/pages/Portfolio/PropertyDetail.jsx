@@ -197,7 +197,7 @@ const PropertyDetail = () => {
   return (
     <>
       <SEO
-        title={`${property.title} | Real Estate Portfolio | Impex Capital Group`}
+        title={`${property.title} | Portfolio | Impex Capital Group`}
         description={`Detailed overview of ${property.title}, a ${getCategoryLabel(
           property.category
         )} investment asset managed by Impex Capital Group${property.location ? ` in ${property.location}` : ""

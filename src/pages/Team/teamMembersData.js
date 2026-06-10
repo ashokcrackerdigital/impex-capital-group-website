@@ -48,7 +48,7 @@ export const TEAM_MEMBERS = [
     seo: {
       title: "Ash Shah | Founder, President & CEO | Impex Capital Group",
       description:
-        "Read the professional profile and biography of Ash Shah, Founder, President & CEO at Impex Capital Group.",
+        "Read the professional profile and biography of Ash Shah, Founder, President & CEO at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
     },
     structuredPersonBio:
       "Ash Shah is the Founder, President and CEO of Impex Capital Group, overseeing real estate investment strategy and asset management.",
@@ -106,7 +106,7 @@ export const TEAM_MEMBERS = [
     seo: {
       title: "Michael Munshi | Managing Director, Business Development | Impex Capital Group",
       description:
-        "Read the professional profile and biography of Michael Munshi, Managing Director, Business Development at Impex Capital Group.",
+        "Read the professional profile and biography of Michael Munshi, Managing Director, Business Development at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
     },
     structuredPersonBio:
       "Michael is Managing Director, Business Development at IMPEX Capital Group, leading strategic partnerships and global capital alignment across commercial real estate investments.",
@@ -167,7 +167,7 @@ export const TEAM_MEMBERS = [
     seo: {
       title: "Nisha Smith | Director of Operations | Impex Capital Group",
       description:
-        "Read the professional profile and biography of Nisha Smith, Director of Operations at Impex Capital Group.",
+        "Read the professional profile and biography of Nisha Smith, Director of Operations at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
     },
     structuredPersonBio:
       "Nisha Smith is the Director of Operations at IMPEX Capital Group, where she plays a critical role in strengthening investor relationships, expanding market reach, and supporting the firm’s capital growth strategy.",
@@ -224,7 +224,7 @@ export const TEAM_MEMBERS = [
       title:
         "Doug Bergen | Director of Special Projects | Impex Capital Group",
       description:
-        "Read the professional profile and biography of Doug Bergen, Director of Special Projects at Impex Capital Group.",
+        "Read the professional profile and biography of Doug Bergen, Director of Special Projects at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
     },
     structuredPersonBio:
       "Doug Bergen is a Director of Special Projects at IMPEX Capital Group with 20+ years of experience in multifamily development, capital formation, and investment execution.",
@@ -288,7 +288,7 @@ export const TEAM_MEMBERS = [
     seo: {
       title: "David Wallace | Chief Development Officer | Impex Capital Group",
       description:
-        "Read the professional profile and biography of David Wallace, Chief Development Officer at Impex Capital Group.",
+        "Read the professional profile and biography of David Wallace, Chief Development Officer at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
     },
     structuredPersonBio:
       "David Wallace is Chief Development Officer at IMPEX Capital Group with 40+ years of experience in real estate development, capital formation, and complex public-private transactions.",
@@ -357,7 +357,7 @@ export const TEAM_MEMBERS = [
       title:
         "Rajeev Thorat | Lead – Strategic Initiatives | Impex Capital Group",
       description:
-        "Read the professional profile and biography of Rajeev Thorat, Lead – Strategic Initiatives at Impex Capital Group.",
+        "Read the professional profile and biography of Rajeev Thorat, Lead – Strategic Initiatives at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
     },
     structuredPersonBio:
       "Rajeev is a strategic partner at Impex Capital Group focused on data center investments, cost optimization, and accretive NOI across the portfolio.",
@@ -423,7 +423,7 @@ export const TEAM_MEMBERS = [
       title:
         'Tapan ("Paul") Patel | VP of Operations | Impex Capital Group',
       description:
-        'Read the professional profile and biography of Paul (Tapan) Patel, VP of Operations at Impex Capital Group.',
+        'Read the professional profile and biography of Paul (Tapan) Patel, VP of Operations at Impex Capital Group. Learn about their real estate investment expertise and leadership.',
     },
     structuredPersonBio:
       'Tapan ("Paul") Patel is a real estate and asset management professional at IMPEX Capital Group with 15+ years of experience in operations, repositioning, and value creation.',
@@ -483,7 +483,7 @@ export const TEAM_MEMBERS = [
     seo: {
       title: "Krish Shah | Senior Analyst | Impex Capital Group",
       description:
-        "Read the professional profile and biography of Krish Shah, Senior Analyst at Impex Capital Group.",
+        "Read the professional profile and biography of Krish Shah, Senior Analyst at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
     },
     structuredPersonBio:
       "Krish Shah is a Senior Analyst - Associate at IMPEX Capital Group supporting deal evaluation, financial analysis, and growth-focused strategic initiatives.",
@@ -547,7 +547,7 @@ export const TEAM_MEMBERS = [
       title:
         "Fahd Mulawwah | Director, Investments & Capital Management | Impex Capital Group",
       description:
-        "Read the professional profile and biography of Fahd Mulawwah, Director, Investments & Capital Management at Impex Capital Group.",
+        "Read the professional profile and biography of Fahd Mulawwah, Director, Investments & Capital Management at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
     },
     structuredPersonBio:
       "Fahd Mulawwah is Managing Director of Investments at Impex Capital Group, leading investment strategy, credit enhancement, and high-value real estate execution.",
@@ -606,7 +606,7 @@ export const TEAM_MEMBERS = [
     seo: {
       title: "Barry Chien | Chief Investment Officer | Impex Capital Group",
       description:
-        "Read the professional profile and biography of Barry Chien, Chief Investment Officer at Impex Capital Group.",
+        "Read the professional profile and biography of Barry Chien, Chief Investment Officer at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
     },
     structuredPersonBio:
       "Barry Chien is Chief Investment Officer of Impex Capital Group, overseeing investment strategy, underwriting, and portfolio management across multiple asset classes.",
@@ -667,7 +667,7 @@ export const TEAM_MEMBERS = [
     seo: {
       title: "Leena Mehta | Account Executive | Impex Capital Group",
       description:
-        "Read the professional profile and biography of Leena Mehta, Account Executive at Impex Capital Group.",
+        "Read the professional profile and biography of Leena Mehta, Account Executive at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
     },
     structuredPersonBio:
       "Leena Mehta is an Account Executive at IMPEX Capital Group supporting client relationship management, operational coordination, and strategic growth initiatives.",
@@ -724,7 +724,7 @@ export const TEAM_MEMBERS = [
     seo: {
       title: "Jodi Srubar | Administrative Assistant | Impex Capital Group",
       description:
-        "Read the professional profile and biography of Jodi Srubar, Administrative Assistant at Impex Capital Group.",
+        "Read the professional profile and biography of Jodi Srubar, Administrative Assistant at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
     },
     structuredPersonBio:
       "Jodi Srubar is an Administrative Assistant at IMPEX Capital Group with 20+ years of experience in operations, coordination, and process efficiency.",
@@ -784,7 +784,7 @@ export const TEAM_MEMBERS = [
     seo: {
       title: "Aryan Shah | Analyst | Impex Capital Group",
       description:
-        "Read the professional profile and biography of Aryan Shah, Analyst at Impex Capital Group.",
+        "Read the professional profile and biography of Aryan Shah, Analyst at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
     },
     structuredPersonBio:
       "Aryan Shah is an Analyst at IMPEX Capital Group supporting research, data analysis, and project execution across the investment platform.",
