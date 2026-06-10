@@ -157,8 +157,8 @@ const Land = () => {
   return (
     <>
       <SEO
-        title="Land Development & Strategic Investments | Impex Capital Group"
-        description="Impex Capital Group strategically acquires and entitles land in high-growth corridors for future residential, commercial, and mixed-use development."
+        title="Land Acquisition & Development | Impex Capital Group"
+        description="Explore strategic land entitlement and pre-development opportunities acquired by Impex Capital Group across major metropolitan growth corridors."
       />
       <StructuredData
         breadcrumbs={[
@@ -221,7 +221,7 @@ const Land = () => {
             <span className="hero-subtitle">
               Strategic Development Opportunities
             </span>
-            <h1>LAND</h1>
+            <h1>Land</h1>
             <p className="hero-description">
               Impex Capital Group strategically acquires and entitles land in
               high-growth corridors, creating a pipeline of future development
