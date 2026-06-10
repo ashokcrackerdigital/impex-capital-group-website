@@ -155,24 +155,12 @@ const Multifamily = () => {
     <>
       <SEO
         title="Multifamily Real Estate Investments | Impex Capital Group"
-        description="Explore our multifamily real estate portfolio. Impex Capital Group specializes in value-add multifamily acquisitions across high‑growth U.S. markets."
+        description="Learn about Impex Capital Group's multifamily real estate investment strategy, targeting value-add apartment communities in high-growth US corridors."
       />
       <StructuredData
         breadcrumbs={[
           { name: "Home", url: "https://impexcapitalgroup.com" },
           { name: "Multifamily", url: "https://impexcapitalgroup.com/multifamily" }
-        ]}
-        faqs={[
-          {
-            question: "What is Impex Capital Group’s multifamily investment strategy?",
-            answer:
-              "Impex Capital Group focuses on acquiring and operating multifamily communities through value-add strategies and active asset management."
-          },
-          {
-            question: "Where does Impex Capital Group invest in multifamily assets?",
-            answer:
-              "Multifamily investments are made in select U.S. markets with strong population growth and demand fundamentals."
-          }
         ]}
       />
 
@@ -180,27 +168,16 @@ const Multifamily = () => {
       <Navbar />
 
       {/* ===== HERO ===== */}
-      <section className="multifamily-hero" style={{ position: "relative" }}>
-        <div
-          className="service-hero-bg"
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundImage: `url(${multifamilyImg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            opacity: 0.3,
-            filter: "grayscale(60%) brightness(0.65)",
-            zIndex: 1,
-          }}
-        ></div>
+      <section className="multifamily-hero">
+        <img
+          src={multifamilyImg}
+          alt="Impex Capital Group Multifamily Investment Property"
+          className="hero-bg-image"
+        />
 
         <div className="service-hero-content">
           <span className="hero-subtitle">Residential Communities</span>
-          <h1>MULTIFAMILY</h1>
+          <h1>Multifamily</h1>
           <p className="hero-description">
             With over two decades of experience in multifamily real estate, Impex Capital Group has established itself as a leader in residential community development and management.
           </p>
@@ -223,7 +200,7 @@ const Multifamily = () => {
           <span className="stat-label">States</span>
         </div>
         <div className="stat-box">
-          <span className="stat-number">$1.2B+</span>
+          <span className="stat-number">$2.1B+</span>
           <span className="stat-label">Portfolio Value</span>
         </div>
       </div>

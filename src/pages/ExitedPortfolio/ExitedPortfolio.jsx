@@ -155,8 +155,8 @@ const ExitedPortfolio = () => {
   return (
     <>
       <SEO
-        title="Realized & Exited Investments Portfolio | Impex Capital Group"
-        description="A curated portfolio of successfully realized investments by Impex Capital Group, spanning multifamily, land, retail, hotel, and commercial assets."
+        title="Realized Investments | Exited | Impex Capital Group"
+        description="Review our exited real estate portfolio properties, showcasing realized gains and successfully exited multifamily, commercial, and land assets."
         canonical="https://impexcapitalgroup.com/exited-portfolio"
       />
 
@@ -164,18 +164,6 @@ const ExitedPortfolio = () => {
         breadcrumbs={[
           { name: "Home", url: "https://impexcapitalgroup.com" },
           { name: "Exited Portfolio", url: "https://impexcapitalgroup.com/exited-portfolio" }
-        ]}
-        faqs={[
-          {
-            question: "What is the exited portfolio of Impex Capital Group?",
-            answer:
-              "The exited portfolio highlights real estate investments that Impex Capital Group has successfully realized across various asset classes."
-          },
-          {
-            question: "What does an exited investment indicate?",
-            answer:
-              "Exited investments reflect completed business plans and realized outcomes following asset repositioning or market execution."
-          }
         ]}
       />
 
@@ -186,7 +174,7 @@ const ExitedPortfolio = () => {
       <section className="exited-hero">
         <div className="exited-hero-content">
           <span className="hero-subtitle">Successfully Realized Investments</span>
-          <h1>EXITED PORTFOLIO</h1>
+          <h1>Exited Portfolio</h1>
           <p className="hero-description">
             A curated portfolio of destination assets across sectors, thoughtfully assembled to balance durable income with meaningful growth potential.
           </p>

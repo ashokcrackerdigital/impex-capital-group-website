@@ -114,7 +114,7 @@ const Home = () => {
           <h2 className="hero-title">
             A LEGACY OF
             <br />
-            SUCCESS
+            {" "}SUCCESS
           </h2>
         </div>
       </header>
@@ -134,7 +134,7 @@ const Home = () => {
           <span className="stat-label">Sq. Ft. Industrial & Commercial Office</span>
         </div>
         <div className="stat-item">
-          <span className="stat-number">$1.8B+</span>
+          <span className="stat-number">$2.1B+</span>
           <span className="stat-label">Portfolio Value</span>
         </div>
       </section>
@@ -226,7 +226,7 @@ const Home = () => {
             </div>
           </Link>
 
-          <Link to="/commercial" className="sector-item clickable">
+          <Link to="/hotel" className="sector-item clickable">
             <div
               className="sector-bg"
               style={{

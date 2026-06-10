@@ -152,25 +152,13 @@ const Hotel = () => {
   return (
     <>
       <SEO
-        title="Hospitality & Hotel Asset Investments | Impex Capital Group"
-        description="Impex Capital Group invests in premium hotel and hospitality assets in strategic business and leisure markets across the United States."
+        title="Hotel & Hospitality Investments | Impex Capital Group"
+        description="Audit of Impex Capital Group's commercial hospitality investments, acquiring premium hotel assets in high-demand business and leisure destinations."
       />
       <StructuredData
         breadcrumbs={[
           { name: "Home", url: "https://impexcapitalgroup.com" },
-          { name: "Hotel", url: "https://impexcapitalgroup.com/commercial" }
-        ]}
-        faqs={[
-          {
-            question: "What types of hospitality assets does Impex Capital Group invest in?",
-            answer:
-              "Impex Capital Group invests in hotel and hospitality assets located in strategic markets with strong travel and demand fundamentals."
-          },
-          {
-            question: "How does Impex Capital Group approach hotel investments?",
-            answer:
-              "Hotel investments are evaluated based on market demand, operational performance, brand positioning, and long-term value creation potential."
-          }
+          { name: "Hotel", url: "https://impexcapitalgroup.com/hotel" }
         ]}
       />
 
@@ -282,7 +270,7 @@ const Hotel = () => {
                 style={{ cursor: 'pointer' }}
               >
                 <div className="property-img-container">
-                  <img src={imageUrl} className="property-img" alt={prop.title} loading="lazy" />
+                  <img src={imageUrl} className="property-img" alt={`${prop.title} - Hotel & Commercial Property by Impex Capital Group`} loading="lazy" />
                   <div className="property-overlay">
                     <h3>{prop.title}</h3>
                     <div className="property-location">{prop.location}</div>

@@ -63,7 +63,7 @@ const About = () => {
                         <h1 className="about-title">
                             About Impex
                             <br />
-                            Capital Group
+                            {" "}Capital Group
                         </h1>
                         <p className="about-subtitle">
                             Houston-based real estate investment firm creating long-term value
@@ -204,7 +204,7 @@ const About = () => {
                             </div>
                         </Link>
 
-                        <Link to="/commercial" className="about-sector-item clickable">
+                        <Link to="/hotel" className="about-sector-item clickable">
                             <div
                                 className="about-sector-bg"
                                 style={{
@@ -247,7 +247,7 @@ const About = () => {
                             </p>
                         </div>
                         <div className="track-item">
-                            <p className="track-number">$1.8B+</p>
+                            <p className="track-number">$2.1B+</p>
                             <p className="track-label">Portfolio Value</p>
                         </div>
                     </div>

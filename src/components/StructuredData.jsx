@@ -35,7 +35,9 @@ const StructuredData = ({
         "@type": "ContactPoint",
         contactType: "Investor Relations",
         telephone: "+1-833-467-3924",
-        email: "investor_relations@impexcapitalgroup.com"
+        email: "investor_relations@impexcapitalgroup.com",
+        areaServed: "US",
+        availableLanguage: "English"
       }
     };
 
