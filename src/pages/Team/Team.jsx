@@ -63,7 +63,7 @@ const Team = () => {
               <i className="fa-regular fa-user"></i> 25+ Years Experience
             </span>
             <span>
-              <i className="fa-regular fa-building"></i> $1.8B+ Portfolio
+              <i className="fa-regular fa-building"></i> $2.1B+ Portfolio
             </span>
           </div>
         </div>

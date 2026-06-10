@@ -134,7 +134,7 @@ const Home = () => {
           <span className="stat-label">Sq. Ft. Industrial & Commercial Office</span>
         </div>
         <div className="stat-item">
-          <span className="stat-number">$1.8B+</span>
+          <span className="stat-number">$2.1B+</span>
           <span className="stat-label">Portfolio Value</span>
         </div>
       </section>

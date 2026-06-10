@@ -247,7 +247,7 @@ const About = () => {
                             </p>
                         </div>
                         <div className="track-item">
-                            <p className="track-number">$1.8B+</p>
+                            <p className="track-number">$2.1B+</p>
                             <p className="track-label">Portfolio Value</p>
                         </div>
                     </div>

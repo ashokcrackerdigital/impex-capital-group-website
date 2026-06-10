@@ -223,7 +223,7 @@ const Multifamily = () => {
           <span className="stat-label">States</span>
         </div>
         <div className="stat-box">
-          <span className="stat-number">$1.2B+</span>
+          <span className="stat-number">$2.1B+</span>
           <span className="stat-label">Portfolio Value</span>
         </div>
       </div>
