@@ -40,7 +40,7 @@ export const TEAM_MEMBERS = [
     mobileImage: ashShahImgMobile,
     linkedin: "https://www.linkedin.com/in/ash-shah-a14351100/",
     bio: [
-      "Ash Shah is the Founder, President & CEO of Impex Capital Group, a Houston-based commercial real estate investment firm that owns and manages over $1.8 billion in properties across the United States, including approximately $800 million in Houston and throughout Texas.",
+      "Ash Shah is the Founder, President & CEO of Impex Capital Group, a Houston-based commercial real estate investment firm that owns and manages over $2.1 billion in properties across the United States, including approximately $800 million in Houston and throughout Texas.",
       "To date, Impex has acquired over 10,000 multifamily units, 1,500 units of new multifamily development & build-to-rent projects, 600,000 square feet of industrial & commercial office, and 400,000 square feet of retail & mixed-use assets. Ash's portfolio also includes hotels, assisted-living with memory care, storage facilities and land for housing development.",
       "Prior to founding Impex Capital Group, Ash served as founder and CEO of Impex Global, a plastic films, paper and packaging company with operations across North America and multiple international markets, which he successfully exited to a private equity firm in 2012.",
       "Ash holds an MBA from Thunderbird School of Global Management and has been recognized by the Houston Business Journal and Inc. 5000 as a \"Top 100\" and \"Fastest Growing Company\" leader. He is a former \"International Entrepreneur of the Year\" award recipient from the Indo-American Chamber of Commerce and a member of the Forbes Financial Council.",
