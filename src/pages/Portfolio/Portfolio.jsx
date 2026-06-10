@@ -233,7 +233,7 @@ const Portfolio = () => {
         <section className="stats-section reveal">
           <div className="stats-container">
             <div className="stat-item">
-              <span className="stat-number">60+</span>
+              <span className="stat-number">75+</span>
               <span className="stat-label">Properties</span>
             </div>
             <div className="stat-item">
