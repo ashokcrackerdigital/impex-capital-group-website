@@ -30,6 +30,7 @@ const filterCategories = [
   { value: "office", label: "Office" },
   { value: "self-storage", label: "Self Storage" },
   { value: "senior-living", label: "Senior Living" },
+  { value: "condominiums", label: "Condominiums" },
 ];
 
 const Portfolio = () => {
