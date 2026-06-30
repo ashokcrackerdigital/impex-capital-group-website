@@ -269,21 +269,7 @@
   </url>
 
   <url>
-    <loc>https://impexcapitalgroup.com/portfolio/property/cy_fair_retail</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://impexcapitalgroup.com/portfolio/property/water_park_ii</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://impexcapitalgroup.com/portfolio/property/lucciola_midtown_houston_tx</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -612,13 +598,6 @@
   </url>
 
   <url>
-    <loc>https://impexcapitalgroup.com/portfolio/property/lucciola_at_midtwon_houston_tx</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://impexcapitalgroup.com/portfolio/property/melber_line_travis_county_tx</loc>
     <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -845,6 +824,41 @@
   <url>
     <loc>https://impexcapitalgroup.com/portfolio/property/interdrive_building_houston</loc>
     <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/lucciola_midtown_houston_tx</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/cy_fair_retail</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/allegra_at_cocoa</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/the_st_regis_residences_houston</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://impexcapitalgroup.com/portfolio/property/the_holiday_kansas_city</loc>
+    <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
