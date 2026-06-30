@@ -437,6 +437,158 @@ img {
 }
 
 /* =========================
+   FINANCIAL SOLUTIONS
+========================= */
+.financial-solutions-section {
+  background: #000;
+  border-top: 1px solid var(--border-color);
+  padding: 5rem 5%;
+}
+
+.financial-solutions-inner {
+  display: flex;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+.financial-solutions-visual {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+}
+
+.financial-solutions-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.financial-solutions-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.financial-solutions-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-gold);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.financial-solutions-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  line-height: 1.2;
+  color: var(--text-white);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.financial-solutions-desc {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-grey);
+  margin-bottom: 2.5rem;
+  max-width: 560px;
+}
+
+.financial-solutions-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 560px;
+}
+
+.financial-solutions-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+  transition: var(--transition);
+}
+
+.financial-solutions-item:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.financial-solutions-icon {
+  flex-shrink: 0;
+  width: 1.25rem;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-gold);
+}
+
+.financial-solutions-item span {
+  font-size: 0.9rem;
+  color: var(--text-white);
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .financial-solutions-section {
+    padding: 3rem 8%;
+  }
+
+  .financial-solutions-inner {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .financial-solutions-visual {
+    flex: none;
+    height: 420px;
+  }
+
+  .financial-solutions-img {
+    position: relative;
+    inset: auto;
+    height: 100%;
+  }
+
+  .financial-solutions-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .financial-solutions-desc,
+  .financial-solutions-list {
+    max-width: 100%;
+  }
+
+  .financial-solutions-item {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .financial-solutions-section {
+    padding: 2.5rem 5%;
+  }
+
+  .financial-solutions-visual {
+    height: 280px;
+  }
+
+  .financial-solutions-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* =========================
    MAP
 ========================= */
 .map-section {

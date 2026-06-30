@@ -10,6 +10,7 @@ import SEO from "../../components/SEO";
 
 import heroVideo from "../../assets/videos/opt_Luxury_Apartment_Drone_Footage.mp4";
 import seniorLivingImg from "../../assets/images/Seniorliving.webp";
+import financialSolutionsImg from "../../assets/images/financialSolutionsSectionImg.png";
 // import topInvestorImg from "../../assets/images/topinvestor.webp";
 // import bottomInvestorImg from "../../assets/images/Bottominvestor.webp";
 import StructuredData from "../../components/StructuredData";
@@ -268,6 +269,59 @@ const Home = () => {
           </Link>
         </div>
       </section> */}
+
+      {/* ===== FINANCIAL SOLUTIONS ===== */}
+      <section className="financial-solutions-section reveal">
+        <div className="financial-solutions-inner">
+          <div className="financial-solutions-visual">
+            <img
+              src={financialSolutionsImg}
+              alt="Real estate sponsors reviewing financial data and charts"
+              className="financial-solutions-img"
+            />
+          </div>
+
+          <div className="financial-solutions-content">
+            <span className="financial-solutions-label">Financial Solutions</span>
+            <h2 className="financial-solutions-title">
+              Balance Sheet Support
+              <br />
+              &amp; Loan Guarantees
+            </h2>
+            <p className="financial-solutions-desc">
+              Impex Capital Group provides balance sheet support and loan guarantee
+              solutions to real estate sponsors across commercial real estate
+              transactions. Our team supports non-recourse acquisition financing,
+              refinancing, construction loans, and completion guarantees, helping
+              sponsors meet lender requirements and successfully execute their
+              projects.
+            </p>
+
+            <ul className="financial-solutions-list">
+              <li className="financial-solutions-item">
+                <i className="fas fa-file-invoice financial-solutions-icon" />
+                <span>Balance Sheet Support</span>
+              </li>
+              <li className="financial-solutions-item">
+                <i className="fas fa-house-circle-check financial-solutions-icon" />
+                <span>Non-Recourse Acquisition Loan Guarantees</span>
+              </li>
+              <li className="financial-solutions-item">
+                <i className="fas fa-rotate financial-solutions-icon" />
+                <span>Refinance Loan Guarantees</span>
+              </li>
+              <li className="financial-solutions-item">
+                <i className="fas fa-building financial-solutions-icon" />
+                <span>Construction Loan Guarantees</span>
+              </li>
+              <li className="financial-solutions-item">
+                <i className="fas fa-shield-halved financial-solutions-icon" />
+                <span>Completion Guarantees</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       {/* ===== MAP SECTION ===== */}
       <section className="map-section reveal">
