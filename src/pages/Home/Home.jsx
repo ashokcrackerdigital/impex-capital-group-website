@@ -271,7 +271,7 @@ const Home = () => {
       </section> */}
 
       {/* ===== FINANCIAL SOLUTIONS ===== */}
-      <section className="financial-solutions-section reveal">
+      {/* <section className="financial-solutions-section reveal">
         <div className="financial-solutions-inner">
           <div className="financial-solutions-visual">
             <img
@@ -321,7 +321,7 @@ const Home = () => {
             </ul>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ===== MAP SECTION ===== */}
       <section className="map-section reveal">
