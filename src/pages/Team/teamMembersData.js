@@ -160,9 +160,8 @@ export const TEAM_MEMBERS = [
     mobileImage: nishaSmithImgMobile,
     linkedin: "https://www.linkedin.com/in/nisha-smith-a6118b41/",
     bio: [
-      "Nisha Smith brings over 25 years of experience in hospitality, banking and real estate, including leadership roles with DoubleTree Hotel and Citibank, where she served as Vice President and helped build the Non-Resident Indian (NRI) business across the Southern United States.",
-      "Since 2011, Nisha has advised thousands of investors on real estate strategies across India and the U.S., helping them deploy hundreds of millions of dollars into institutional-quality properties tailored to their long-term financial goals.",
-      "At Impex Capital Group, she leads investor relations, focusing on communication, education and relationship-building with global investors. Nisha is based in Houston and maintains deep ties with the broader NRI community and developers across the U.S. and India.",
+      "Nisha Smith brings more than 25 years of experience in commercial real estate, business operations, and cross-border advisory. As Director of Operations at Impex Capital Group, she oversees transaction coordination, lender communications, SREO management, and operational processes across the firm's active portfolio and deal pipeline.",
+      "Over the past year, she has played a key role in the firm's expansion across 23 states and the execution of more than 15 acquisition and development transactions totaling over $1 billion in property value. Based in Houston, Nisha works closely with lenders, developers, legal teams, and strategic partners to ensure efficient execution and operational excellence.",
     ],
     seo: {
       title: "Nisha Smith | Director of Operations | Impex Capital Group",
