@@ -10,7 +10,7 @@ import SEO from "../../components/SEO";
 
 import heroVideo from "../../assets/videos/opt_Luxury_Apartment_Drone_Footage.mp4";
 import seniorLivingImg from "../../assets/images/Seniorliving.webp";
-// import financialSolutionsImg from "../../assets/images/financialSolutionsSectionImg.png";
+import financialSolutionsImg from "../../assets/images/financialSolutionsSectionImg.png";
 // import topInvestorImg from "../../assets/images/topinvestor.webp";
 // import bottomInvestorImg from "../../assets/images/Bottominvestor.webp";
 import StructuredData from "../../components/StructuredData";
@@ -271,7 +271,7 @@ const Home = () => {
       </section> */}
 
       {/* ===== FINANCIAL SOLUTIONS ===== */}
-      {/* <section className="financial-solutions-section reveal">
+      <section className="financial-solutions-section reveal">
         <div className="financial-solutions-inner">
           <div className="financial-solutions-visual">
             <img
@@ -321,7 +321,7 @@ const Home = () => {
             </ul>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* ===== MAP SECTION ===== */}
       <section className="map-section reveal">
