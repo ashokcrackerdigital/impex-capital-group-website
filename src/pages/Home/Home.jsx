@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
@@ -16,8 +16,12 @@ import financialSolutionsImg from "../../assets/images/financialSolutionsSection
 import StructuredData from "../../components/StructuredData";
 
 const multifamilyImg = "/assets/images/multifamily.webp";
+const ELFSIGHT_APP_ID = "35ad7f62-3168-4c39-b646-88177f2602a1";
+const ELFSIGHT_SCRIPT_ID = "elfsight-platform-script";
 
 const Home = () => {
+  const [showLinkedInFeed, setShowLinkedInFeed] = useState(false);
+
   /* Scroll Reveal Animation */
   useEffect(() => {
     const reveal = () => {
@@ -35,19 +39,43 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    const existingScript = document.getElementById("elfsight-platform-script");
-    if (existingScript) {
-      existingScript.remove();
+    let cancelled = false;
+
+    const mountLinkedInFeed = () => {
+      if (cancelled) return;
+
+      setShowLinkedInFeed(true);
+      requestAnimationFrame(() => {
+        window.eapps?.Platform?.init?.();
+      });
+    };
+
+    const script = document.getElementById(ELFSIGHT_SCRIPT_ID);
+    if (!script) {
+      mountLinkedInFeed();
+      return () => {
+        cancelled = true;
+      };
     }
 
-    const script = document.createElement("script");
-    script.src = "https://elfsightcdn.com/platform.js";
-    script.async = true;
-    script.id = "elfsight-platform-script";
-    document.body.appendChild(script);
+    if (script.getAttribute("data-loaded") === "true" || window.eapps?.Platform) {
+      script.setAttribute("data-loaded", "true");
+      mountLinkedInFeed();
+      return () => {
+        cancelled = true;
+      };
+    }
+
+    const handleLoad = () => {
+      script.setAttribute("data-loaded", "true");
+      mountLinkedInFeed();
+    };
+
+    script.addEventListener("load", handleLoad);
 
     return () => {
-      script.remove();
+      cancelled = true;
+      script.removeEventListener("load", handleLoad);
     };
   }, []);
 
@@ -408,9 +436,12 @@ const Home = () => {
         <div className="news-header">
           <h2>Strategic Insights</h2>
         </div>
-        <div
-          className="elfsight-app-35ad7f62-3168-4c39-b646-88177f2602a1"
-        />
+        {showLinkedInFeed && (
+          <div
+            className={`elfsight-app-${ELFSIGHT_APP_ID}`}
+            data-elfsight-app-locale="en"
+          />
+        )}
       </section>
 
       {/* ===== CTA + FOOTER ===== */}
