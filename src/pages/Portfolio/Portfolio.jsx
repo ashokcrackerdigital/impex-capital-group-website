@@ -56,6 +56,7 @@ const Portfolio = () => {
 
           // Only populate image (lightweight)
           params.append("populate", "image");
+          params.append("filters[propertyStatus][$ne]", "Hide");
           params.append("pagination[page]", page);
           params.append("pagination[pageSize]", 20); // safe chunk size
 
@@ -87,7 +88,9 @@ const Portfolio = () => {
 
         if (!isMounted) return;
 
-        const formatted = allData.map((item) => {
+        const formatted = allData
+          .filter((item) => item.propertyStatus?.toLowerCase() !== "hide")
+          .map((item) => {
           const title = item.title || "";
           return {
             id: item.id,

@@ -60,8 +60,14 @@ const PropertyDetail = () => {
 
         // Load in small chunks (safe for mobile)
         do {
+          const params = new URLSearchParams();
+          params.append("populate", "image");
+          params.append("filters[propertyStatus][$ne]", "Hide");
+          params.append("pagination[page]", page);
+          params.append("pagination[pageSize]", 25);
+
           const res = await fetch(
-            `https://api.impexcapitalgroup.com/api/properties?populate=image&pagination[page]=${page}&pagination[pageSize]=25`
+            `https://api.impexcapitalgroup.com/api/properties?${params.toString()}`
           );
 
           if (!res.ok) throw new Error("Network error");
@@ -73,8 +79,12 @@ const PropertyDetail = () => {
           page++;
         } while (page <= pageCount);
 
+        const visibleProperties = allData.filter(
+          (item) => item.propertyStatus?.toLowerCase() !== "hide"
+        );
+
         // Now find matching slug in frontend
-        const foundProperty = allData.find(
+        const foundProperty = visibleProperties.find(
           (item) => createSlug(item.title || "") === slug
         );
 
@@ -95,7 +105,7 @@ const PropertyDetail = () => {
         setProperty(prop);
 
         // Same category
-        const sameCategory = allData
+        const sameCategory = visibleProperties
           .filter(
             (item) =>
               item.category === foundProperty.category &&

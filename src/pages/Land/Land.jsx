@@ -102,6 +102,7 @@ const Land = () => {
         do {
           const params = new URLSearchParams();
           params.append("filters[category][$eq]", "Land");
+          params.append("filters[propertyStatus][$ne]", "Hide");
           params.append("populate", "image");
           params.append("pagination[page]", page);
           params.append("pagination[pageSize]", 20);
@@ -122,7 +123,9 @@ const Land = () => {
 
         if (!isMounted) return;
 
-        const formatted = allData.map((item) => {
+        const formatted = allData
+          .filter((item) => item.propertyStatus?.toLowerCase() !== "hide")
+          .map((item) => {
           const imageUrl =
             item.image?.url ||
             item.image?.data?.attributes?.url ||

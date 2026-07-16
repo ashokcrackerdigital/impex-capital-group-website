@@ -101,6 +101,7 @@ const Multifamily = () => {
         do {
           const params = new URLSearchParams();
           params.append("filters[category][$eq]", "Multifamily");
+          params.append("filters[propertyStatus][$ne]", "Hide");
           params.append("populate", "image");
           params.append("pagination[page]", page);
           params.append("pagination[pageSize]", 20); // small chunk safe
@@ -121,7 +122,9 @@ const Multifamily = () => {
 
         if (!isMounted) return;
 
-        const formatted = allData.map((item) => {
+        const formatted = allData
+          .filter((item) => item.propertyStatus?.toLowerCase() !== "hide")
+          .map((item) => {
           const imageUrl =
             item.image?.url ||
             item.image?.data?.attributes?.url ||
@@ -188,7 +191,7 @@ const Multifamily = () => {
       {/* ===== STATS ===== */}
       <div className="dynamic-stats reveal">
         <div className="stat-box">
-          <span className="stat-number">42</span>
+          <span className="stat-number">40</span>
           <span className="stat-label">Properties</span>
         </div>
         <div className="stat-box">

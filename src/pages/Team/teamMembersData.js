@@ -270,6 +270,69 @@ export const TEAM_MEMBERS = [
     },
   },
   {
+    slug: "barry-chien",
+    name: "Barry Chien",
+    role: "Chief Investment Officer",
+    image: barryChienImg,
+    mobileImage: barryChienImgMobile,
+    linkedin: "https://www.linkedin.com/in/barrychien/",
+    bio: [
+      "Barry Chien is Chief Investment Officer of Impex Capital Group, with over two decades of investment experience across the United States and Asia in origination, underwriting, structuring, execution, and portfolio management.",
+      "He has completed more than $400 million in direct real estate investments across residential, hospitality, multifamily, and commercial sectors, including a $204 million condominium development in Seattle, a $53 million Houston office-to-hotel conversion under the Canopy by Hilton brand, and $73 million value-add multifamily project in Chicago.",
+      "Barry has also managed over $500 million in private equity fund allocations on behalf of institutional investors, including U.S. public pension funds, sovereign wealth funds, and family offices.",
+      "Prior to Impex, he held leadership roles at Wan Hai Line's Family Office Fund where he completed a UK condo development project, he was a part of the investment team for the resort developer, Libre Resorts and he also led an investment team while at Greentown, a Hong Kong publicly listed real estate developer. He began his career at Deutsche Bank’s RREEF and Jade Invest, focusing on private equity allocations and co-investment opportunities for U.S. pension funds and global sovereign wealth funds.",
+    ],
+    seo: {
+      title: "Barry Chien | Chief Investment Officer | Impex Capital Group",
+      description:
+        "Read the professional profile and biography of Barry Chien, Chief Investment Officer at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
+    },
+    structuredPersonBio:
+      "Barry Chien is Chief Investment Officer of Impex Capital Group, overseeing investment strategy, underwriting, and portfolio management across multiple asset classes.",
+    detail: {
+      heroEyebrow: "Executive Leadership",
+      heroRoleLine: "Chief Investment Officer",
+      companyLine: "IMPEX Capital Group",
+      educationLines: [
+        "BBA, University of Texas at Austin (McCombs School of Business)",
+        "MBA, Cheung Kong Graduate School of Business",
+      ],
+      bioKicker: "EXECUTIVE PROFILE",
+      bioTitle: "Driving Strategic Investments, Delivering Global Value",
+      longBio: [
+        "Barry Chien serves as the Chief Investment Officer of IMPEX Capital Group, bringing over two decades of investment experience across the United States and Asia. He has led full-lifecycle real estate transactions, including origination, underwriting, structuring, execution, and portfolio management.",
+        "Over his career, Barry has completed more than $400 million in direct real estate investments across residential, hospitality, multifamily, and commercial sectors. His notable projects include a $204 million condominium development in Seattle, a $53 million office-to-hotel conversion under the Canopy by Hilton brand, and the $30 million financing of a value-add data center in Houston.",
+        "In addition to direct investments, Barry has managed over $500 million in private equity fund allocations on behalf of institutional investors, including U.S. public pension funds, sovereign wealth funds, and family offices. His expertise includes rigorous due diligence, manager selection, and strategic portfolio construction across North America and Asia.",
+        "Prior to joining IMPEX Capital Group, Barry held leadership roles at Suma Monde Kapital Partners and a publicly listed real estate developer, Greentown. He began his career at Deutsche Bank’s RREEF and Jade Invest, where he focused on private equity allocations and co-investment opportunities for U.S. pension funds and global sovereign wealth funds.",
+      ],
+      eduKicker: "RECOGNITION",
+      eduTitle: "Education & Professional Background",
+      eduCards: [
+        {
+          variant: "list",
+          iconClass: "fa-solid fa-graduation-cap",
+          heading: "Education",
+          items: [
+            "BBA – University of Texas at Austin (McCombs School of Business)",
+            "MBA – Cheung Kong Graduate School of Business",
+          ],
+        },
+        {
+          variant: "list",
+          iconClass: "fa-regular fa-star",
+          heading: "Professional Highlights",
+          items: [
+            "20+ years of global investment experience",
+            "$400M+ in direct real estate transactions",
+            "$500M+ managed in private equity allocations",
+            "Experience across U.S. & Asian markets",
+            "Institutional investor exposure including pension funds & sovereign wealth funds",
+          ],
+        },
+      ],
+    },
+  },
+  {
     slug: "david-wallace",
     name: "David Wallace",
     role: "Chief Development Officer",
@@ -584,69 +647,6 @@ export const TEAM_MEMBERS = [
             "Managing Director – IMPEX Capital Group",
             "Former Managing Director – Shieldstone Holdings",
             "Expertise in Credit Structuring & Risk Management",
-          ],
-        },
-      ],
-    },
-  },
-  {
-    slug: "barry-chien",
-    name: "Barry Chien",
-    role: "Chief Investment Officer",
-    image: barryChienImg,
-    mobileImage: barryChienImgMobile,
-    linkedin: "https://www.linkedin.com/in/barrychien/",
-    bio: [
-      "Barry Chien is Chief Investment Officer of Impex Capital Group, with over two decades of investment experience across the United States and Asia in origination, underwriting, structuring, execution, and portfolio management.",
-      "He has completed more than $400 million in direct real estate investments across residential, hospitality, multifamily, and commercial sectors, including a $204 million condominium development in Seattle, a $53 million office-to-hotel conversion under the Canopy by Hilton brand, and $30 million financing for a value-add data center in Houston.",
-      "Barry has also managed over $500 million in private equity fund allocations on behalf of institutional investors, including U.S. public pension funds, sovereign wealth funds, and family offices.",
-      "Prior to Impex, he held leadership roles at Suma Monde Kapital Partners and at Greentown, a publicly listed real estate developer. He began his career at Deutsche Bank’s RREEF and Jade Invest, focusing on private equity allocations and co-investment opportunities for U.S. pension funds and global sovereign wealth funds.",
-    ],
-    seo: {
-      title: "Barry Chien | Chief Investment Officer | Impex Capital Group",
-      description:
-        "Read the professional profile and biography of Barry Chien, Chief Investment Officer at Impex Capital Group. Learn about their real estate investment expertise and leadership.",
-    },
-    structuredPersonBio:
-      "Barry Chien is Chief Investment Officer of Impex Capital Group, overseeing investment strategy, underwriting, and portfolio management across multiple asset classes.",
-    detail: {
-      heroEyebrow: "Executive Leadership",
-      heroRoleLine: "Chief Investment Officer",
-      companyLine: "IMPEX Capital Group",
-      educationLines: [
-        "BBA, University of Texas at Austin (McCombs School of Business)",
-        "MBA, Cheung Kong Graduate School of Business",
-      ],
-      bioKicker: "EXECUTIVE PROFILE",
-      bioTitle: "Driving Strategic Investments, Delivering Global Value",
-      longBio: [
-        "Barry Chien serves as the Chief Investment Officer of IMPEX Capital Group, bringing over two decades of investment experience across the United States and Asia. He has led full-lifecycle real estate transactions, including origination, underwriting, structuring, execution, and portfolio management.",
-        "Over his career, Barry has completed more than $400 million in direct real estate investments across residential, hospitality, multifamily, and commercial sectors. His notable projects include a $204 million condominium development in Seattle, a $53 million office-to-hotel conversion under the Canopy by Hilton brand, and the $30 million financing of a value-add data center in Houston.",
-        "In addition to direct investments, Barry has managed over $500 million in private equity fund allocations on behalf of institutional investors, including U.S. public pension funds, sovereign wealth funds, and family offices. His expertise includes rigorous due diligence, manager selection, and strategic portfolio construction across North America and Asia.",
-        "Prior to joining IMPEX Capital Group, Barry held leadership roles at Suma Monde Kapital Partners and a publicly listed real estate developer, Greentown. He began his career at Deutsche Bank’s RREEF and Jade Invest, where he focused on private equity allocations and co-investment opportunities for U.S. pension funds and global sovereign wealth funds.",
-      ],
-      eduKicker: "RECOGNITION",
-      eduTitle: "Education & Professional Background",
-      eduCards: [
-        {
-          variant: "list",
-          iconClass: "fa-solid fa-graduation-cap",
-          heading: "Education",
-          items: [
-            "BBA – University of Texas at Austin (McCombs School of Business)",
-            "MBA – Cheung Kong Graduate School of Business",
-          ],
-        },
-        {
-          variant: "list",
-          iconClass: "fa-regular fa-star",
-          heading: "Professional Highlights",
-          items: [
-            "20+ years of global investment experience",
-            "$400M+ in direct real estate transactions",
-            "$500M+ managed in private equity allocations",
-            "Experience across U.S. & Asian markets",
-            "Institutional investor exposure including pension funds & sovereign wealth funds",
           ],
         },
       ],
