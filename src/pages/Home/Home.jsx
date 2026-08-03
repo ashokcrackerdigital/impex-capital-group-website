@@ -388,7 +388,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="linkedin-feed-section reveal">
+      <section className="linkedin-feed-section">
         <div className="news-header">
           <h2>Strategic Insights</h2>
         </div>

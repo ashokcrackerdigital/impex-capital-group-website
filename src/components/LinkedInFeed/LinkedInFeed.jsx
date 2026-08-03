@@ -2,39 +2,27 @@ import { useEffect, useRef, useState } from "react";
 import "./LinkedInFeed.css";
 
 const ELFSIGHT_APP_ID = "35ad7f62-3168-4c39-b646-88177f2602a1";
-const LINKEDIN_COMPANY_URL =
-  "https://www.linkedin.com/company/impex-capital-group/";
-const LOAD_TIMEOUT_MS = 15000;
 
 /**
  * Isolates Elfsight LinkedIn widget in an iframe so its bundled React/i18n
- * never conflicts with the host React app (fixes intermittent blank feed).
+ * never conflicts with the host React app.
+ *
+ * Important: we never tear the iframe down for a "load failure". The old
+ * timeout + selector check was replacing a working feed with the LinkedIn
+ * fallback link after a few seconds for many visitors.
  */
 const LinkedInFeed = () => {
   const iframeRef = useRef(null);
-  const loadedRef = useRef(false);
-  const [failed, setFailed] = useState(false);
-  const [loaded, setLoaded] = useState(false);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
-    let timeoutId;
     let pollId;
+    let resizeObserver;
 
-    const markLoaded = () => {
-      if (cancelled || loadedRef.current) return;
-      loadedRef.current = true;
-      setLoaded(true);
-      setFailed(false);
-      clearTimeout(timeoutId);
-      clearInterval(pollId);
-    };
-
-    const markFailed = () => {
-      if (cancelled || loadedRef.current) return;
-      setFailed(true);
-      clearTimeout(timeoutId);
-      clearInterval(pollId);
+    const markReady = () => {
+      if (cancelled) return;
+      setReady(true);
     };
 
     const syncIframeHeight = (doc) => {
@@ -44,33 +32,49 @@ const LinkedInFeed = () => {
       iframe.style.height = `${nextHeight}px`;
     };
 
-    timeoutId = setTimeout(markFailed, LOAD_TIMEOUT_MS);
-
-    pollId = setInterval(() => {
+    const inspect = () => {
       try {
         const doc = iframeRef.current?.contentDocument;
-        if (!doc) return;
+        if (!doc?.body) return;
 
         syncIframeHeight(doc);
 
-        const hasContent = Boolean(
+        if (!resizeObserver && typeof ResizeObserver !== "undefined") {
+          resizeObserver = new ResizeObserver(() => syncIframeHeight(doc));
+          resizeObserver.observe(doc.body);
+        }
+
+        const root = doc.querySelector(`[class*="elfsight-app-"], .eapps-widget`);
+        const hasWidgetChrome = Boolean(
           doc.querySelector(
-            ".eapps-widget img, .eapps-widget a, [class*='Post'] img, [class*='Post'] a, [class*='WidgetBackground'] img"
+            ".eapps-widget, [class*='WidgetBackground'], [class*='Post'], [class*='Carousel'], [class*='Slider']"
           )
         );
+        const hasMedia = Boolean(
+          doc.querySelector(
+            ".eapps-widget img, .eapps-widget a, [class*='Post'] img, [class*='Post'] a, iframe"
+          )
+        );
+        const hasChildren = Boolean(root && root.childElementCount > 0);
 
-        if (hasContent) {
-          markLoaded();
+        if (hasMedia || hasWidgetChrome || hasChildren) {
+          markReady();
         }
       } catch {
-        // Not ready yet
+        // Document not ready yet
       }
-    }, 700);
+    };
+
+    pollId = setInterval(inspect, 500);
+    // Always reveal the iframe even if Elfsight DOM classes change —
+    // never swap it out for a fallback message.
+    const revealId = setTimeout(markReady, 4000);
 
     return () => {
       cancelled = true;
-      clearTimeout(timeoutId);
       clearInterval(pollId);
+      clearTimeout(revealId);
+      resizeObserver?.disconnect();
     };
   }, []);
 
@@ -86,16 +90,12 @@ const LinkedInFeed = () => {
       background: transparent;
       overflow-x: hidden;
     }
-    .elfsight-app-${ELFSIGHT_APP_ID} { width: 100%; }
+    .elfsight-app-${ELFSIGHT_APP_ID} { width: 100%; min-height: 420px; }
     [class*="es-widget-toolbar"],
     [class*="eapps-widget-toolbar"],
-    [class*="global-styles__BadgeWrapper"],
-    [class*="WidgetToolbar"],
-    a[href*="elfsight.com"],
-    [title*="Free LinkedIn Feed Widget"] {
+    [class*="WidgetToolbar"] {
       display: none !important;
       visibility: hidden !important;
-      opacity: 0 !important;
       pointer-events: none !important;
     }
   </style>
@@ -104,7 +104,6 @@ const LinkedInFeed = () => {
 <body>
   <div
     class="elfsight-app-${ELFSIGHT_APP_ID}"
-    data-elfsight-app-lazy
     data-elfsight-app-locale="en"
   ></div>
 </body>
@@ -112,30 +111,14 @@ const LinkedInFeed = () => {
 
   return (
     <div className="linkedin-feed-widget">
-      {!failed && (
-        <iframe
-          ref={iframeRef}
-          title="Impex Capital Group LinkedIn feed"
-          className={`linkedin-feed-iframe${loaded ? " is-loaded" : ""}`}
-          srcDoc={srcDoc}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-        />
-      )}
-
-      {failed && (
-        <div className="linkedin-feed-fallback">
-          <p>Follow our latest updates on LinkedIn.</p>
-          <a
-            href={LINKEDIN_COMPANY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Impex Capital Group on LinkedIn
-          </a>
-        </div>
-      )}
+      <iframe
+        ref={iframeRef}
+        title="Impex Capital Group LinkedIn feed"
+        className={`linkedin-feed-iframe${ready ? " is-loaded" : ""}`}
+        srcDoc={srcDoc}
+        referrerPolicy="no-referrer-when-downgrade"
+        sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+      />
     </div>
   );
 };
