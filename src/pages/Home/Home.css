@@ -448,26 +448,27 @@ img {
 .financial-solutions-inner {
   display: flex;
   gap: 3rem;
-  align-items: stretch;
+  align-items: center;
 }
 
 .financial-solutions-visual {
-  flex: 1;
+  flex: 1 1 48%;
   position: relative;
   min-width: 0;
+  overflow: hidden;
 }
 
 .financial-solutions-img {
-  position: absolute;
-  inset: 0;
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center bottom;
 }
 
 .financial-solutions-content {
-  flex: 1;
+  flex: 1 1 52%;
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -546,17 +547,19 @@ img {
   .financial-solutions-inner {
     flex-direction: column;
     gap: 2rem;
+    align-items: stretch;
   }
 
   .financial-solutions-visual {
     flex: none;
-    height: 420px;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
   }
 
   .financial-solutions-img {
-    position: relative;
-    inset: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
   }
 
   .financial-solutions-content {
@@ -580,7 +583,7 @@ img {
   }
 
   .financial-solutions-visual {
-    height: 280px;
+    max-width: 100%;
   }
 
   .financial-solutions-title {
@@ -1099,6 +1102,11 @@ img {
   margin-bottom: 2.5rem;
 }
 
+.linkedin-feed-section .linkedin-feed-widget {
+  width: 100%;
+}
+
+/* Legacy selectors kept for any residual direct embeds */
 .linkedin-feed-section [class^="elfsight-app-"] {
   width: 100%;
 }

@@ -7,6 +7,11 @@ import { BrowserRouter } from 'react-router-dom';
 
 const resizeObserverErrorText =
   "ResizeObserver loop completed with undelivered notifications";
+const elfsightI18nErrorText = "Cannot destructure property 'i18n'";
+
+const shouldIgnoreRuntimeNoise = (message = "") =>
+  String(message).includes(resizeObserverErrorText) ||
+  String(message).includes(elfsightI18nErrorText);
 
 if (typeof window !== "undefined" && "ResizeObserver" in window) {
   const NativeResizeObserver = window.ResizeObserver;
@@ -22,7 +27,7 @@ if (typeof window !== "undefined" && "ResizeObserver" in window) {
 window.addEventListener(
   "error",
   (event) => {
-    if (event?.message?.includes(resizeObserverErrorText)) {
+    if (shouldIgnoreRuntimeNoise(event?.message)) {
       event.stopImmediatePropagation();
     }
   },
@@ -31,7 +36,7 @@ window.addEventListener(
 
 const originalOnError = window.onerror;
 window.onerror = (message, ...args) => {
-  if (String(message).includes(resizeObserverErrorText)) {
+  if (shouldIgnoreRuntimeNoise(message)) {
     return true;
   }
   if (typeof originalOnError === "function") {
@@ -42,7 +47,7 @@ window.onerror = (message, ...args) => {
 
 window.addEventListener("unhandledrejection", (event) => {
   const reasonMessage = event?.reason?.message || String(event?.reason || "");
-  if (reasonMessage.includes(resizeObserverErrorText)) {
+  if (shouldIgnoreRuntimeNoise(reasonMessage)) {
     event.preventDefault();
   }
 });
