@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
@@ -6,6 +6,7 @@ import "./Home.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import FooterCTA from "../../components/Footer/FooterCTA";
+import LinkedInFeed from "../../components/LinkedInFeed/LinkedInFeed";
 import SEO from "../../components/SEO";
 
 import heroVideo from "../../assets/videos/opt_Luxury_Apartment_Drone_Footage.mp4";
@@ -16,12 +17,8 @@ import financialSolutionsImg from "../../assets/images/financialSolutionsSection
 import StructuredData from "../../components/StructuredData";
 
 const multifamilyImg = "/assets/images/multifamily.webp";
-const ELFSIGHT_APP_ID = "35ad7f62-3168-4c39-b646-88177f2602a1";
-const ELFSIGHT_SCRIPT_ID = "elfsight-platform-script";
 
 const Home = () => {
-  const [showLinkedInFeed, setShowLinkedInFeed] = useState(false);
-
   /* Scroll Reveal Animation */
   useEffect(() => {
     const reveal = () => {
@@ -36,47 +33,6 @@ const Home = () => {
     reveal();
 
     return () => window.removeEventListener("scroll", reveal);
-  }, []);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    const mountLinkedInFeed = () => {
-      if (cancelled) return;
-
-      setShowLinkedInFeed(true);
-      requestAnimationFrame(() => {
-        window.eapps?.Platform?.init?.();
-      });
-    };
-
-    const script = document.getElementById(ELFSIGHT_SCRIPT_ID);
-    if (!script) {
-      mountLinkedInFeed();
-      return () => {
-        cancelled = true;
-      };
-    }
-
-    if (script.getAttribute("data-loaded") === "true" || window.eapps?.Platform) {
-      script.setAttribute("data-loaded", "true");
-      mountLinkedInFeed();
-      return () => {
-        cancelled = true;
-      };
-    }
-
-    const handleLoad = () => {
-      script.setAttribute("data-loaded", "true");
-      mountLinkedInFeed();
-    };
-
-    script.addEventListener("load", handleLoad);
-
-    return () => {
-      cancelled = true;
-      script.removeEventListener("load", handleLoad);
-    };
   }, []);
 
   return (
@@ -436,12 +392,7 @@ const Home = () => {
         <div className="news-header">
           <h2>Strategic Insights</h2>
         </div>
-        {showLinkedInFeed && (
-          <div
-            className={`elfsight-app-${ELFSIGHT_APP_ID}`}
-            data-elfsight-app-locale="en"
-          />
-        )}
+        <LinkedInFeed />
       </section>
 
       {/* ===== CTA + FOOTER ===== */}
