@@ -1111,16 +1111,13 @@ img {
   width: 100%;
 }
 
-/* Hide Elfsight owner toolbar + free branding badge */
+/* Hide Elfsight owner edit toolbar only — do not hide the free badge link,
+   Elfsight can tear down free widgets when branding is forcibly removed */
 .linkedin-feed-section [class*="es-widget-toolbar"],
 .linkedin-feed-section [class*="eapps-widget-toolbar"],
-.linkedin-feed-section [class*="global-styles__BadgeWrapper"],
-.linkedin-feed-section [class*="WidgetToolbar"],
-.linkedin-feed-section a[href*="elfsight.com"],
-.linkedin-feed-section [title*="Free LinkedIn Feed Widget"] {
+.linkedin-feed-section [class*="WidgetToolbar"] {
   display: none !important;
   visibility: hidden !important;
-  opacity: 0 !important;
   pointer-events: none !important;
 }
 
