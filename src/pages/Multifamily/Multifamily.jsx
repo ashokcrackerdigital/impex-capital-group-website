@@ -191,7 +191,7 @@ const Multifamily = () => {
       {/* ===== STATS ===== */}
       <div className="dynamic-stats reveal">
         <div className="stat-box">
-          <span className="stat-number">40</span>
+          <span className="stat-number">39</span>
           <span className="stat-label">Properties</span>
         </div>
         <div className="stat-box">
