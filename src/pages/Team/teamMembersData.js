@@ -595,7 +595,7 @@ export const TEAM_MEMBERS = [
   {
     slug: "fahd-mulawwah",
     name: "Fahd Mulawwah",
-    role: "Director, Investments & Capital Management",
+    role: "Managing Director, Investments & Capital Management",
     image: fahdMulawwahImg,
     mobileImage: fahdMulawwahImgMobile,
     linkedin: "https://www.linkedin.com/in/fsm7/",

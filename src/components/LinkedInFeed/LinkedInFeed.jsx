@@ -29,7 +29,11 @@ const LinkedInFeed = () => {
       const iframe = iframeRef.current;
       if (!iframe || !doc?.body) return;
       const nextHeight = Math.max(doc.body.scrollHeight, 420);
-      iframe.style.height = `${nextHeight}px`;
+      const nextHeightPx = `${nextHeight}px`;
+      // Only write when height changes — writing every observation causes a
+      // ResizeObserver feedback loop that CRA surfaces as a runtime overlay.
+      if (iframe.style.height === nextHeightPx) return;
+      iframe.style.height = nextHeightPx;
     };
 
     const inspect = () => {
@@ -40,7 +44,11 @@ const LinkedInFeed = () => {
         syncIframeHeight(doc);
 
         if (!resizeObserver && typeof ResizeObserver !== "undefined") {
-          resizeObserver = new ResizeObserver(() => syncIframeHeight(doc));
+          let frameId = 0;
+          resizeObserver = new ResizeObserver(() => {
+            cancelAnimationFrame(frameId);
+            frameId = requestAnimationFrame(() => syncIframeHeight(doc));
+          });
           resizeObserver.observe(doc.body);
         }
 
